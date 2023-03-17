@@ -57,10 +57,10 @@
         </div>
 
         <div class="form-outline w-25 mb-3">
-            <input type="radio" id="avaible" name="is_visible" value="" >
-            <label>Avaible</label><br>
-            <input type="radio" id="not_avaible" name="is_visible" value="">
-            <label>Not available</label><br>               
+            <input type="radio" id="visible" name="is_visible" value="1" @checked (old('is_visible', $dish->is_visible))/>
+            <label>Visible</label>
+            <input type="radio" id="not_visible" name="is_visible" value="0" @checked (!old('is_visible', $dish->is_visible))>
+            <label>Not Visible</label><br>
         </div>
         {{-- TODO Rivedere i radio buttons --}}
         <button type="submit" class="btn btn-primary">Invia</button>

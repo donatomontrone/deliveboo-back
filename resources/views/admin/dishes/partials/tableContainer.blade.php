@@ -80,7 +80,7 @@ $columns=[
       </thead>
   
       <tbody>
-        @foreach ($dishes as $dish)
+        @forelse ($dishes as $dish)
           <tr>
             {{-- @dump($dish->restaurant->name) --}}
               <th scope="row">{{$dish->id}}</th>
@@ -118,7 +118,11 @@ $columns=[
                 @endif --}}
               </td>
           </tr>
-        @endforeach
+        @empty
+        <tr>
+          <td colspan="9" class="text-center">No dishes to show </td>
+      </tr>
+        @endforelse
       </tbody>
     </table>
 

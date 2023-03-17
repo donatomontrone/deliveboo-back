@@ -24,8 +24,8 @@ class DishController extends Controller
         'description' => ['required', 'string', 'min:5'],
         'ingredients' => ['required', 'string', 'min:2', 'max:255'],
         'price' => ['required', 'numeric'],
-        'category_id' => 'required|exists:categories,id'
-        // 'is_visible' => ['required']
+        'category_id' => 'required|exists:categories,id',
+        'is_visible' => ['required']
     ];
 
     protected $messages = [];
@@ -37,7 +37,7 @@ class DishController extends Controller
      */
     public function index()
     {
-        $dishes = Dish::all();
+        $dishes = Dish::where('restaurant_id',  Auth::user()->restaurant->id)->get();
         $restaurant = Auth::user()->restaurant->id;
         return view('admin.dishes.index', compact('dishes', 'restaurant'));
     }
@@ -91,7 +91,8 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
-        return view('admin.dishes.edit', compact('dish'));
+        $categories = Category::all();
+        return view('admin.dishes.edit', compact('dish', 'categories'));
     }
 
     /**
