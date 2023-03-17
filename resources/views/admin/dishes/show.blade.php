@@ -14,6 +14,7 @@
         @endif
 dishs        alt="{{ $dish->title }} image" class="img-fluid">
     </div> --}}
+    {{-- @dump(Auth::user()->restaurant->name) --}}
     <div class="card-body">
         <h2 class="card-title">{{ $dish->name }}</h2>
         <p class="card-text">

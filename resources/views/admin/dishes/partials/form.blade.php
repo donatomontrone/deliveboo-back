@@ -1,7 +1,6 @@
 <form action="{{ route($routeName, $dish) }}" method="POST" enctype="multipart/form-data" class="py-3">
     @csrf
     @method($method)
-
     <div class="card px-5 py-3 mb-3">
 
         <div class="form-outline w-25 mb-3">
@@ -13,6 +12,18 @@
                     <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
                 </div>
             @enderror       
+        </div>
+
+        <div class="col-12 mb-3">
+            <div class="form-check form-check-inline">
+                <select class="form-select" name="category_id" id="category-select">
+                    @foreach ($categories as $category)
+                    <option value="{{$category->id}}" {{ old('category_id', $category->category_id) ==  $category->id ? 'selected' : '' }}> 
+                        {{ $category->title }}
+                    </option>
+                    @endforeach 
+                </select>
+            </div>
         </div>
 
         <div class="form-outline w-100 mb-3">
@@ -51,7 +62,6 @@
             <input type="radio" id="not_avaible" name="is_visible" value="">
             <label>Not available</label><br>               
         </div>
-
         {{-- TODO Rivedere i radio buttons --}}
         <button type="submit" class="btn btn-primary">Invia</button>
     </div>
