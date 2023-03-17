@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Dish;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
@@ -22,7 +24,8 @@ class DishController extends Controller
         'description' => ['required', 'string', 'min:5'],
         'ingredients' => ['required', 'string', 'min:2', 'max:255'],
         'price' => ['required', 'numeric'],
-        'is_visible' => ['required']
+        'category_id' => 'required|exists:categories,id'
+        // 'is_visible' => ['required']
     ];
 
     protected $messages = [];
@@ -35,7 +38,8 @@ class DishController extends Controller
     public function index()
     {
         $dishes = Dish::all();
-        return view('admin.dishes.index', compact('dishes'));
+        $restaurant = Auth::user()->restaurant->id;
+        return view('admin.dishes.index', compact('dishes', 'restaurant'));
     }
 
     /**
@@ -45,7 +49,8 @@ class DishController extends Controller
      */
     public function create(Dish $dish)
     {
-        return view('admin.dishes.create', compact('dish'));
+        $categories = Category::all();
+        return view('admin.dishes.create', compact('dish', 'categories'));
     }
 
     /**
@@ -56,8 +61,9 @@ class DishController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate($this->rules); //$this->messages
+        $data = $request->validate($this->rules);
         $data['slug'] = Str::slug($data['name']);
+        $data['restaurant_id'] = Auth::user()->restaurant->id;
         $newDish = new Dish();
         $newDish->fill($data);
         $newDish->save();
@@ -100,7 +106,7 @@ class DishController extends Controller
         $dataValidate = $request->validate($this->rules, $this->messages);
         $dish->update($dataValidate);
 
-        return redirect()->route('admin.dishes.show', $dish->id);
+        return redirect()->route('admin.dishes.show', $dish);
     }
 
     /**
