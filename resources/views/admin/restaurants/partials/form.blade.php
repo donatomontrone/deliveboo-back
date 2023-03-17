@@ -63,9 +63,9 @@
                 </div>
             </div>
         </div>
-        <div class="buttons d-flex justify-content-between">
-            <button type="submit" class="btn btn-outline-success"><i class="fa-regular fa-paper-plane"></i> Submit</button>
+        <div class="buttons d-flex justify-content-between mt-3">
             <a href="{{route('admin.restaurants.index')}}" class="btn btn-outline-secondary"><i class="fa-solid fa-arrow-left"></i> Back</a>
+            <button type="submit" class="btn btn-outline-success"><i class="fa-regular fa-paper-plane"></i> Submit</button>
         </div>
 
     </div>

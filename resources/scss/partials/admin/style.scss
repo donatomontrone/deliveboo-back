@@ -1,4 +1,3 @@
-
 :root {
     --blue: #4e73df;
     --indigo: #6610f2;
@@ -15,7 +14,7 @@
     --gray-dark: #5a5c69;
     --primary: #00ccbc;
     --secondary: #858796;
-    --success: #1cc88a;
+    --success: #36CCBC;
     --info: #36b9cc;
     --warning: #f6c23e;
     --danger: #e74a3b;
@@ -3082,8 +3081,8 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-success {
-    color: #1cc88a;
-    border-color: #1cc88a;
+    color: #36CCBC;
+    border-color: #36CCBC;
 }
 
 .btn-outline-success:hover {
@@ -3099,7 +3098,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-success.disabled,
 .btn-outline-success:disabled {
-    color: #1cc88a;
+    color: #36CCBC;
     background-color: transparent;
 }
 
@@ -7033,7 +7032,7 @@ button.bg-secondary:focus {
 }
 
 .bg-success {
-    background-color: #1cc88a !important;
+    background-color: #36CCBC !important;
 }
 
 a.bg-success:hover,
@@ -10765,7 +10764,7 @@ a.text-secondary:focus {
 }
 
 .text-success {
-    color: #1cc88a !important;
+    color: #36CCBC !important;
 }
 
 a.text-success:hover,

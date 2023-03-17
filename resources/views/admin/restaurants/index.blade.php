@@ -34,7 +34,11 @@
                         <tr>
                             <th scope="row">{{$restaurant->id}}</th>
                             <td>
-                                <img src="{{$restaurant->img_path}}" alt="{{$restaurant->name}} image" class="restaurant-img">
+                                @if (str_starts_with($restaurant->img_path, 'http'))
+                                <img src=" {{$restaurant->img_path}} " class="restaurant-img"
+                                @else
+                                <img src="{{asset('storage/'. $restaurant->img_path)}}" class="restaurant-img"
+                                @endif
                             </td>
                             <td>{{$restaurant->name}}</td>
                             <td>{{$restaurant->address}}</td>

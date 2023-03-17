@@ -48,7 +48,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="{{url('/') }}">
+                <a class="nav-link" href="{{route('admin.dishes.index')}}">
                     <i class="fa-solid fa-burger"></i>
                     <span>Piatti</span>
                 </a>

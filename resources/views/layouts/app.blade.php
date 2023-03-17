@@ -35,7 +35,7 @@
                             <div id="content">
                                 @include('layouts.partials.header')
                                 
-                                <main>
+                                <main class="mt-3">
                                     <div class="container-fluid">
                                         @yield('content')
                                     </div>
