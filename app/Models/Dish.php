@@ -9,6 +9,16 @@ class Dish extends Model
 {
     use HasFactory;
 
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+
+    public function getABooleanFromNumber($num)
+    {
+        return ($num) ? 'true' : 'false';
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class);
