@@ -14,7 +14,7 @@ class Restaurant extends Model
         return 'slug';
     }
 
-    protected $fillable = ['name', 'slug', 'address', 'VAT', 'img_path'];
+    protected $fillable = ['name', 'user_id', 'slug', 'address', 'VAT', 'img_path'];
 
     public function user()
     {

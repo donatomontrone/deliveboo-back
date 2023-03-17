@@ -54,6 +54,7 @@ class RestaurantController extends Controller
         $data = $request->validate($this->rules);
         $data['slug'] = Str::slug($data['name']);
         $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
+        $data['user_id'] = Auth::user()->id;
         $newRestaurant = new Restaurant();
         $newRestaurant->fill($data);
         $newRestaurant->save();
