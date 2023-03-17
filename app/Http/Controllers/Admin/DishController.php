@@ -4,10 +4,29 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Dish;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
 
 class DishController extends Controller
 {
+    /**
+     * Validation Rules
+     * Regole di validazione
+     * 
+     */
+    protected $rules =
+    [
+        'name' => ['required', 'string', 'min:3', 'max:40'],
+        'description' => ['required', 'string', 'min:5'],
+        'ingredients' => ['required', 'string', 'min:2', 'max:255'],
+        'price' => ['required', 'numeric'],
+        'is_visible' => ['required']
+    ];
+
+    protected $messages = [];
+
     /**
      * Display a listing of the resource.
      *
@@ -23,9 +42,9 @@ class DishController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Dish $dish)
     {
-        //
+        return view('admin.dishes.create', compact('dish'));
     }
 
     /**
@@ -36,7 +55,12 @@ class DishController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate($this->rules); //$this->messages
+        $data['slug'] = Str::slug($data['name']);
+        $newDish = new Dish();
+        $newDish->fill($data);
+        $newDish->save();
+        return redirect()->route('admin.dishes.index');
     }
 
     /**
@@ -58,7 +82,7 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
-        //
+        return view('admin.dishes.edit', compact('dish'));
     }
 
     /**
@@ -70,7 +94,10 @@ class DishController extends Controller
      */
     public function update(Request $request, Dish $dish)
     {
-        //
+        $dataValidate = $request->validate($this->rules, $this->messages);
+        $dish->update($dataValidate);
+
+        return redirect()->route('admin.dishes.show', $dish->id);
     }
 
     /**
