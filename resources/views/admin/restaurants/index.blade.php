@@ -15,9 +15,6 @@
                     <div class="col-6 text-success">
                         <h2 class="m-0">Restaurants [ {{count($restaurants)}} ]</h2>
                     </div>
-                    <div class="col-6 text-end">
-                        <a href="{{route('admin.restaurants.create')}}" class="btn btn-outline-dark"><i class="fa-solid fa-plus"></i> Add Restaurant</a>
-                    </div>
                 </div>
             </div>
             <div class="card-body p-0">
