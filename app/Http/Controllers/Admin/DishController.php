@@ -34,7 +34,8 @@ class DishController extends Controller
      */
     public function index()
     {
-        //
+        $dishes = Dish::all();
+        return view('admin.dishes.index', compact('dishes'));
     }
 
     /**
@@ -71,7 +72,9 @@ class DishController extends Controller
      */
     public function show(Dish $dish)
     {
-        //
+        $previousDish = Dish::where('id', '<', $dish->id)->orderBy('id', 'DESC')->first();
+        $nextDish = Dish::where('id', '>', $dish->id)->orderBy('id')->first();
+        return view('admin.dishes.show', compact('dish', 'previousDish', 'nextDish'));
     }
 
     /**
@@ -108,6 +111,8 @@ class DishController extends Controller
      */
     public function destroy(Dish $dish)
     {
-        //
+        $dish->delete();
+
+        return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been deleted");
     }
 }
