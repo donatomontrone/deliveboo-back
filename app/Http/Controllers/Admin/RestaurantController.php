@@ -4,10 +4,22 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
+use App\Models\Type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class RestaurantController extends Controller
 {
+    protected $rules = [
+        'name' => 'required|min:3|max:100|string',
+        'address' => 'required|min:6|max:255|string',
+        'VAT' => 'required|size:11|unique:restaurants',
+        'img_path' => 'required|image|max:400',
+        'types' => 'array|exists:types,id|nullable'
+    ];
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +27,9 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        //
+        $restaurants = Restaurant::all();
+
+        return view('admin.restaurants.index', compact('restaurants'));
     }
 
     /**
@@ -23,9 +37,10 @@ class RestaurantController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Restaurant $restaurant)
     {
-        //
+        $types = Type::all();
+        return view('admin.restaurants.create', compact('restaurant', 'types'));
     }
 
     /**
@@ -36,7 +51,15 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate($this->rules);
+        $data['slug'] = Str::slug($data['name']);
+        $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
+        $newRestaurant = new Restaurant();
+        $newRestaurant->fill($data);
+        $newRestaurant->save();
+        $newRestaurant->types()->sync($data['types'] ?? []);
+
+        return redirect()->route('admin.restaurants.show', $newRestaurant->slug)->with('info-message', "'$newRestaurant->name' was created successfully!")->with('alert', 'success');
     }
 
     /**
@@ -47,7 +70,7 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        //
+        return view('admin.restaurants.show', compact('restaurant'));
     }
 
     /**

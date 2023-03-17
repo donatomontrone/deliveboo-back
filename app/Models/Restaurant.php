@@ -9,6 +9,13 @@ class Restaurant extends Model
 {
     use HasFactory;
 
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+
+    protected $fillable = ['name', 'slug', 'address', 'VAT', 'img_path'];
+
     public function user()
     {
         return $this->belongsTo(User::class);
