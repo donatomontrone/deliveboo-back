@@ -3,11 +3,33 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Dish;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
 
 class DishController extends Controller
 {
+    /**
+     * Validation Rules
+     * Regole di validazione
+     * 
+     */
+    protected $rules =
+    [
+        'name' => ['required', 'string', 'min:3', 'max:40'],
+        'description' => ['required', 'string', 'min:5'],
+        'ingredients' => ['required', 'string', 'min:2', 'max:255'],
+        'price' => ['required', 'numeric'],
+        'category_id' => 'required|exists:categories,id'
+        // 'is_visible' => ['required']
+    ];
+
+    protected $messages = [];
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +37,9 @@ class DishController extends Controller
      */
     public function index()
     {
-        //
+        $dishes = Dish::all();
+        $restaurant = Auth::user()->restaurant->id;
+        return view('admin.dishes.index', compact('dishes', 'restaurant'));
     }
 
     /**
@@ -23,9 +47,10 @@ class DishController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Dish $dish)
     {
-        //
+        $categories = Category::all();
+        return view('admin.dishes.create', compact('dish', 'categories'));
     }
 
     /**
@@ -36,7 +61,13 @@ class DishController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate($this->rules);
+        $data['slug'] = Str::slug($data['name']);
+        $data['restaurant_id'] = Auth::user()->restaurant->id;
+        $newDish = new Dish();
+        $newDish->fill($data);
+        $newDish->save();
+        return redirect()->route('admin.dishes.index');
     }
 
     /**
@@ -47,7 +78,9 @@ class DishController extends Controller
      */
     public function show(Dish $dish)
     {
-        //
+        $previousDish = Dish::where('id', '<', $dish->id)->orderBy('id', 'DESC')->first();
+        $nextDish = Dish::where('id', '>', $dish->id)->orderBy('id')->first();
+        return view('admin.dishes.show', compact('dish', 'previousDish', 'nextDish'));
     }
 
     /**
@@ -58,7 +91,7 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
-        //
+        return view('admin.dishes.edit', compact('dish'));
     }
 
     /**
@@ -70,7 +103,10 @@ class DishController extends Controller
      */
     public function update(Request $request, Dish $dish)
     {
-        //
+        $dataValidate = $request->validate($this->rules, $this->messages);
+        $dish->update($dataValidate);
+
+        return redirect()->route('admin.dishes.show', $dish);
     }
 
     /**
@@ -81,6 +117,8 @@ class DishController extends Controller
      */
     public function destroy(Dish $dish)
     {
-        //
+        $dish->delete();
+
+        return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been deleted");
     }
 }

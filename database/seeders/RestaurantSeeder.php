@@ -75,6 +75,7 @@ class RestaurantSeeder extends Seeder
         ];
         foreach ($restaurants as $restaurant) {
             $newRestaurant = new Restaurant();
+            $newRestaurant->user_id = User::inRandomOrder()->first()->id;
             $newRestaurant->name = $restaurant['name'];
             $newRestaurant->slug = Str::slug($newRestaurant->name);
             $newRestaurant->address = $restaurant['address'];
