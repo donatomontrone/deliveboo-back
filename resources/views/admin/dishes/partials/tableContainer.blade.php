@@ -82,6 +82,7 @@ $columns=[
       <tbody>
         @foreach ($dishes as $dish)
           <tr>
+            {{-- @dump($dish->restaurant->name) --}}
               <th scope="row">{{$dish->id}}</th>
               <td>{{$dish->restaurant->name}}</td>
               <td>{{$dish->category->title}}</td>
