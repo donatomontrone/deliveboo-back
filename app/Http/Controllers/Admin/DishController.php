@@ -67,7 +67,7 @@ class DishController extends Controller
         $newDish = new Dish();
         $newDish->fill($data);
         $newDish->save();
-        return redirect()->route('admin.dishes.index');
+        return redirect()->route('admin.dishes.index')->with('message-create', "$newDish->name has been create");
     }
 
     /**
