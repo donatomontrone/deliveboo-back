@@ -157,8 +157,10 @@ class DishController extends Controller
      */
     public function destroy(Dish $dish)
     {
-        if (!$dish->isAnUrl()) {
-            Storage::delete($dish->img_path);
+        if ($dish->img_path) {
+            if (!$dish->isAnUrl()) {
+                Storage::delete($dish->img_path);
+            }
         }
         $dish->delete();
         return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been deleted")->with('alert', 'danger');;
