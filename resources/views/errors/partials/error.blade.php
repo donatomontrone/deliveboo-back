@@ -14,12 +14,12 @@
                     </g>
                 </svg>
             </div>
-            <h1>{{$code}}</h1>
-            <h5 class="mb-4">{{ $info_message }}</h5>
+            <div class="error mx-auto" data-text="{{$code}}">{{$code}}</div>
+            <h3 class="mb-4 text-black">{{ $info_message }}</h3>
             @guest
-            <p><a class="text-success" href="{{route('login')}}">Login</a></p>
+            <h5><a class="text-success" href="{{route('login')}}"><i class="fa-solid fa-arrow-left"></i>  Indietro</a></h5>
             @else
-            <p><a class="text-success" href="{{route('admin.dashboard')}}">Dashboard</a></p>
+            <h5><a class="text-success" href="{{route('admin.dashboard')}}"><i class="fa-solid fa-arrow-left"></i>  Dashboard</a></h5>
             @endguest
 
         </div>
