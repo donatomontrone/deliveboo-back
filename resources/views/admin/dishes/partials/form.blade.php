@@ -1,68 +1,112 @@
-<form action="{{ route($routeName, $dish) }}" method="POST" enctype="multipart/form-data" class="py-3">
-    @csrf
-    @method($method)
-    <div class="card px-5 py-3 mb-3">
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dishes List') }}</div>
 
-        <div class="form-outline w-25 mb-3">
-            <label for="name" class="form-label @error('name') is-invalid @enderror">name</label>
-            <input type="text" class="form-control" id="name" required minlength="3" maxlength="40" placeholder="Insert name of dish" maxlength="40" name="name" value="{{old('name', $dish->name)}}">
-            {{--inserisco l'errore sotto al singolo input--}}  
-            @error('name')
-                <div class="invalid-feedback px-2">
-                    <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
+                <div class="card-body">
+                    <form action="{{ route($routeName, $dish) }}" method="POST" enctype="multipart/form-data" class="py-3">
+                        @csrf
+                        @method($method)
+                    
+                        <div class="mb-4 row">
+                            <label for="dishName" class="col-md-4 col-form-label text-md-right">Name &ast;</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="dishName" required minlength="3" maxlength="40" placeholder="Insert name of dish" maxlength="40" name="name" value="{{old('name', $dish->name)}}">
+                                {{--inserisco l'errore sotto al singolo input--}}  
+                                @error('name')
+                                    <div class="invalid-feedback px-2">
+                                        <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
+                                    </div>
+                                @enderror
+                            </div>       
+                        </div>
+
+                        <div class="mb-4 row">
+                            <label for="dishImg" class="col-md-4 col-form-label text-md-right">{{ __('Dish image') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="dishImg" type="file" class="form-control @error('img_path') is-invalid @enderror" name="img_path" value="{{ old('img_path') }}" required placeholder="Insert the image of dish">
+    
+                                @error('img_path')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="mb-4 row">
+                            <label for="dishName" class="col-md-4 col-form-label text-md-right">Type &ast;</label>
+                            <div class="col-md-6 ">
+                                <select class="form-select" name="category_id" id="category-select" required >
+                                    @foreach ($categories as $category)
+                                    <option value="{{$category->id}}" {{ old('category_id', $category->category_id) ==  $category->id ? 'selected' : '' }}> 
+                                        {{ $category->title }}
+                                    </option>
+                                    @endforeach 
+                                </select>    
+                            </div>
+                        </div>
+
+                        <div class="mb-4 row">
+                            <label for="dishDescription" class="col-md-4 col-form-label text-md-right">Description</label>
+                            <div class="col-md-6">
+                                <textarea name="description" minlength="5" id="dishDescription" placeholder="Insert description" class="form-control">{{old('description', $dish->description)}}</textarea>               
+                                @error('description')
+                                    <div class="invalid-feedback px-2">
+                                        <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
+                                    </div>
+                                @enderror           
+                            </div>       
+                        </div>
+
+                        <div class="mb-4 row">
+                            <label for="dishIngredients" class="col-md-4 col-form-label text-md-right">Ingredients &ast;</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="dishIngredients" required minlength="2" maxlength="255" placeholder="Insert all ingredients" name="ingredients" value="{{old('ingredients', $dish->ingredients)}}">               
+                                @error('ingredients')
+                                    <div class="invalid-feedback px-2">
+                                        <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
+                                    </div>
+                                @enderror                
+                            </div>       
+                        </div>
+
+                        <div class="mb-4 row">
+                            <label for="dishPrice" class="col-md-4 col-form-label text-md-right">Price</label>
+                            <div class="col-md-6">
+                                <input step=".01" type="number" min="0" max="999.99" maxlength="5"  class="form-control" required id="dishPrice" placeholder="Insert price of the dish" name="price" value="{{old('price', $dish->price)}}">
+                                @error('price')
+                                    <div class="invalid-feedback px-2">
+                                        <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
+                                    </div>
+                                @enderror                
+                            </div>       
+                        </div>
+
+                        <div class="mb-4 row">
+                            <div class="col-md-3">
+                                <label for="dishVisible">Visible</label class='col-form-label'>
+                                <div class="col-md-6">
+                                    <input type="radio" id="dishVisible" name="is_visible" value="1" required @checked (old('is_visible', $dish->is_visible))/>    
+                                </div>      
+                            </div> 
+                            <div class="col-md-3">
+                                <label for="dish-notVisible" class="col-form-label">Not Visible</label>
+                                <div class="col-md-6">
+                                    <input type="radio" id="not_visible" name="is_visible" value="0" required @checked (!old('is_visible', $dish->is_visible))>
+                                </div>     
+                            </div>
+                        </div>
+
+                        <div class="mb-4 row mb-0">
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">Invia</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            @enderror       
-        </div>
-
-        <div class="col-12 mb-3">
-            <div class="form-check form-check-inline">
-                <select class="form-select" name="category_id" id="category-select" required >
-                    @foreach ($categories as $category)
-                    <option value="{{$category->id}}" {{ old('category_id', $category->category_id) ==  $category->id ? 'selected' : '' }}> 
-                        {{ $category->title }}
-                    </option>
-                    @endforeach 
-                </select>
             </div>
         </div>
-
-        <div class="form-outline w-100 mb-3">
-            <label for="description" class="form-label @error('description') is-invalid @enderror">Description</label>
-            <textarea name="description" minlength="5" id="description" placeholder="Insert description" class="form-control">{{old('description', $dish->description)}}</textarea>               
-            @error('description')
-                <div class="invalid-feedback px-2">
-                    <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
-                </div>
-            @enderror               
-        </div>
-
-        <div class="form-outline w-100 mb-3">
-            <label for="ingredients" class="form-label @error('ingredients') is-invalid @enderror">Ingredients</label>
-            <input type="text" class="form-control" id="ingredients" required minlength="2" maxlength="255" placeholder="Insert all ingredients" name="ingredients" value="{{old('ingredients', $dish->ingredients)}}">               
-            @error('ingredients')
-                <div class="invalid-feedback px-2">
-                    <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
-                </div>
-            @enderror               
-        </div>
-
-        <div class="form-outline w-25 mb-3">
-            <label for="price" class="form-label @error('price') is-invalid @enderror">Price</label>
-            <input step=".01" type="number" min="0.99" max="999.99" maxlength="5"  class="form-control" required id="price" placeholder="Insert price of the dish" name="price" value="{{old('price', $dish->price)}}">
-            @error('price')
-                <div class="invalid-feedback px-2">
-                    <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
-                </div>
-            @enderror               
-        </div>
-
-        <div class="form-outline w-25 mb-3">
-            <input type="radio" id="visible" name="is_visible" value="1" required @checked (old('is_visible', $dish->is_visible))/>
-            <label>Visible</label>
-            <input type="radio" id="not_visible" name="is_visible" value="0" required @checked (!old('is_visible', $dish->is_visible))>
-            <label>Not Visible</label><br>
-        </div>
-        <button type="submit" class="btn btn-primary">Invia</button>
     </div>
-
-</form>
+</div>
