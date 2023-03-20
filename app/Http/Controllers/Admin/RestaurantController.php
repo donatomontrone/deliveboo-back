@@ -7,6 +7,7 @@ use App\Models\Restaurant;
 use App\Models\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -27,9 +28,8 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        $restaurants = Restaurant::all();
-
-        return view('admin.restaurants.index', compact('restaurants'));
+        $restaurant = Restaurant::where('user_id', Auth::user()->id)->first();
+        return view('admin.dashboard', compact('restaurant'));
     }
 
     /**
@@ -39,6 +39,9 @@ class RestaurantController extends Controller
      */
     public function create(Restaurant $restaurant)
     {
+        if (isset(Auth::user()->restaurant->id)) {
+            abort(403, 'Access not allowed');
+        }
         $types = Type::all();
         return view('admin.restaurants.create', compact('restaurant', 'types'));
     }
@@ -53,14 +56,20 @@ class RestaurantController extends Controller
     {
         $data = $request->validate($this->rules);
         $data['slug'] = Str::slug($data['name']);
-        $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
         $data['user_id'] = Auth::user()->id;
-        $newRestaurant = new Restaurant();
-        $newRestaurant->fill($data);
-        $newRestaurant->save();
-        $newRestaurant->types()->sync($data['types'] ?? []);
+        if (DB::table('restaurants')->where('slug', $data['slug'])->first()) {
+            abort(409, 'The slug is already registered');
+        } else {
+            $data['slug'] = Str::slug($data['name']);
+            $data['user_id'] = Auth::user()->id;
+            $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
+            $newRestaurant = new Restaurant();
+            $newRestaurant->fill($data);
+            $newRestaurant->save();
+            $newRestaurant->types()->sync($data['types'] ?? []);
+        }
 
-        return redirect()->route('admin.restaurants.show', $newRestaurant->slug)->with('info-message', "'$newRestaurant->name' was created successfully!")->with('alert', 'success');
+        return redirect()->route('admin.dashboard', $newRestaurant->slug)->with('info-message', "'$newRestaurant->name' was created successfully!")->with('alert', 'success');
     }
 
     /**
@@ -71,7 +80,7 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        return view('admin.dashboard', compact('restaurant'));
+        // 
     }
 
     /**

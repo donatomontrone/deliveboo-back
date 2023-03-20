@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('popup')
+    @vite(['resources/js/popupOnDelete.js'])
+@endsection
+
 @section('content')
 <article class="card text-center">
     <div class="card-header">
@@ -27,10 +31,10 @@ dishs        alt="{{ $dish->title }} image" class="img-fluid">
     <div class="my_btn-container d-flex justify-content-center">
         <a href="{{route('admin.dishes.edit' , $dish->slug)}}" class="my_btn btn btn-dark">Edit</a>
 
-        <form action="{{route('admin.dishes.destroy' , $dish->slug)}}" method="POST" data-form-destroy data-element-name = '{{$dish->title}}' >
+        <form class="delete" action="{{route('admin.dishes.destroy' , $dish->slug)}}" method="POST" data-form-destroy data-element-name = '{{$dish->title}}' >
             @csrf
             @method('DELETE')
-            <button type="submit" class="my_btn btn btn-danger">Delete</button>
+            <button type="submit" class="my_btn btn btn-danger" title="delete">Delete</button>
         </form>
     </div>
 

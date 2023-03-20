@@ -8,6 +8,8 @@ use App\Models\Dish;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
@@ -28,8 +30,6 @@ class DishController extends Controller
         'is_visible' => ['required']
     ];
 
-    protected $messages = [];
-
     /**
      * Display a listing of the resource.
      *
@@ -37,9 +37,13 @@ class DishController extends Controller
      */
     public function index()
     {
-        $restaurant = Auth::user()->restaurant->id;
-        $dishes = Dish::where('restaurant_id',  $restaurant)->get();
-        return view('admin.dishes.index', compact('dishes', 'restaurant'));
+        if (Auth::user()->restaurant) {
+            $restaurant = Auth::user()->restaurant->id;
+            $dishes = Dish::where('restaurant_id',  $restaurant)->get();
+            return view('admin.dishes.index', compact('dishes', 'restaurant'));
+        } else {
+            abort(404, 'Page not found');
+        }
     }
 
     /**
@@ -49,6 +53,10 @@ class DishController extends Controller
      */
     public function create(Dish $dish)
     {
+
+        if (!Auth::user()->restaurant) {
+            abort(403, 'Access not allowed');
+        }
         $categories = Category::all();
         return view('admin.dishes.create', compact('dish', 'categories'));
     }
@@ -67,9 +75,8 @@ class DishController extends Controller
         $newDish = new Dish();
         $newDish->fill($data);
         $newDish->save();
-        return redirect()->route('admin.dishes.index');
+        return redirect()->route('admin.dishes.index')->with('message-create', "$newDish->name has been create");
     }
-
     /**
      * Display the specified resource.
      *
@@ -78,9 +85,16 @@ class DishController extends Controller
      */
     public function show(Dish $dish)
     {
-        $previousDish = Dish::where('id', '<', $dish->id)->orderBy('id', 'DESC')->first();
-        $nextDish = Dish::where('id', '>', $dish->id)->orderBy('id')->first();
-        return view('admin.dishes.show', compact('dish', 'previousDish', 'nextDish'));
+
+        if (!Auth::user()->restaurant) {
+            abort(403, 'Access not allowed');
+        }
+        $restaurant = Auth::user()->restaurant->id;
+        if ($restaurant !== $dish->restaurant_id) {
+            abort(403, 'Access not allowed');
+        }
+
+        return view('admin.dishes.show', compact('dish'));
     }
 
     /**
@@ -91,6 +105,14 @@ class DishController extends Controller
      */
     public function edit(Dish $dish)
     {
+        if (!Auth::user()->restaurant) {
+            abort(403, 'Access not allowed');
+        }
+        $restaurant = Auth::user()->restaurant->id;
+        if ($restaurant !== $dish->restaurant_id) {
+            abort(403, 'Access not allowed');
+        }
+
         $categories = Category::all();
         return view('admin.dishes.edit', compact('dish', 'categories'));
     }
@@ -104,10 +126,27 @@ class DishController extends Controller
      */
     public function update(Request $request, Dish $dish)
     {
-        $dataValidate = $request->validate($this->rules, $this->messages);
-        $dish->update($dataValidate);
+        $data = $request->validate($this->rules);
+        $data['slug'] = Str::slug($data['name']);
+        $data['restaurant_id'] = Auth::user()->restaurant->id;
 
-        return redirect()->route('admin.dishes.show', $dish);
+        //  Se nella tabella piatti è già presente lo slug
+        //  allora abort 'vedere che codice inserire';
+        //  altrimenti salvare il nuovo piatto
+        if (DB::table('dishes')->where('slug', $data['slug'])->first()) {
+            abort(409, 'the slug is already registered');
+        } else {
+            $data['slug'] =  Str::slug($data['name']);
+            $data['restaurant_id'] = Auth::user()->restaurant->id;
+            if ($request->hasFile('img_path')) {
+                if (!$dish->isAnUrl()) {
+                    Storage::delete($dish->img_path);
+                }
+                $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
+            }
+            $dish->update($data);
+            return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been successfully updated")->with('alert', 'success');
+        }
     }
 
     /**
@@ -118,8 +157,12 @@ class DishController extends Controller
      */
     public function destroy(Dish $dish)
     {
+        if ($dish->img_path) {
+            if (!$dish->isAnUrl()) {
+                Storage::delete($dish->img_path);
+            }
+        }
         $dish->delete();
-
-        return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been deleted");
+        return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been deleted")->with('alert', 'danger');;
     }
 }

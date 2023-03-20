@@ -34,8 +34,26 @@ $columns=[
 ];    
 @endphp
 
+@section('popup')
+  @vite(['resources/js/popupOnDelete.js'])
+@endsection
+
 @if (session('message'))
-    <span>{{session('message')}}</span>
+    <div class="row">
+      <div class="alert alert-warning d-flex justify-content-between" role="alert">
+        <strong>{{session('message')}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
+@endif
+
+@if (session('message-create'))
+    <div class="row">
+      <div class="alert alert-success d-flex justify-content-between" role="alert">
+        <strong>{{session('message-create')}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
 @endif
 
 <section class="card">
@@ -66,9 +84,6 @@ $columns=[
   </div>
 
   <div class="card-body">
-    @if (session('message'))
-    <div>{{session('message')}}</div>
-    @endif
     <div class="container-fluid">
       <table class="table table-hover">
         <thead class="table-dark">
@@ -104,10 +119,10 @@ $columns=[
                   {{-- @if ($dishesRoute === 'index') --}}
                     <a href="{{route('admin.dishes.edit' , $dish->slug)}}" class="my_btn btn btn-dark">Edit</a>
   
-                    <form action="{{route('admin.dishes.destroy' , $dish->slug)}}" method="POST" data-form-destroy data-element-name = '{{$dish->title}}' >
+                    <form class="delete" action="{{route('admin.dishes.destroy' , $dish->slug)}}" method="POST" data-form-destroy data-element-name = '{{$dish->title}}' >
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="my_btn btn btn-danger">Delete</button>
+                        <button type="submit" class="my_btn btn btn-danger" title="delete">Delete</button>
                     </form>
                   {{-- @else
                       <form action="{{route('admin.dishes.forceDelete' , $dish->slug)}}" method="POST" >
