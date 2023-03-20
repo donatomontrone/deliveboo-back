@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Dish extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'restaurant_id', 'category_id', 'slug', 'description', 'ingredients', 'price', 'is_visible'];
+    protected $fillable = ['name', 'restaurant_id', 'category_id', 'slug', 'img_path', 'description', 'ingredients', 'price', 'is_visible'];
 
     public function getRouteKeyName(): string
     {
@@ -33,5 +33,10 @@ class Dish extends Model
     public function restaurant()
     {
         return $this->belongsTo(Restaurant::class);
+    }
+
+    public function isAnUrl()
+    {
+        return filter_var($this->img_path, FILTER_VALIDATE_URL);
     }
 }
