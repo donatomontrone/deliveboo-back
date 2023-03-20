@@ -62,6 +62,7 @@
             <input type="radio" id="not_visible" name="is_visible" value="0" required @checked (!old('is_visible', $dish->is_visible))>
             <label>Not Visible</label><br>
         </div>
+        
         <button type="submit" class="btn btn-primary">Invia</button>
     </div>
 

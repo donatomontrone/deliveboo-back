@@ -72,23 +72,10 @@ class DishController extends Controller
         $data = $request->validate($this->rules);
         $data['slug'] = Str::slug($data['name']);
         $data['restaurant_id'] = Auth::user()->restaurant->id;
-
-        //  Se nella tabella piatti è già presente lo slug
-        //  allora abort 'vedere che codice inserire'->409;
-        //  altrimenti salvare il nuovo piatto
-        if (DB::table('dishes')->where('slug', $data['slug'])->first()) {
-            abort(409, 'The slug is already registered');
-        } else {
-            $data['slug'] =  Str::slug($data['name']);
-            $data['restaurant_id'] = Auth::user()->restaurant->id;
-            if ($request->hasFile('img_path')) {
-                $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
-            }
-            $newDish = new Dish();
-            $newDish->fill($data);
-            $newDish->save();
-            return redirect()->route('admin.dishes.index')->with('message', "$newDish->name has been created successfully")->with('alert', 'success');
-        }
+        $newDish = new Dish();
+        $newDish->fill($data);
+        $newDish->save();
+        return redirect()->route('admin.dishes.index')->with('message-create', "$newDish->name has been create");
     }
     /**
      * Display the specified resource.
