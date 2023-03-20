@@ -124,13 +124,13 @@ sup {
 }
 
 a {
-    color: #4e73df;
+    color: #2f2f30;
     text-decoration: none;
     background-color: transparent;
 }
 
 a:hover {
-    color: #224abe;
+    color: #22312d;
     text-decoration: underline;
 }
 
@@ -232,13 +232,13 @@ select {
     word-wrap: normal;
 }
 
-button,
+/* button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
     -webkit-appearance: button;
 }
-
+ */
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -295,7 +295,7 @@ progress {
 
 [type="search"] {
     outline-offset: -2px;
-    -webkit-appearance: none;
+   /*  -webkit-appearance: none; */
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -2596,7 +2596,7 @@ textarea.form-control.is-invalid {
 .btn {
     display: inline-block;
     font-weight: 400;
-    color: #858796;
+    color: #00ccbc;
     text-align: center;
     vertical-align: middle;
     -webkit-user-select: none;
@@ -2619,7 +2619,7 @@ textarea.form-control.is-invalid {
 }
 
 .btn:hover {
-    color: #858796;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -2644,22 +2644,22 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #4e73df;
-    border-color: #4e73df;
+    color: #ffffff;
+    background-color: #00ccbc;
+    border-color: #00ccbc;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #2e59d9;
-    border-color: #2653d4;
+    background-color: #00ccbc;
+    border-color: #00ccbc;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
     color: #fff;
-    background-color: #2e59d9;
-    border-color: #2653d4;
+    background-color: #00ccbc;
+    border-color: #00ccbc;
     box-shadow: 0 0 0 0.2rem rgba(105, 136, 228, 0.5);
 }
 
@@ -3922,8 +3922,8 @@ input[type="button"].btn-block {
     display: block;
     min-height: 1.5rem;
     padding-left: 1.5rem;
-    -webkit-print-color-adjust: exact;
-    color-adjust: exact;
+   /*  -webkit-print-color-adjust: exact; */
+    /* color-adjust: exact; */
 }
 
 .custom-control-inline {
@@ -12054,7 +12054,7 @@ a:focus {
 }
 
 .bg-login-image {
-    background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
+    background: url("https://source.unsplash.com/tjpV7yS1k_4/600x800");
     background-position: center;
     background-size: cover;
 }
@@ -12085,6 +12085,7 @@ form.user .btn-user {
     font-size: 0.8rem;
     border-radius: 10rem;
     padding: 0.75rem 1rem;
+    border: #00ccbc;
 }
 
 .btn-google {
