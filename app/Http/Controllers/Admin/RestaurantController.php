@@ -39,7 +39,7 @@ class RestaurantController extends Controller
      */
     public function create(Restaurant $restaurant)
     {
-        if (isset(Auth::user()->restaurant)) {
+        if (isset(Auth::user()->restaurant->id)) {
             abort(403, 'Access not allowed');
         }
         $types = Type::all();

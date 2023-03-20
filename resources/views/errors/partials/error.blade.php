@@ -15,8 +15,13 @@
                 </svg>
             </div>
             <h1>{{$code}}</h1>
-            <h5 class="mb-4">{{ $exception->getMessage() }}</h5>
+            <h5 class="mb-4">{{ $info_message }}</h5>
+            @guest
+            <p><a class="text-success" href="{{route('login')}}">Login</a></p>
+            @else
             <p><a class="text-success" href="{{route('admin.dashboard')}}">Dashboard</a></p>
+            @endguest
+
         </div>
     </div>
 </div>
