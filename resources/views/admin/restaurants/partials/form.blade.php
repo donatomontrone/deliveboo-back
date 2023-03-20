@@ -6,7 +6,7 @@
                     {{-- Restaurant Name --}}
         <div class="col-md">
             <div class="form-floating">
-                <input type="text" class="form-control  @error('name') is-invalid @enderror" id="nameInput" placeholder="restaurant name" value="{{ old('name', $restaurant->name) }}" name="name">
+                <input type="text" class="form-control  @error('name') is-invalid @enderror" required minlength="3" maxlength="100" id="nameInput" placeholder="restaurant name" value="{{ old('name', $restaurant->name) }}" name="name">
                 <label for="nameInput">Insert the restaurant name</label>
                 <div id="nameInput" class="invalid-feedback">
                 @error('name')
@@ -18,7 +18,7 @@
             {{-- Address --}}
             <div class="col-md">
                 <div class="form-floating">
-                    <input type="text" class="form-control  @error('address') is-invalid @enderror" id="addressInput" placeholder="restaurant address" value="{{ old('address', $restaurant->address) }}" name="address">
+                    <input type="text" class="form-control  @error('address') is-invalid @enderror" id="addressInput" placeholder="restaurant address" required minlength="6" maxlength="255" value="{{ old('address', $restaurant->address) }}" name="address">
                     <label for="addressInput">Insert the address</label>
                     <div id="addressInput" class="invalid-feedback">
                     @error('address')
@@ -32,7 +32,7 @@
         <div class="col-12">
             <div class="">
                 <label for="inputImgPath">Insert the image that should be displayed</label>
-                <input type="file" class="form-control @error('img_path') is-invalid @enderror" placeholder="restaurant image" id="inputImgPath" name="img_path" value="{{  old('img_path',  $restaurant->img_path) }}">
+                <input type="file" required max="400" class="form-control @error('img_path') is-invalid @enderror" placeholder="restaurant image" id="inputImgPath" name="img_path" value="{{  old('img_path',  $restaurant->img_path) }}">
                 <div id="inputImgPath" class="invalid-feedback">
                     @error('img_path')
                         {{$message}}
@@ -54,7 +54,7 @@
         {{-- VAT --}}
         <div class="col-md">
             <div class="form-floating">
-                <input type="text" class="form-control  @error('VAT') is-invalid @enderror" id="vatInput" placeholder="VAT" value="{{ old('VAT', $restaurant->VAT) }}" name="VAT" >
+                <input type="text" size="11" required class="form-control @error('VAT') is-invalid @enderror" id="vatInput" placeholder="VAT" value="{{ old('VAT', $restaurant->VAT) }}" name="VAT" >
                 <label for="vatInput">Insert your VAT</label>
                 <div id="vatInput" class="invalid-feedback">
                     @error('VAT')
