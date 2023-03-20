@@ -77,7 +77,7 @@ class DishController extends Controller
         //  allora abort 'vedere che codice inserire'->409;
         //  altrimenti salvare il nuovo piatto
         if (DB::table('dishes')->where('slug', $data['slug'])->first()) {
-            abort(409, 'the slug is already registered');
+            abort(409, 'The slug is already registered');
         } else {
             $data['slug'] =  Str::slug($data['name']);
             $data['restaurant_id'] = Auth::user()->restaurant->id;
@@ -87,7 +87,7 @@ class DishController extends Controller
             $newDish = new Dish();
             $newDish->fill($data);
             $newDish->save();
-            return redirect()->route('admin.dishes.index')->with('message', "$newDish->name has been created successfully");
+            return redirect()->route('admin.dishes.index')->with('message', "$newDish->name has been created successfully")->with('alert', 'success');
         }
     }
     /**
@@ -158,7 +158,7 @@ class DishController extends Controller
                 $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
             }
             $dish->update($data);
-            return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been successfully updated");
+            return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been successfully updated")->with('alert', 'success');
         }
     }
 
@@ -174,6 +174,6 @@ class DishController extends Controller
             Storage::delete($dish->img_path);
         }
         $dish->delete();
-        return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been deleted");
+        return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been deleted")->with('alert', 'danger');;
     }
 }
