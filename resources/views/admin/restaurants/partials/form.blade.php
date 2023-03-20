@@ -54,7 +54,7 @@
         {{-- VAT --}}
         <div class="col-md">
             <div class="form-floating">
-                <input type="text" size="11" required class="form-control @error('VAT') is-invalid @enderror" id="vatInput" placeholder="VAT" value="{{ old('VAT', $restaurant->VAT) }}" name="VAT" >
+                <input type="text" minlength="11" maxlength="11" required class="form-control @error('VAT') is-invalid @enderror" id="vatInput" placeholder="VAT" value="{{ old('VAT', $restaurant->VAT) }}" name="VAT" >
                 <label for="vatInput">Insert your VAT</label>
                 <div id="vatInput" class="invalid-feedback">
                     @error('VAT')
