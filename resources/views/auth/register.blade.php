@@ -56,12 +56,9 @@
                                     
                                 </div>
 
-
                                         <div class="text-center">
                                             <h1 class="h4 text-gray-900 mb-4 pt-4">Aggiungi il tuo ristorante</h1>
                                         </div>
-
-
 
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
@@ -83,7 +80,6 @@
                                         </div>
                                     </div>
 
-                              
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                             <input id="restaurantVat" type="text" class="form-control form-control-user @error('VAT') is-invalid @enderror" name="VAT" value="{{ old('VAT') }}" required minlength="11" maxlength="11" placeholder="Partita IVA" >
@@ -94,34 +90,37 @@
                                                 @enderror
                                     </div>
 
-                               
-
                                     <div class="col-sm-6">
 
                                         <div class="input_container form-control-user">
-                                            <input type="file" id="fileUpload">
+                                            <input type="file" id="fileUpload" class=" @error('img_path') is-invalid @enderror" name="img_path">
                                         </div>
-                                        
-{{--                                             <input id="restaurantImg" type="file" class="form-control form-control-user my-form-control-user @error('restaurant_img_path') is-invalid @enderror" name="restaurant_img_path" value="{{ old('restaurant_img_path') }}">
- --}}                                           
-                                                    @error('restaurant_img_path')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
+                                            @error('img_path')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
                                 </div>
 
+                                {{-- <input id="restaurantImg" type="file" class="form-control @error('restaurant_img_path') is-invalid @enderror" name="restaurant_img_path" value="{{ old('restaurant_img_path') }}">
+                                @error('restaurant_img_path')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong> --}}
 
 
                                         <div class="form-group col-lg-4 p-2">
 
                                             @foreach ($types as $type)
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="checkbox" id="typeCheck" value="{{$type->id}}" name="types[]">
+                                                    <input class="form-check-input @error('types') is-invalid @enderror" type="checkbox" id="typeCheck" value="{{$type->id}}" name="types[]">
                                                     <label class="form-check-label" for="typeCheck">{{$type->title}}</label>
                                                 </div>
+                                                @error('types')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
                                             @endforeach
-
                                         </div>
 
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
