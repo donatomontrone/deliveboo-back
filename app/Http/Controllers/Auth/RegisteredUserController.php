@@ -99,7 +99,7 @@ class RegisteredUserController extends Controller
                 Str::slug($request->restaurant_name) : (Str::slug($request->restaurant_name) . '-' . $user->id),
             'address' => $request->restaurant_address,
             'VAT' => $request->VAT,
-            'img_path' => Storage::put('imgs/', $request->restaurant_img_path),
+            'img_path' => ($request->hasFile('img_path')) ? Storage::put('imgs/', $request->restaurant_img_path) : null,
         ]);
 
 
