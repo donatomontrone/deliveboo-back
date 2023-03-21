@@ -53,14 +53,14 @@ class DishController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Dish $dish)
     {
 
         if (!Auth::user()->restaurant) {
             abort(403);
         }
         $categories = Category::all();
-        return view('admin.dishes.create', compact('categories'));
+        return view('admin.dishes.create', compact('dish', 'categories'));
     }
 
     /**
@@ -80,7 +80,7 @@ class DishController extends Controller
         $newDish->save();
         $newDish->slug = $newDish->slug . '-' . $newDish->id;
         $newDish->update();
-        return redirect()->route('admin.dishes.index')->with('message-create', "$newDish->name has been create");
+        return redirect()->route('admin.dishes.index')->with('message-create', "$newDish->name è stato creato correttamente!");
     }
     /**
      * Display the specified resource.
@@ -143,7 +143,7 @@ class DishController extends Controller
             $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
         }
         $dish->update($data);
-        return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been successfully updated")->with('alert', 'success');
+        return redirect()->route('admin.dishes.index')->with('message', "$dish->name è stato aggiornato correttamente!")->with('alert', 'success');
     }
 
     /**
@@ -160,6 +160,6 @@ class DishController extends Controller
             }
         }
         $dish->delete();
-        return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been deleted")->with('alert', 'danger');
+        return redirect()->route('admin.dishes.index')->with('message', "$dish->name è stato eliminato!")->with('alert', 'danger');
     }
 }

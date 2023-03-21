@@ -25,6 +25,10 @@ class CategorySeeder extends Seeder
                 'img_path' => 'https://www.freepnglogos.com/uploads/pasta-png/pasta-seasonings-product-poddar-foods-13.png'
             ],
             [
+                'title' => 'Secondi piatti',
+                'img_path' => 'https://www.freepnglogos.com/uploads/pasta-png/pasta-seasonings-product-poddar-foods-13.png'
+            ],
+            [
                 'title' => 'Pizza',
                 'img_path' => 'https://e7.pngegg.com/pngimages/606/648/png-clipart-california-style-pizza-sicilian-pizza-chrono-pizza-fast-food-pizza-menu-food-recipe-thumbnail.png'
             ],

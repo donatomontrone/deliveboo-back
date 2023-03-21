@@ -39,17 +39,50 @@ class RegisteredUserController extends Controller
     {
 
 
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'surname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'restaurant_name' => ['required', 'string', 'min:3', 'max:100'],
-            'restaurant_address' => ['required', 'string', 'min:6', 'max:255'],
-            'VAT' => ['required', 'size:11', 'unique:restaurants'],
-            'restaurant_img_path' => ['image', 'max:400'],
-            'types' => ['array', 'exists:types,id']
-        ]);
+        $request->validate(
+            [
+                'name' => ['required', 'string', 'max:255'],
+                'surname' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
+                'password' => ['required', 'confirmed', Rules\Password::defaults()],
+                'restaurant_name' => ['required', 'string', 'min:3', 'max:100'],
+                'restaurant_address' => ['required', 'string', 'min:6', 'max:255'],
+                'VAT' => ['required', 'size:11', 'unique:restaurants'],
+                'restaurant_img_path' => ['image', 'max:400'],
+                'types' => ['required', 'array', 'exists:types,id']
+            ],
+            [
+                'name.required' => 'Inserisci il tuo nome',
+                'name.string' => 'Il nome deve essere una stringa',
+                'name.max' => 'Il nome deve essere massimo di :max caratteri',
+                'surname.required' => 'Inserisci il tuo cognome',
+                'surname.string' => 'Il cognome deve essere una stringa',
+                'surname.max' => 'Il cognome deve essere massimo di :max caratteri',
+                'email.require' => 'Inserisci la tua mail',
+                'email.email' => 'Il campo inserito non è una mail valida',
+                'email.string' => 'L\'email deve essere una stringa',
+                'email.max' => 'La mail deve essere massimo di :max caratteri',
+                'email.unique' => 'La mail è già registrata nei nostri sistemi.',
+                'password.confirmed' => 'Conferma la tua password',
+                'password.required' => 'Inserisci obbligatoriamente la passoword',
+                'restaurant_name.required' => 'Inserisci il nome del tuo ristorante',
+                'restaurant_name.string' => 'Il nome del ristorante deve essere una stringa',
+                'restaurant_name.min' => 'Il nome del ristorante deve essere minimo di :min caratteri.',
+                'restaurant_name.max' => 'Il nome del ristorante deve essere masssimo di :max caratteri.',
+                'restaurant_address.required' => 'Inserisci l\'indirizzo del tuo ristorante',
+                'restaurant_address.string' => 'L\'indirizzo del ristorante deve essere una stringa',
+                'restaurant_address.min' => 'L\'indirizzo del ristorante deve essere minimo di :min caratteri.',
+                'restaurant_address.max' => 'L\'indirizzo del ristorante deve essere masssimo di :max caratteri.',
+                'VAT.required' => 'Inserisci la tua partita IVA.',
+                'VAT.size' => 'La partita iva deve essere di :size caratteri.',
+                'VAT.unique' => 'La partita IVA è già presente nei nostri sistemi',
+                'restaurant_img_path.image' => 'Il file inserito deve essere una immagine (jpg, jpeg, png, bmp, gif, svg, or webp)',
+                'restaurant_img_path.max' => 'La grandezza del file deve essere massimo di :max kb.',
+                'types.required' => 'Inserisci almeno un tipo di cucina per il tuo ristorante.',
+                'types.array' => 'Inserisci almeno un tipo di cucina per il tuo ristorante.',
+                'types.exists' => 'Il tipo di cucina inserito non è valido.'
+            ]
+        );
 
         $user = User::create([
             'name' => $request->name,

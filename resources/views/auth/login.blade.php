@@ -16,11 +16,11 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">{{ __('Login') }}</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Accedi</h1>
                                     </div>
                                     <form class="user" method="POST" action="{{ route('login') }}"> @csrf
                                         <div class="form-group">
-                                            <input id="email" type="email" class="form-control-user form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Enter Email Address...">
+                                            <input id="email" type="email" class="form-control-user form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Inserisci l'indirizzo e-mail...">
 
                                             @error('email')
                                                 <span class="invalid-feedback" role="alert">
@@ -41,13 +41,13 @@
                                             <div class="custom-control custom-checkbox small">
                                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                                 <label class="form-check-label" for="remember">
-                                                    {{ __('Remember Me') }}
+                                                    Ricordami
                                                 </label>
                                             </div>
                                         </div>
                                         
                                                 <button type="submit" class="btn-user btn-block bg-gradient-primary text-white">
-                                                    {{ __('Login') }}
+                                                    Accedi
                                                 </button>
                                         
                                     </form>
@@ -55,7 +55,7 @@
                                     <div class="text-center">
                                         @if (Route::has('password.request'))
                                                 <a class="small" href="{{ route('password.request') }}">
-                                                    {{ __('Forgot Password?') }}
+                                                    Password dimenticata?
                                                 </a>
                                                 @endif
                                     </div>

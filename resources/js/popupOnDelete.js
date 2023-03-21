@@ -19,14 +19,14 @@ deleteBtns.forEach((formDelete) => {
     formDelete.addEventListener('submit', function (event) {
         event.preventDefault();
         Swal.fire({
-            title: 'Do you want to delete this dish?',
+            title: 'Sei sicuro di voler eliminare il piatto?',
             text: "",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#00ccbc',
             cancelButtonColor: '#d33',
-            cancelButtonText: 'Cancel',
-            confirmButtonText: 'I confirm!'
+            cancelButtonText: '<i class="fa-solid fa-xmark"></i>',
+            confirmButtonText: 'Conferma'
         }).then((result) => {
             if (result.isConfirmed)
                 this.submit()

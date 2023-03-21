@@ -1,35 +1,35 @@
 @php
 $columns=[
     [
-      "name" => "id",
+      "name" => "ID",
     ],
 
     [
-      "name" => "restaurant_name",
+      "name" => "Nome Ristorante",
     ],
 
     [
-    "name" => "category_title",
+    "name" => "Categoria",
     ],
 
     [
-      "name" => "name",
+      "name" => "Piatto",
     ],
 
     [
-      "name" => "description",
+      "name" => "Descrizione",
     ],
 
     [
-      "name" => "ingredients",
+      "name" => "Ingredienti",
     ],
 
     [
-      "name" => "price",
+      "name" => "Prezzo",
     ],
 
     [
-      "name" => "is_visible",
+      "name" => "Visibilità",
     ],
 ];    
 @endphp
@@ -65,19 +65,8 @@ $columns=[
 
       <div class="col-6">
         <div class="text-end">
-            {{-- @if ($dishesRoute === 'index') --}}
-                {{-- @if ($numOfTrashedElements)
-                <a href="{{route('admin.dishes.trashed')}}" class="my_btn btn btn-outline-danger" title="{{$numOfTrashedElements>1 ? "$numOfTrashedElements trashed elements" : "1 trashed element"}}">Go to the the recycled bin</a>
-                @endif --}}
-                <a href="{{route('admin.dishes.create')}}" class="my_btn btn btn-outline-primary">Add a new dish +</a>
-            {{-- @else
-                <form class="d-inline-block" action="{{route('admin.dishes.emptyTrash')}}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button class="my_btn btn btn-outline-danger">Delete all</button>
-                </form>
-                <a href="{{route('admin.dishes.restoreAll')}}" class="my_btn btn btn-outline-primary">Restore All</a>
-            @endif --}}
+
+                <a href="{{route('admin.dishes.create')}}" class="my_btn btn btn-outline-primary">Aggiungi piatto <i class="fa-solid fa-plus"></i></a>
         </div>
       </div>
     </div>
@@ -91,14 +80,13 @@ $columns=[
             @foreach ($columns as $col)
             <th scope="col">{{$col['name']}}</a></th>
             @endforeach
-            <th scope="col">#Actions</th>
+            <th scope="col">Azioni</th>
           </tr>
         </thead>
     
         <tbody>
           @forelse ($dishes as $dish)
             <tr>
-              {{-- @dump($dish->restaurant->name) --}}
                 <th scope="row">{{$dish->id}}</th>
                 <td>{{$dish->restaurant->name}}</td>
                 <td>{{$dish->category->title}}</td>
@@ -115,28 +103,20 @@ $columns=[
                   @endforelse
                 </td> --}}
                 <td>
-                  <a href="{{route('admin.dishes.show' , $dish->slug)}}" class="my_btn btn btn-primary">Show</a>
+                  <a href="{{route('admin.dishes.show' , $dish->slug)}}" class="my_btn btn btn-primary">Mostra</a>
                   {{-- @if ($dishesRoute === 'index') --}}
-                    <a href="{{route('admin.dishes.edit' , $dish->slug)}}" class="my_btn btn btn-dark">Edit</a>
+                    <a href="{{route('admin.dishes.edit' , $dish->slug)}}" class="my_btn btn btn-dark">Modifica</a>
   
                     <form class="delete" action="{{route('admin.dishes.destroy' , $dish->slug)}}" method="POST" data-form-destroy data-element-name = '{{$dish->title}}' >
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="my_btn btn btn-danger" title="delete">Delete</button>
+                        <button type="submit" class="my_btn btn btn-danger" title="delete">Elimina</button>
                     </form>
-                  {{-- @else
-                      <form action="{{route('admin.dishes.forceDelete' , $dish->slug)}}" method="POST" >
-                          @csrf
-                          @method('DELETE')
-                          <button type="submit" class="my_btn btn btn-danger">Delete</button>
-                      </form>
-                      <a href="{{route('admin.dishes.restore' , $dish->slug)}}" class="my_btn btn btn-primary">Restore</a>
-                  @endif --}}
                 </td>
             </tr>
           @empty
           <tr>
-            <td colspan="9" class="text-center">No dishes to show </td>
+            <td colspan="9" class="text-center">Nessun piatto inserito</td>
         </tr>
           @endforelse
         </tbody>

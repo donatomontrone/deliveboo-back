@@ -29,12 +29,12 @@ dishs        alt="{{ $dish->title }} image" class="img-fluid">
     </div>
 
     <div class="my_btn-container d-flex justify-content-center">
-        <a href="{{route('admin.dishes.edit' , $dish->slug)}}" class="my_btn btn btn-dark">Edit</a>
+        <a href="{{route('admin.dishes.edit' , $dish->slug)}}" class="my_btn btn btn-dark">Modifica</a>
 
         <form class="delete" action="{{route('admin.dishes.destroy' , $dish->slug)}}" method="POST" data-form-destroy data-element-name = '{{$dish->title}}' >
             @csrf
             @method('DELETE')
-            <button type="submit" class="my_btn btn btn-danger" title="delete">Delete</button>
+            <button type="submit" class="my_btn btn btn-danger" title="delete">Elimina</button>
         </form>
     </div>
 
