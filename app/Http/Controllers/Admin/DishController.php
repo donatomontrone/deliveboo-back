@@ -23,9 +23,11 @@ class DishController extends Controller
     protected $rules =
     [
         'name' => ['required', 'string', 'min:3', 'max:40'],
+        'slug' => ['string', 'unique:dishes'],
         'description' => ['required', 'string', 'min:5'],
         'ingredients' => ['required', 'string', 'min:2', 'max:255'],
         'price' => ['required', 'numeric'],
+        'img_path' => ['image', 'max:400'],
         'category_id' => 'required|exists:categories,id',
         'is_visible' => ['required']
     ];
@@ -42,7 +44,7 @@ class DishController extends Controller
             $dishes = Dish::where('restaurant_id',  $restaurant)->get();
             return view('admin.dishes.index', compact('dishes', 'restaurant'));
         } else {
-            abort(404, 'Page not found');
+            abort(404);
         }
     }
 
@@ -51,14 +53,14 @@ class DishController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Dish $dish)
+    public function create()
     {
 
         if (!Auth::user()->restaurant) {
-            abort(403, 'Access not allowed');
+            abort(403);
         }
         $categories = Category::all();
-        return view('admin.dishes.create', compact('dish', 'categories'));
+        return view('admin.dishes.create', compact('categories'));
     }
 
     /**
@@ -72,9 +74,12 @@ class DishController extends Controller
         $data = $request->validate($this->rules);
         $data['slug'] = Str::slug($data['name']);
         $data['restaurant_id'] = Auth::user()->restaurant->id;
+        $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
         $newDish = new Dish();
         $newDish->fill($data);
         $newDish->save();
+        $newDish->slug = $newDish->slug . '-' . $newDish->id;
+        $newDish->update();
         return redirect()->route('admin.dishes.index')->with('message-create', "$newDish->name has been create");
     }
     /**
@@ -87,11 +92,11 @@ class DishController extends Controller
     {
 
         if (!Auth::user()->restaurant) {
-            abort(403, 'Access not allowed');
+            abort(403);
         }
         $restaurant = Auth::user()->restaurant->id;
         if ($restaurant !== $dish->restaurant_id) {
-            abort(403, 'Access not allowed');
+            abort(403);
         }
 
         return view('admin.dishes.show', compact('dish'));
@@ -106,11 +111,11 @@ class DishController extends Controller
     public function edit(Dish $dish)
     {
         if (!Auth::user()->restaurant) {
-            abort(403, 'Access not allowed');
+            abort(403);
         }
         $restaurant = Auth::user()->restaurant->id;
         if ($restaurant !== $dish->restaurant_id) {
-            abort(403, 'Access not allowed');
+            abort(403);
         }
 
         $categories = Category::all();
@@ -126,27 +131,19 @@ class DishController extends Controller
      */
     public function update(Request $request, Dish $dish)
     {
-        $data = $request->validate($this->rules);
-        $data['slug'] = Str::slug($data['name']);
+        $newRules = $this->rules;
+        $newRules['slug'] = ['string', 'unique', Rule::unique('dishes')->ignore($dish->id)];
+        $data = $request->validate($newRules);
         $data['restaurant_id'] = Auth::user()->restaurant->id;
-
-        //  Se nella tabella piatti è già presente lo slug
-        //  allora abort 'vedere che codice inserire';
-        //  altrimenti salvare il nuovo piatto
-        if (DB::table('dishes')->where('slug', $data['slug'])->first()) {
-            abort(409, 'the slug is already registered');
-        } else {
-            $data['slug'] =  Str::slug($data['name']);
-            $data['restaurant_id'] = Auth::user()->restaurant->id;
-            if ($request->hasFile('img_path')) {
-                if (!$dish->isAnUrl()) {
-                    Storage::delete($dish->img_path);
-                }
-                $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
+        $data['slug'] =  Str::slug($data['name']);
+        if ($request->hasFile('img_path')) {
+            if (!$dish->isAnUrl()) {
+                Storage::delete($dish->img_path);
             }
-            $dish->update($data);
-            return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been successfully updated")->with('alert', 'success');
+            $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
         }
+        $dish->update($data);
+        return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been successfully updated")->with('alert', 'success');
     }
 
     /**
@@ -163,6 +160,6 @@ class DishController extends Controller
             }
         }
         $dish->delete();
-        return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been deleted")->with('alert', 'danger');;
+        return redirect()->route('admin.dishes.index')->with('message', "$dish->name has been deleted")->with('alert', 'danger');
     }
 }

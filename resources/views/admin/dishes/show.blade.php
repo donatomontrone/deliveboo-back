@@ -10,14 +10,14 @@
             <span class="badge bg-dark">{{$dish->restaurant->name}}</span>
             <span class="badge bg-dark">{{$dish->category->title}}</span>
     </div>
-    {{-- <div class="card-image my-4">
-        @if ( $dish->isImageAUrl())
+    <div class="card-image my-4">
+        @if ( $dish->isAnUrl())
         <img src="{{ $dish->img_path }}"
         @else
         <img src="{{ asset("storage/$dish->img_path") }}"
         @endif
 dishs        alt="{{ $dish->title }} image" class="img-fluid">
-    </div> --}}
+    </div>
     {{-- @dump(Auth::user()->restaurant->name) --}}
     <div class="card-body">
         <h2 class="card-title">{{ $dish->name }}</h2>
@@ -38,26 +38,5 @@ dishs        alt="{{ $dish->title }} image" class="img-fluid">
         </form>
     </div>
 
-    <div class="my_btn-container d-flex justify-content-center">
-        @if (isset($previousDish))
-            <div class="col-2">
-                <a class="btn btn-outline-primary" href="{{route('admin.dishes.show',$previousDish->slug)}}">Previous</a>
-            </div>
-        @else
-            <div class="col-2">
-                <a class="btn btn-outline-secondary disabled" href="">Previous</a>
-            </div>
-        @endif
-
-        @if (isset($nextDish))
-            <div class="col-2">
-                <a class="btn btn-outline-primary" href="{{route('admin.dishes.show',$nextDish->slug)}}">Next</a>
-            </div>
-        @else
-            <div class="col-2">
-                <a class="btn btn-outline-secondary disabled" href="">Next</a>
-            </div>
-        @endif
-    </div>
 </article>
 @endsection
