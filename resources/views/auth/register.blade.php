@@ -97,15 +97,18 @@
                                
 
                                     <div class="col-sm-6">
-                                        <label class="custom-file-upload form-control form-control-user">
-                                            <input id="restaurantImg" type="file" class="form-control @error('restaurant_img_path') is-invalid @enderror" name="restaurant_img_path" value="{{ old('restaurant_img_path') }}">
-                                            <span class="add-image d-inline-block"><i class="fa-solid fa-circle-plus fa-2xl"></i> &nbsp; Seleziona immagine</span>
+
+                                        <div class="input_container form-control-user">
+                                            <input type="file" id="fileUpload">
+                                        </div>
+                                        
+{{--                                             <input id="restaurantImg" type="file" class="form-control form-control-user my-form-control-user @error('restaurant_img_path') is-invalid @enderror" name="restaurant_img_path" value="{{ old('restaurant_img_path') }}">
+ --}}                                           
                                                     @error('restaurant_img_path')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{ $message }}</strong>
                                                         </span>
                                                     @enderror
-                                        </label>
                                 </div>
 
 
