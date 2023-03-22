@@ -82,7 +82,7 @@
 
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input id="restaurantVat" type="text" class="form-control form-control-user @error('VAT') is-invalid @enderror" name="VAT" value="{{ old('VAT') }}" required minlength="11" maxlength="11" placeholder="Partita IVA" >
+                                            <input id="restaurantVat" type="text" class="form-control form-control-user @error('VAT') is-invalid @enderror" name="VAT" value="{{ old('VAT') }}" required pattern="[0-9]+" minlength="11" maxlength="11" placeholder="Partita IVA" >
                                                 @error('VAT')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
@@ -108,19 +108,18 @@
                                     <strong>{{ $message }}</strong> --}}
 
 
-                                        <div class="form-group col-lg-4 p-2">
-
+                                        <div class="form-group col-12 mt-4">
                                             @foreach ($types as $type)
-                                                <div class="form-check form-check-inline">
-                                                    <input class="form-check-input @error('types') is-invalid @enderror" type="checkbox" id="typeCheck" value="{{$type->id}}" name="types[]">
-                                                    <label class="form-check-label" for="typeCheck">{{$type->title}}</label>
+                                                <div class="form-check form-check-inline form-control-user p-1">
+                                                    <input class="form-check-input @error('types') is-invalid @enderror" type="checkbox" id="typeCheck-{{$type->id}}" value="{{$type->id}}" name="types[]">
+                                                    <label class="form-check-label" for="typeCheck-{{$type->id}}">{{$type->title}}</label>
                                                 </div>
-                                                @error('types')
+                                                @endforeach
+                                                    @error('types')
                                                     <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
+                                                        <strong>{{$message}}</strong>
                                                     </span>
-                                                @enderror
-                                            @endforeach
+                                                    @enderror
                                         </div>
 
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
