@@ -43,7 +43,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Menu
+                Naviga
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
