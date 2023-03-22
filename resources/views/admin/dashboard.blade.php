@@ -6,7 +6,7 @@
 
                     
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Ciao, {{Auth::user()->name }} {{Auth::user()->surname}}</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Ciao, {{Auth::user()->name . ' ' . Auth::user()->surname}}</h1>
                     </div>
 
                     

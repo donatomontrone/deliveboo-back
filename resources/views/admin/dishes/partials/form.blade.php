@@ -27,7 +27,6 @@
                                     
                                         <div class="col-sm-6">
                                             <select class="custom-select border-5" name="category_id" id="category-select" required >
-                                                <option value="e">Seleziona Categoria</option>
                                                 @foreach ($categories as $category)
                                                 <option value="{{$category->id}}" {{ old('category_id', $category->category_id) ==  $category->id ? 'selected' : '' }}> 
                                                     {{ $category->title }}
@@ -46,7 +45,7 @@
                                     
                             
                                 <div class="form-group">
-                                    <textarea name="description" minlength="5" id="dishDescription" placeholder="Insert description" class="form-control form-control-user rounded-5" rows="3">{{old('description', $dish->description)}}</textarea>               
+                                    <textarea name="description" minlength="5" id="dishDescription" placeholder="Descrizione" class="form-control form-control-user rounded-5" rows="3">{{old('description', $dish->description)}}</textarea>               
                                             @error('description')
                                                 <div class="invalid-feedback px-2">
                                                     <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
