@@ -12,8 +12,7 @@
                         <div class="mb-4 row">
                             <label for="dishName" class="col-md-4 col-form-label text-md-right">Nome &ast;</label>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" id="dishName" required minlength="3" maxlength="40" placeholder="Insert name of dish" maxlength="40" name="name" value="{{old('name', $dish->name)}}">
-                                {{--inserisco l'errore sotto al singolo input--}}  
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="dishName" required minlength="3" maxlength="40" placeholder="Insert name of dish" maxlength="40" name="name" value="{{old('name', $dish->name)}}">
                                 @error('name')
                                     <div class="invalid-feedback px-2">
                                         <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}

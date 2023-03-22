@@ -23,13 +23,17 @@ class DishController extends Controller
     protected $rules =
     [
         'name' => ['required', 'string', 'min:3', 'max:40'],
-        'slug' => ['string', 'unique:dishes'],
         'description' => ['required', 'string', 'min:5'],
         'ingredients' => ['required', 'string', 'min:2', 'max:255'],
         'price' => ['required', 'numeric'],
-        'img_path' => ['image', 'max:400'],
+        'img_path' => ['image', 'max:2048'],
         'category_id' => 'required|exists:categories,id',
         'is_visible' => ['required']
+    ];
+
+    protected $messages =
+    [
+        'name.require'
     ];
 
     /**
@@ -73,13 +77,18 @@ class DishController extends Controller
     {
         $data = $request->validate($this->rules);
         $data['slug'] = Str::slug($data['name']);
+        $num = 1;
+        while (DB::table('dishes')->where('slug', $data['slug'])->first()) {
+            $slug = Str::slug($data['name']) . '-' . $num;
+            $num++;
+            $data['slug'] = $slug;
+        }
         $data['restaurant_id'] = Auth::user()->restaurant->id;
         $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
         $newDish = new Dish();
         $newDish->fill($data);
         $newDish->save();
-        $newDish->slug = $newDish->slug . '-' . $newDish->id;
-        $newDish->update();
+
         return redirect()->route('admin.dishes.index')->with('message-create', "$newDish->name è stato creato correttamente!");
     }
     /**
@@ -132,10 +141,10 @@ class DishController extends Controller
     public function update(Request $request, Dish $dish)
     {
         $newRules = $this->rules;
-        $newRules['slug'] = ['string', 'unique', Rule::unique('dishes')->ignore($dish->id)];
+        $newRules['slug'] = ['string', Rule::unique('dishes')->ignore($dish->id)];
         $data = $request->validate($newRules);
         $data['restaurant_id'] = Auth::user()->restaurant->id;
-        $data['slug'] =  Str::slug($data['name']);
+        $data['slug'] =  Str::slug($data['name'] . "-$dish->id");
         if ($request->hasFile('img_path')) {
             if (!$dish->isAnUrl()) {
                 Storage::delete($dish->img_path);

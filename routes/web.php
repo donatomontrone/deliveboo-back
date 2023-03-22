@@ -5,7 +5,6 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DishController as AdminDishController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
-use App\Http\Controllers\Admin\RestaurantController as AdminRestaurantController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +23,6 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-        Route::resource('/restaurants', AdminRestaurantController::class);
         Route::resource('/dishes', AdminDishController::class);
         Route::resource('/orders', AdminOrderController::class, ['only' => ['index', 'show']]);
     });

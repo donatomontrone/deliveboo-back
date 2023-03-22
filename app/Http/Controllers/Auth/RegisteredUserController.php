@@ -44,12 +44,12 @@ class RegisteredUserController extends Controller
                 'name' => ['required', 'string', 'max:255'],
                 'surname' => ['required', 'string', 'max:255'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
-                'password' => ['required', 'confirmed', Rules\Password::defaults()],
+                'password' => ['required', 'confirmed', 'min:8'],
                 'restaurant_name' => ['required', 'string', 'min:3', 'max:100'],
                 'restaurant_address' => ['required', 'string', 'min:6', 'max:255'],
-                'VAT' => ['required', 'size:11', 'unique:restaurants'],
-                'restaurant_img_path' => ['image', 'max:1024'],
-                'types' => ['required', 'array', 'exists:types,id', 'in:1']
+                'VAT' => ['required', 'min:11', 'max:11', 'unique:restaurants,VAT'],
+                'img_path' => ['image', 'mimes:jpeg,png,jpg,svg', 'max:2048'],
+                'types' => ['required', 'array', 'exists:types,id',]
             ],
             [
                 'name.required' => 'Inserisci il tuo nome.',
@@ -64,6 +64,7 @@ class RegisteredUserController extends Controller
                 'email.max' => 'La mail deve essere massimo di :max caratteri.',
                 'email.unique' => 'La mail è già registrata nei nostri sistemi.',
                 'password.confirmed' => 'Conferma la tua password.',
+                'password.min' => 'La password deve essere lunga minimo :min caratteri.',
                 'password.required' => 'Inserisci obbligatoriamente la passoword.',
                 'restaurant_name.required' => 'Inserisci il nome del tuo ristorante.',
                 'restaurant_name.string' => 'Il nome del ristorante deve essere una stringa.',
@@ -74,14 +75,15 @@ class RegisteredUserController extends Controller
                 'restaurant_address.min' => 'L\'indirizzo del ristorante deve essere minimo di :min caratteri.',
                 'restaurant_address.max' => 'L\'indirizzo del ristorante deve essere masssimo di :max caratteri.',
                 'VAT.required' => 'Inserisci la tua partita IVA.',
-                'VAT.size' => 'La partita iva deve essere di :size caratteri.',
+                'VAT.min' => 'La partita IVA deve essere di :min caratteri.',
+                'VAT.max' => 'La partita IVA deve essere di :max caratteri.',
                 'VAT.unique' => 'La partita IVA è già presente nei nostri sistemi.',
-                'restaurant_img_path.image' => 'Il file inserito deve essere una immagine (jpg, jpeg, png, bmp, gif, svg, or webp).',
-                'restaurant_img_path.max' => 'La grandezza del file deve essere massimo di :max kb.',
+                'img_path.image' => 'Il file inserito deve essere una immagine (jpg, jpeg, png, bmp, gif, svg, or webp).',
+                'img_path.mimes' => 'Il file inserito deve essere una immagine (jpg, jpeg, png, bmp, gif, svg, or webp).',
+                'img_path.max' => 'La grandezza del file deve essere massimo di :max kb.',
                 'types.required' => 'Inserisci almeno un tipo di cucina per il tuo ristorante.',
                 'types.array' => 'Inserisci almeno un tipo di cucina per il tuo ristorante.',
-                'types.exists' => 'Il tipo di cucina inserito non è valido.',
-                'types.in' => 'Seleziona almeno un tipo di cucina.'
+                'types.exists' => 'Il tipo di cucina inserito non è valido.'
             ]
         );
 
@@ -100,7 +102,7 @@ class RegisteredUserController extends Controller
                 Str::slug($request->restaurant_name) : (Str::slug($request->restaurant_name) . '-' . $user->id),
             'address' => $request->restaurant_address,
             'VAT' => $request->VAT,
-            'img_path' => ($request->hasFile('img_path')) ? Storage::put('imgs/', $request->restaurant_img_path) : null,
+            'img_path' => ($request->hasFile('img_path')) ? Storage::put('imgs/', $request->img_path) : null,
         ]);
 
 
