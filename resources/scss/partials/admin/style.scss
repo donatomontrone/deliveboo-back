@@ -295,7 +295,7 @@ progress {
 
 [type="search"] {
     outline-offset: -2px;
-   /*  -webkit-appearance: none; */
+    /*  -webkit-appearance: none; */
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -3266,7 +3266,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-link:hover {
-    color: #224abe;
+    color: #5a5c69;
     text-decoration: underline;
 }
 
@@ -3572,7 +3572,7 @@ input[type="button"].btn-block {
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #4e73df;
+    background-color: #00CCBC;
 }
 
 .dropdown-item.disabled,
@@ -3922,7 +3922,7 @@ input[type="button"].btn-block {
     display: block;
     min-height: 1.5rem;
     padding-left: 1.5rem;
-   /*  -webkit-print-color-adjust: exact; */
+    /*  -webkit-print-color-adjust: exact; */
     /* color-adjust: exact; */
 }
 
@@ -12583,14 +12583,14 @@ input[type=file]::file-selector-button {
 
 input[type=file]::file-selector-button:hover {
     background-color: #00ccbc;
-    color:#ffffff ;
+    color: #ffffff;
     border-radius: 100px;
 }
 
 #fileUpload {
     position: absolute;
-    top:14px;
-    left:-66px;
+    top: 14px;
+    left: -66px;
     padding-left: 76px;
 }
 
