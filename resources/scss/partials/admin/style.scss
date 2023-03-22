@@ -26,7 +26,7 @@ body {
     line-height: 1.5;
     color: #858796;
     text-align: left;
-    background-color: #fff;
+    background-color: #f8f9fc;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2674,8 +2674,8 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled).active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #2653d4;
-    border-color: #244ec9;
+    background-color: #33C2B3;
+    border-color: #33C2B3;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -5356,7 +5356,7 @@ a.badge:focus {
 a.badge-primary:hover,
 a.badge-primary:focus {
     color: #fff;
-    background-color: #2653d4;
+    background-color: #33C2B3;
 }
 
 a.badge-primary:focus,
@@ -12592,4 +12592,10 @@ input[type=file]::file-selector-button:hover {
     top:14px;
     left:-66px;
     padding-left: 76px;
+}
+
+.form-check-input:checked {
+    background-color: #00CCBC;
+    border-color: #00CCBC;
+
 }

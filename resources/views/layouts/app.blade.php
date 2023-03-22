@@ -29,8 +29,12 @@
     <div id="app">
 
                 <div id="wrapper">
-                    
-                        @include('layouts.partials.sidebar')
+
+                        @guest
+                        @else
+                             @include('layouts.partials.sidebar')
+                        @endguest
+                       
 
 
                         <div id="content-wrapper">
