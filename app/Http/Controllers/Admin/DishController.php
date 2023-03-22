@@ -77,12 +77,16 @@ class DishController extends Controller
     {
         $data = $request->validate($this->rules);
         $data['slug'] = Str::slug($data['name']);
+        $num = 1;
+        while (DB::table('dishes')->where('slug', $data['slug'])->first()) {
+            $slug = Str::slug($data['name']) . '-' . $num;
+            $num++;
+            $data['slug'] = $slug;
+        }
         $data['restaurant_id'] = Auth::user()->restaurant->id;
         $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
         $newDish = new Dish();
         $newDish->fill($data);
-        //Inserire un numero randomico.
-        $newDish->slug = $newDish->slug . '-' . $newDish->id;
         $newDish->save();
 
         return redirect()->route('admin.dishes.index')->with('message-create', "$newDish->name è stato creato correttamente!");
