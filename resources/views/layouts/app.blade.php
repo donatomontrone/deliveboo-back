@@ -10,6 +10,11 @@
 
     <title>@yield('title', 'Deliveboo')</title>
 
+    
+    {{-- Boostrap Icons --}}
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
     {{-- CDN sweet alert --}}
 
     <link href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>

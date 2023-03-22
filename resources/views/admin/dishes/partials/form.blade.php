@@ -8,7 +8,11 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
+                                @if (Route::currentRouteName()=== 'admin.dishes.create')
                                 <h1 class="h4 text-gray-900 mb-4">Crea il tuo piatto</h1>
+                                @else
+                                <h1 class="h4 text-gray-900 mb-4">Modifica il tuo piatto</h1>
+                                @endif
                             </div>
                                 <form class="user" action="{{ route($routeName, $dish) }}" method="POST" enctype="multipart/form-data" class="py-3">
                                     @csrf
