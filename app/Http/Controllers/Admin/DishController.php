@@ -23,17 +23,34 @@ class DishController extends Controller
     protected $rules =
     [
         'name' => ['required', 'string', 'min:3', 'max:40'],
-        'description' => ['required', 'string', 'min:5'],
+        'description' => ['string', 'min:5'],
         'ingredients' => ['required', 'string', 'min:2', 'max:255'],
         'price' => ['required', 'numeric'],
-        'img_path' => ['image', 'max:2048'],
+        'img_path' => ['image', 'mimes:jpeg,png,jpg,svg', 'max:2048'],
         'category_id' => 'required|exists:categories,id',
         'is_visible' => ['required']
     ];
 
     protected $messages =
     [
-        'name.require'
+        'name.required' => 'Inserisci il nome del piatto.',
+        'name.string' => 'Il nome del piatto deve essere una stringa.',
+        'name.min' => 'Il nome del piatto deve essere minimo di :min caratteri.',
+        'name.max' => 'Il nome del piatto deve essere massimo di :max caratteri.',
+        'description.string' => 'La descrizione deve essere una stringa.',
+        'description.min' => 'La descrizione deve essere minimo di :min caratteri.',
+        'ingredients.required' => 'Inserisci gli ingredienti del piatto.',
+        'ingredients.string' => 'Gli ingredienti devono essere una stringa.',
+        'ingredients.min' => 'Questo campo deve contenere minimo :min caratteri.',
+        'ingredients.max' => 'Questo campo deve contenere massimo :max caratteri.',
+        'price.required' => 'Inserisci il prezzo unitario del piatto.',
+        'price.numeric' => 'Il prezzo deve essere numerico.',
+        'img_path.image' => 'Il file inserito deve essere una immagine (jpg, jpeg, png, bmp, gif, svg, or webp).',
+        'img_path.mimes' => 'Il file inserito deve essere una immagine (jpg, jpeg, png, bmp, gif, svg, or webp).',
+        'img_path.max' => 'La grandezza del file deve essere massimo di :max kb.',
+        'category_id.required' => 'Seleziona la categoria del piatto.',
+        'category_id.exists' => 'Inserisci una categoria valida.',
+        'is_visible.required' => 'Seleziona se il piatto è visibile o meno.',
     ];
 
     /**
@@ -144,7 +161,6 @@ class DishController extends Controller
         $newRules['slug'] = ['string', Rule::unique('dishes')->ignore($dish->id)];
         $data = $request->validate($newRules);
         $data['restaurant_id'] = Auth::user()->restaurant->id;
-        $data['slug'] =  Str::slug($data['name'] . "-$dish->id");
         if ($request->hasFile('img_path')) {
             if (!$dish->isAnUrl()) {
                 Storage::delete($dish->img_path);

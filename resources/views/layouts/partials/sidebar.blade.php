@@ -32,7 +32,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item {{ str_starts_with(Route::currentRouteName(), 'admin.dashboard') ? 'active' : '' }}">
                 <a class="nav-link" href="{{url('/') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -43,16 +43,17 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Menu
+                Naviga
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <li class="nav-item {{ str_starts_with(Route::currentRouteName(), 'admin.dishes') ? 'active' : '' }}">
                 <a class="nav-link" href="{{route('admin.dishes.index')}}">
                     <i class="fa-solid fa-burger"></i>
                     <span>Piatti</span>
                 </a>
-
+            </li>
+            <li class="nav-item {{ str_starts_with(Route::currentRouteName(), 'admin.orders') ? 'active' : '' }}">
                  <a class="nav-link" href="{{url('/') }}">
                     <i class="fa-solid fa-inbox"></i>
                     <span>Ordini</span>
@@ -61,7 +62,7 @@
 
            
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <li class="nav-item {{ str_starts_with(Route::currentRouteName(), 'admin.stats') ? 'active' : '' }}">
                 <a class="nav-link" href="{{url('/') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Statistiche</span></a>
