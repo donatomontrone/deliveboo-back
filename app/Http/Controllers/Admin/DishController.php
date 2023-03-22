@@ -144,7 +144,6 @@ class DishController extends Controller
         $newRules['slug'] = ['string', Rule::unique('dishes')->ignore($dish->id)];
         $data = $request->validate($newRules);
         $data['restaurant_id'] = Auth::user()->restaurant->id;
-        $data['slug'] =  Str::slug($data['name'] . "-$dish->id");
         if ($request->hasFile('img_path')) {
             if (!$dish->isAnUrl()) {
                 Storage::delete($dish->img_path);
