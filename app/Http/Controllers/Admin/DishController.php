@@ -171,4 +171,13 @@ class DishController extends Controller
         $dish->delete();
         return redirect()->route('admin.dishes.index')->with('message', "$dish->name è stato eliminato!")->with('alert', 'danger');
     }
+
+    public function enableToggle(Dish $dish)
+    {
+        $dish->is_visible = !$dish->is_visible;
+        $dish->save();
+
+        $message = ($dish->is_visible) ? "invisible" : "visible";
+        return redirect()->back()->with('alert-type', 'success')->with('alert-message', "$dish->is_visible:&nbsp;<b>$message</b>");
+    }
 }

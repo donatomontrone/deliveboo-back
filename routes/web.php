@@ -22,6 +22,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::prefix('admin')->name('admin.')->group(function () {
+        Route::patch('/{dish}/toggle', [AdminDishController::class, 'enableToggle'])->name('toggle');
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('/dishes', AdminDishController::class);
         Route::resource('/orders', AdminOrderController::class, ['only' => ['index', 'show']]);

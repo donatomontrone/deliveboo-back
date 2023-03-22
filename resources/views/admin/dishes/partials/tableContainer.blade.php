@@ -31,7 +31,7 @@ $columns=[
     [
       "name" => "Visibilità",
     ],
-];    
+];
 @endphp
 
 @section('popup')
@@ -41,7 +41,7 @@ $columns=[
 @if (session('message'))
     <div class="row">
       <div class="alert alert-warning d-flex justify-content-between" role="alert">
-        <strong>{{session('message')}}</strong> 
+        <strong>{{session('message')}}</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     </div>
@@ -50,7 +50,7 @@ $columns=[
 @if (session('message-create'))
     <div class="row">
       <div class="alert alert-success d-flex justify-content-between" role="alert">
-        <strong>{{session('message-create')}}</strong> 
+        <strong>{{session('message-create')}}</strong>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
     </div>
@@ -83,7 +83,7 @@ $columns=[
             <th scope="col">Azioni</th>
           </tr>
         </thead>
-    
+
         <tbody>
           @forelse ($dishes as $dish)
             <tr>
@@ -94,7 +94,15 @@ $columns=[
                 <td>{{$dish->description}}</td>
                 <td>{{$dish->ingredients}}</td>
                 <td>{{$dish->price}}&euro;</td>
-                <td>{{$dish->getABooleanFromNumber($dish->is_visible)}}</td>
+                <td>
+                  <form action="{{ route('admin.toggle', $dish->slug) }}" method="POST">
+                    @method('PATCH')
+                    @csrf
+                      <button class="btn" type="submit" title="{{$dish->getABooleanFromNumber($dish->is_visible) ? 'visible' : 'invisible' }}">
+                        <i class=" text-dark fa-solid fa-lg fa-eye{{$dish->is_visible ? '' : '-slash'}}"></i>
+                      </button>
+                  </form>
+                </td>
                 {{-- <td>
                   @forelse ($dish->technologies as $technology)
                   <div class="badge rounded rounded-pill" style="color:{{$technology->color}};background-color:{{$technology->bg_color}}">{{$technology->name}}</div>
@@ -106,7 +114,7 @@ $columns=[
                   <a href="{{route('admin.dishes.show' , $dish->slug)}}" class="my_btn btn btn-primary">Mostra</a>
                   {{-- @if ($dishesRoute === 'index') --}}
                     <a href="{{route('admin.dishes.edit' , $dish->slug)}}" class="my_btn btn btn-dark">Modifica</a>
-  
+
                     <form class="delete" action="{{route('admin.dishes.destroy' , $dish->slug)}}" method="POST" data-form-destroy data-element-name = '{{$dish->title}}' >
                         @csrf
                         @method('DELETE')
