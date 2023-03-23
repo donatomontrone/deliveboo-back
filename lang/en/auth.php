@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Le credenziali inseriti sono errate.',
+    'failed' => 'Le credenziali inserite sono errate.',
     'password' => 'La password non è corretta.',
     'throttle' => 'Troppi tentativi di accesso. Riprova tra :seconds secondi.',
 
