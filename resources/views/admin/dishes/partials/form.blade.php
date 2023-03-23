@@ -97,14 +97,14 @@
                                         <div class="col-sm-6">
                                                     
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" id="dishVisible" name="is_visible" value="1" required @checked (!old('is_visible', $dish->is_visible))>
+                                                        <input class="form-check-input" type="radio" id="dishVisible" name="is_visible" value="1" required @checked(old('is_visible', $dish->is_visible))>
                                                         <label class="form-check-label" for="dishVisible">
                                                             Visibile
                                                         </label>
                                                     </div>
 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" id="not_visible" name="is_visible" value="0" required @checked (!old('is_visible', $dish->is_visible))>
+                                                        <input class="form-check-input" type="radio" id="not_visible" name="is_visible" value="0" required @checked(!old('is_visible', $dish->is_visible))>
                                                         <label class="form-check-label" for="dish-notVisible">
                                                             Non Visibile
                                                         </label>
