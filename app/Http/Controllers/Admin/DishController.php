@@ -193,7 +193,7 @@ class DishController extends Controller
         $dish->is_visible = !$dish->is_visible;
         $dish->save();
 
-        $message = ($dish->is_visible) ? "invisible" : "visible";
-        return redirect()->back()->with('alert-type', 'success')->with('alert-message', "$dish->is_visible:&nbsp;<b>$message</b>");
+        $message = ($dish->is_visible) ? $dish->name . " è disponibile per l'acquisto!" : $dish->name . " è nascosto al pubblico!";
+        return redirect()->route('admin.dishes.index')->with('alert-type', 'success')->with('alert-message', "<b>$message</b>");
     }
 }
