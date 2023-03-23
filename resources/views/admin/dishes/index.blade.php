@@ -22,7 +22,7 @@
                     
 
 
-                        @section('popup')
+                        @section('scripts')
                             @vite(['resources/js/popupOnDelete.js'])
                         @endsection
 
