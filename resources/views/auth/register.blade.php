@@ -51,7 +51,12 @@
 
 
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input id="password-confirm" type="password" class="form-control form-control-user" name="password_confirmation" required autocomplete="new-password" placeholder="Conferma password &ast;">
+                                            <input id="password-confirm" type="password" class="form-control form-control-user @error('password_confirmation') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password" placeholder="Conferma password &ast;">
+                                            @error('password_confirmation')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @enderror
                                         </div>
                                     
                                 </div>
@@ -105,7 +110,7 @@
 
                                         <div class="form-group col-12 mt-4">
                                             <p class="small mb-1">Tipi di cucina &ast;</p>
-                                            <div class="card d-inline-block wrapper @error('types') is-invalid @enderror">
+                                            <div class="card d-inline-block rounded-5 p-2">
                                                 @foreach ($types as $type)
                                                     <div class="form-check form-check-inline form-control-user p-1">
                                                         <input class="form-check-input" type="checkbox" id="typeCheck-{{$type->id}}" value="{{$type->id}}" name="types[]" required>

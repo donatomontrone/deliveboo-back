@@ -8,7 +8,7 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                @if (Route::currentRouteName()=== 'admin.dishes.create')
+                                @if (Route::currentRouteName() === 'admin.dishes.create')
                                 <h1 class="h4 text-gray-900 mb-4">Crea il tuo piatto</h1>
                                 @else
                                 <h1 class="h4 text-gray-900 mb-4">Modifica il tuo piatto</h1>
@@ -28,13 +28,13 @@
                                                     </div>
                                                 @enderror
                                         </div>
-                                    
                                         <div class="col-sm-6">
-                                            <select class="custom-select border-5" name="category_id" id="category-select" required aria-placeholder="Seleziona categoria" >
+                                            
+                                            <select class="custom-select border-5" name="category_id" id="category-select" required >
                                                 {{-- Todo da gestire --}}
-                                                <option value="" selected>Seleziona categoria &ast;</option>
+                                                <option value=""  selected>Seleziona categoria &ast;</option>
                                                 @foreach ($categories as $category)
-                                                <option value="{{$category->id}}" {{ old('category_id', $category->category_id) ==  $category->id ? 'selected' : '' }}> 
+                                                <option value="{{$category->id}}" @if(Route::currentRouteName() === 'admin.dishes.create') @else {{ old('category_id', $category->id) ==  $category->id ? 'selected' : '' }} @endif> 
                                                     {{ $category->title }}
                                                 </option>
                                                 @endforeach 
