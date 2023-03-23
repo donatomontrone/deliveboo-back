@@ -5,7 +5,7 @@
             <div class="card-body p-0">
                 <div class="row">
                     <div class="fill col-lg-5 d-none d-lg-block bg-dish-image">
-                        <img id="image-preview" src="{{ asset('storage/' . $dish->img_path) }}" alt="{{$dish->name}}">
+                        <img id="image-preview" src="{{ asset('storage/' . $dish->img_path) }}" alt="">
                     </div>
                     <div class="col-lg-7">
                         <div class="p-5">
