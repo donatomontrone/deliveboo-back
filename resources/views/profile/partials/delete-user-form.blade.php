@@ -37,7 +37,7 @@
                                             Sei sicuro di voler eliminare il tuo account?
                                         </h2>
                                         <p class="mt-1 text-sm text-gray-600">
-                                            Una volta eliminato il tuo account, tutte le sue risorse e i dati verranno eliminati definitivamente. Inserisci la tua password per confermare che desideri eliminare definitivamente il tuo account.
+                                            Una volta eliminato il tuo account, tutte le sue risorse e i dati verranno eliminati definitivamente, incluso il ristorante associato. Inserisci la tua password per confermare che desideri eliminare definitivamente il tuo account.
                                         </p>
                                     </div>
                                     <div class="modal-footer">
