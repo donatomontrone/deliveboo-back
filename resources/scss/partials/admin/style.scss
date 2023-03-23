@@ -12076,7 +12076,25 @@ a:focus {
     background: url("https://images.prismic.io/deliveroo-restaurants/21d4d272-1706-40a4-b34a-1352c704938e_photography-noodles.jpg");
     background-position: center;
     background-size: cover;
+    padding: 0;
+    
 }
+
+#image-preview { 
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 600px;
+    
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
 
 form.user .custom-checkbox.small label {
     line-height: 1.5rem;

@@ -4,7 +4,9 @@
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-dish-image"></div>
+                    <div class="fill col-lg-5 d-none d-lg-block bg-dish-image">
+                        <img id="image-preview" src="{{ asset('storage/' . $dish->img_path) }}" alt="{{$dish->name}}">
+                    </div>
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
@@ -59,11 +61,12 @@
                                             @enderror 
                                 </div>
 
+                                    {{--   immagine --}}
 
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <div class="input_container form-control-user">
-                                            <input type="file" id="fileUpload" class=" @error('img_path') is-invalid @enderror" name="img_path">
+                                            <input onchange="showImageDish(event)" type="file" id="fileUpload" class=" @error('img_path') is-invalid @enderror" name="img_path">
                                         </div>
                                             @error('img_path')
                                                 <span class="invalid-feedback" role="alert">
@@ -132,3 +135,14 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function showImageDish(event) {
+            const replaceImage = document.getElementById('image-preview');
+            replaceImage.src = URL.createObjectURL(event.target.files[0]);
+
+            const removeImage = document.querySelector('.fill');
+            removeImage.classList.remove('bg-dish-image');
+            console.log("ok");
+        }
+    </script>
