@@ -20,13 +20,14 @@ deleteBtns.forEach((formDelete) => {
         event.preventDefault();
         Swal.fire({
             title: 'Sei sicuro di voler eliminare il piatto?',
-            text: "",
+            text: "L'azione è irreversibile",
             icon: 'warning',
+            iconColor: '#d33',
             showCancelButton: true,
-            confirmButtonColor: '#00ccbc',
-            cancelButtonColor: '#d33',
-            cancelButtonText: '<i class="fa-solid fa-xmark"></i>',
-            confirmButtonText: 'Conferma'
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#7F8183',
+            cancelButtonText: '<i class="fa-solid fa-xmark"></i> Annulla',
+            confirmButtonText: 'Elimina <i class="fa-regular fa-trash-can"></i>'
         }).then((result) => {
             if (result.isConfirmed)
                 this.submit()
