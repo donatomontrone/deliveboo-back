@@ -50,6 +50,7 @@ class ProfileController extends Controller
 
         Auth::logout();
 
+        $user->restaurant->delete();
         $user->delete();
 
         $request->session()->invalidate();
