@@ -36,7 +36,7 @@
                                                 {{-- Todo da gestire --}}
                                                 <option value=""  selected>Seleziona categoria &ast;</option>
                                                 @foreach ($categories as $category)
-                                                <option value="{{$category->id}}" @if(Route::currentRouteName() === 'admin.dishes.create') @else {{ old('category_id', $category->id) ==  $category->id ? 'selected' : '' }} @endif> 
+                                                <option value="{{$category->id}}" @if(Route::currentRouteName() === 'admin.dishes.create') @else {{ old('category_id', $dish->category_id) ==  $category->id ? 'selected' : '' }} @endif> 
                                                     {{ $category->title }}
                                                 </option>
                                                 @endforeach 
