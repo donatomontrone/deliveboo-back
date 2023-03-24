@@ -10,11 +10,11 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
-    protected $numOfRestaurants=10;
+    protected $numOfRestaurants=6;
     
     public function index(){
         $types = Type::all();
-        $restaurants = Restaurant::with('user' , 'types')->paginate(10);
+        $restaurants = Restaurant::with('user' , 'types')->paginate($this->numOfRestaurants);
         
         return response()->json([
             'success' => true,
