@@ -56,7 +56,8 @@ form.addEventListener("submit", (event) => {
     }
 
     // Controlla se ci sono errori di validazione
-    if (!isNameValid || !isSurnameValid || !isEmailValid || !isPasswordValid || !isRestaurantNameValid || !isRestaurantAddressValid || !isVatValid) {
+
+    if (isNameValid || isSurnameValid || isEmailValid || isPasswordValid || isRestaurantNameValid || isRestaurantAddressValid || isVatValid) {
 
         // Mostra errore delle checkbox di validazione
         const typesError = document.getElementById('typesError');
@@ -72,9 +73,10 @@ form.addEventListener("submit", (event) => {
             });
             typesError.innerHTML = '';
         }
-
         event.preventDefault();
+
     } else {
+
         form.submit();
     }
 
