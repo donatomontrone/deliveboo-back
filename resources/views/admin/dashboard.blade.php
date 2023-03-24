@@ -48,11 +48,16 @@
                                     <h6 class="m-0 font-weight-bold text-success">Immagine Ristorante</h6>
                                 </div>
                                 <div class="card-body text-center">
+                                    @if ($restaurant->img_path === null) {
+                                        <img src="https://www.lagodigarda.com/getimg/ristoranti/800/default(8).jpg" class="img-fluid">
+                                    }@else{
                                         @if (str_starts_with($restaurant->img_path, 'http'))
                                             <img src=" {{$restaurant->img_path}} " class="img-fluid">
                                             @else
                                             <img src="{{asset('storage/'. $restaurant->img_path)}}" class="img-fluid">
                                         @endif
+                                    }
+                                    @endif
                                 </div>
                             </div>
                         </div>

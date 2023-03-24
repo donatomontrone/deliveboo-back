@@ -102,7 +102,7 @@ class RegisteredUserController extends Controller
                 Str::slug($request->restaurant_name) : (Str::slug($request->restaurant_name) . '-' . $user->id),
             'address' => $request->restaurant_address,
             'VAT' => $request->VAT,
-            'img_path' => ($request->hasFile('img_path')) ? Storage::put('imgs/', $request->img_path) : 'https://www.lagodigarda.com/getimg/ristoranti/800/default(8).jpg',
+            'img_path' => ($request->hasFile('img_path')) ? Storage::put('imgs/', $request->img_path) : null,
         ]);
 
 

@@ -11,10 +11,15 @@
             <span class="badge bg-dark">{{$dish->category->title}}</span>
     </div>
     <div class="card-image my-4">
-        @if ( $dish->isAnUrl())
-        <img src="{{ $dish->img_path }}"
-        @else
-        <img src="{{ asset("storage/$dish->img_path") }}"
+        @if ($dish->img_path)   
+            @if ($dish->isAnUrl())
+                <img src="{{ $dish->img_path }}"
+                @else
+                <img src="{{ asset("storage/$dish->img_path") }}"
+            @endif
+            @else{
+                <img src="https://images.prismic.io/deliveroo-restaurants/21d4d272-1706-40a4-b34a-1352c704938e_photography-noodles.jpg" 
+            }
         @endif
 dishs        alt="{{ $dish->title }} image" class="img-fluid">
     </div>
