@@ -27,8 +27,7 @@
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
     @vite(['resources/js/admin.js'])
-    @vite(['resources/js/client-validation.js'])
-    @yield('popup')
+    @yield('scripts')
 </head>
 
 <body id="page-top" class="">

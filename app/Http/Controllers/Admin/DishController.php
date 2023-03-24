@@ -101,7 +101,11 @@ class DishController extends Controller
             $data['slug'] = $slug;
         }
         $data['restaurant_id'] = Auth::user()->restaurant->id;
-        $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
+        if ($request->hasFile('img_path')) {
+            $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
+        } else {
+            $data['img_path'] = 'https://images.prismic.io/deliveroo-restaurants/21d4d272-1706-40a4-b34a-1352c704938e_photography-noodles.jpg';
+        }
         $newDish = new Dish();
         $newDish->fill($data);
         $newDish->save();
@@ -193,7 +197,7 @@ class DishController extends Controller
         $dish->is_visible = !$dish->is_visible;
         $dish->save();
 
-        $message = ($dish->is_visible) ? "invisible" : "visible";
-        return redirect()->back()->with('alert-type', 'success')->with('alert-message', "$dish->is_visible:&nbsp;<b>$message</b>");
+        $message = ($dish->is_visible) ? $dish->name . " è disponibile per l'acquisto!" : $dish->name . " è nascosto al pubblico!";
+        return redirect()->route('admin.dishes.index')->with('alert-type', 'success')->with('alert-message', "<b>$message</b>");
     }
 }

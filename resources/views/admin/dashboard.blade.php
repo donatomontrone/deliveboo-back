@@ -67,9 +67,9 @@
                                     <p class="text-success">Nome ristorante: <strong class="text-dark">{{$restaurant->name}}</strong></p>
                                     <p class="text-success">Indirizzo: <strong class="text-dark">{{$restaurant->address}}</strong></p>
                                     <p class="text-success">Partita IVA: <strong class="text-dark">{{$restaurant->VAT}}</strong></p>
-                                    @foreach ( $restaurant->types as $types )
-                                        <p class="text-success">Tipo di cucina: <strong class="text-dark"> {{$types->title}} </strong></p>
-                                    @endforeach
+                                    <p class="text-success">Tipo di cucina: @foreach ( $restaurant->types as $types )<strong class="text-dark"> {{$types->title}} </strong> @endforeach</p>
+                                    
+                                    
                                 </div>
                             </div>
                         </div>

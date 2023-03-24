@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('scripts')
+@vite(['resources/js/userRegistrationCheckboxControll.js'])
+@endsection
 @section('content')
 
 <div class="container">
@@ -114,7 +117,7 @@
                                             <div class="card d-inline-block rounded-5 p-2">
                                                 @foreach ($types as $type)
                                                     <div class="form-check form-check-inline form-control-user p-1">
-                                                        <input class="form-check-input" type="checkbox" id="typeCheck-{{$type->id}}" value="{{$type->id}}" name="types[]" required>
+                                                        <input class="my_checkbox form-check-input" type="checkbox" id="typeCheck-{{$type->id}}" value="{{$type->id}}" name="types[]" required>
                                                         <label class="form-check-label" for="typeCheck-{{$type->id}}">{{$type->title}}</label>
                                                     </div>
                                                     @endforeach

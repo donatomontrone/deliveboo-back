@@ -22,7 +22,7 @@
                     
 
 
-                        @section('popup')
+                        @section('scripts')
                             @vite(['resources/js/popupOnDelete.js'])
                         @endsection
 
@@ -43,6 +43,8 @@
                                 </div>
                                 </div>
                             @endif
+
+                            
 
 
                     <div class="card shadow mb-4">
@@ -74,6 +76,9 @@
                                                         <i class=" text-dark fa-solid fa-lg fa-eye{{$dish->is_visible ? '' : '-slash'}}"></i>
                                                     </button>
                                                 </form>
+                                                @if (session('alert-message'))
+                                                    <div id="popup_message" class="d-none" data-type="{{ session('alert-type') }}" data-message="{{ session('alert-message') }}"></div>
+                                                @endif
                                                 </td>
                                                 <td>
                                                 <a href="{{route('admin.dishes.show' , $dish->slug)}}" class="p-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-folder2-open" viewBox="0 0 16 16">
