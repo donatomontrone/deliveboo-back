@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('scripts')
-@vite(['resources/js/client-validation.js'])
+@vite(['resources/js/registration-client-validation.js'])
 @endsection
 @section('content')
 
@@ -99,7 +99,7 @@
 
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input id="restaurantVat" type="text" class="form-control form-control-user @error('VAT') is-invalid @enderror" name="VAT" value="{{ old('VAT') }}" placeholder="Partita IVA &ast;" >
+                                            <input id="restaurantVat" type="text" class="form-control form-control-user @error('VAT') is-invalid @enderror" name="VAT" value="{{ old('VAT') }}" minlength="11" maxlength="11" placeholder="Partita IVA &ast;" >
                                                 @error('VAT')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>

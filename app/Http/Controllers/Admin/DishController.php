@@ -92,7 +92,7 @@ class DishController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate($this->rules);
+        $data = $request->validate($this->rules, $this->messages);
         $data['slug'] = Str::slug($data['name']);
         $num = 1;
         while (DB::table('dishes')->where('slug', $data['slug'])->first()) {
