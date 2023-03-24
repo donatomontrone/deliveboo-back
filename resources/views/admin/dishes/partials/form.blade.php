@@ -16,24 +16,24 @@
                                 <h1 class="h4 text-gray-900 mb-4">Modifica il tuo piatto</h1>
                                 @endif
                             </div>
-                                <form class="user" action="{{ route($routeName, $dish) }}" method="POST" enctype="multipart/form-data" class="py-3">
+                                <form id="form" class="user" action="{{ route($routeName, $dish) }}" method="POST" enctype="multipart/form-data" class="py-3">
                                     @csrf
                                     @method($method)
 
                                 <div class="form-group row">
 
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="text" class="form-control form-control-user @error('name') is-invalid @enderror" id="dishName" required minlength="3" maxlength="40" placeholder="Nome piatto &ast;" maxlength="40" name="name" value="{{old('name', $dish->name)}}">
+                                            <input type="text" class="form-control form-control-user @error('name') is-invalid @enderror" id="dishName" placeholder="Nome piatto &ast;" name="name" value="{{old('name', $dish->name)}}">
                                                 @error('name')
                                                     <div class="invalid-feedback px-2">
                                                         <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
                                                     </div>
                                                 @enderror
+                                                <div id="nameError" class="invalid-feedback"></div>
                                         </div>
                                         <div class="col-sm-6">
                                             
-                                            <select class="custom-select border-5" name="category_id" id="category-select" required >
-                                                {{-- Todo da gestire --}}
+                                            <select class="custom-select border-5" name="category_id" id="category-select">
                                                 <option value=""  selected>Seleziona categoria &ast;</option>
                                                 @foreach ($categories as $category)
                                                 <option value="{{$category->id}}" @if(Route::currentRouteName() === 'admin.dishes.create') @else {{ old('category_id', $dish->category_id) ==  $category->id ? 'selected' : '' }} @endif> 
@@ -46,7 +46,7 @@
                                                         <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
                                                     </div>
                                                 @enderror
-
+                                                <div id="categoryError" class="invalid-feedback"></div>
                                         </div>
                                 </div>
                                 
@@ -76,12 +76,13 @@
                                         </div>
 
                                         <div class="col-sm-6">
-                                                <input type="text" class="form-control form-control-user" id="dishIngredients" required minlength="2" maxlength="255" placeholder="Ingredienti &ast;" name="ingredients" value="{{old('ingredients', $dish->ingredients)}}">               
+                                                <input type="text" class="form-control form-control-user" id="dishIngredients" placeholder="Ingredienti &ast;" name="ingredients" value="{{old('ingredients', $dish->ingredients)}}">               
                                                 @error('ingredients')
                                                     <div class="invalid-feedback px-2">
                                                         <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
                                                     </div>
                                                 @enderror 
+                                                <div id="ingredientsError" class="invalid-feedback"></div>
                                         </div>
                                 </div>
                                 
@@ -91,12 +92,13 @@
 
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input step=".01" type="number" min="0" max="999.99" maxlength="5"  class="form-control form-control-user" required id="dishPrice" placeholder="Prezzo &ast;" name="price" value="{{old('price', $dish->price)}}">
+                                            <input step=".01" type="number" min="0" max="999.99" maxlength="5"  class="form-control form-control-user" id="dishPrice" placeholder="Prezzo &ast;" name="price" value="{{old('price', $dish->price)}}">
                                                 @error('price')
                                                     <div class="invalid-feedback px-2">
                                                         <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
                                                     </div>
-                                                @enderror  
+                                                @enderror
+                                                <div id="priceError" class="invalid-feedback"></div>
                                     </div>
 
                                         <div class="col-sm-6">
@@ -143,6 +145,5 @@
 
             const removeImage = document.querySelector('.fill');
             removeImage.classList.remove('bg-dish-image');
-            console.log("ok");
         }
     </script>

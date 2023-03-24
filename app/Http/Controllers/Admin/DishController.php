@@ -92,7 +92,7 @@ class DishController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate($this->rules);
+        $data = $request->validate($this->rules, $this->messages);
         $data['slug'] = Str::slug($data['name']);
         $num = 1;
         while (DB::table('dishes')->where('slug', $data['slug'])->first()) {
@@ -195,7 +195,7 @@ class DishController extends Controller
         $dish->is_visible = !$dish->is_visible;
         $dish->save();
 
-        $message = ($dish->is_visible) ? $dish->name . " è disponibile per l'acquisto!" : $dish->name . " è nascosto al pubblico!";
+        $message = ($dish->is_visible) ? $dish->name . " è visibile nel menù" : $dish->name . " non è visibile al menù";
         return redirect()->route('admin.dishes.index')->with('alert-type', 'success')->with('alert-message', "<b>$message</b>");
     }
 }
