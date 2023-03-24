@@ -103,8 +103,6 @@ class DishController extends Controller
         $data['restaurant_id'] = Auth::user()->restaurant->id;
         if ($request->hasFile('img_path')) {
             $data['img_path'] =  Storage::put('imgs/', $data['img_path']);
-        } else {
-            $data['img_path'] = 'https://images.prismic.io/deliveroo-restaurants/21d4d272-1706-40a4-b34a-1352c704938e_photography-noodles.jpg';
         }
         $newDish = new Dish();
         $newDish->fill($data);
