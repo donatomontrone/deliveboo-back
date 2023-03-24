@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('scripts')
-@vite(['resources/js/userRegistrationCheckboxControll.js'])
+@vite(['resources/js/client-validation.js'])
 @endsection
 @section('content')
 
@@ -25,27 +25,32 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                             @enderror
+                                            <div id="nameError" class="invalid-feedback"></div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <input id="surname" type="text" class="form-control form-control-user @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}" required autocomplete="surname" placeholder="Cognome &ast;">
+                                        <input id="surname" type="text" class="form-control form-control-user @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}"  autocomplete="surname" placeholder="Cognome &ast;">
                                             @error('surname')
                                             <div class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </div>
                                             @enderror
+                                            <div id="surnameError" class="invalid-feedback"></div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email &ast;">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 col-md-12">
+                                        <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="Email &ast;">
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
+                                        <div id="emailError" class="invalid-feedback"></div>
+                                    </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password &ast;">
+                                        <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror" name="password" autocomplete="new-password" placeholder="Password &ast;">
                                             @error('password')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -55,12 +60,13 @@
 
 
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input id="password-confirm" type="password" class="form-control form-control-user @error('password_confirmation') is-invalid @enderror" name="password_confirmation" required autocomplete="new-password" placeholder="Conferma password &ast;">
+                                            <input id="password-confirm" type="password" class="form-control form-control-user @error('password_confirmation') is-invalid @enderror" name="password_confirmation"  autocomplete="new-password" placeholder="Conferma password &ast;">
                                             @error('password_confirmation')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                             @enderror
+                                            <div id="confirmPasswordError" class="invalid-feedback"></div>
                                         </div>
                                     
                                 </div>
@@ -71,32 +77,35 @@
 
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input id="restaurantName" type="text" class="form-control form-control-user @error('restaurant_name') is-invalid @enderror" name="restaurant_name" value="{{ old('restaurant_name') }}" required autocomplete="name" minlength="3" maxlength="100" placeholder="Nome Ristorante &ast;">
+                                            <input id="restaurantName" type="text" class="form-control form-control-user @error('restaurant_name') is-invalid @enderror" name="restaurant_name" value="{{ old('restaurant_name') }}"  autocomplete="name" placeholder="Nome Ristorante &ast;">
                                                 @error('restaurant_name')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
-                                                    </span>
+                                                </span>
                                                 @enderror
+                                                <div id="restaurantNameError" class="invalid-feedback"></div>
                                         </div>
 
                                         <div class="col-sm-6">
-                                            <input id="restaurantAddress" type="text" class="form-control form-control-user @error('restaurant_address') is-invalid @enderror" name="restaurant_address" value="{{ old('restaurant_address') }}" required minlength="6" maxlength="255" placeholder="Indirizzo &ast;">
+                                            <input id="restaurantAddress" type="text" class="form-control form-control-user @error('restaurant_address') is-invalid @enderror" name="restaurant_address" value="{{ old('restaurant_address') }}" placeholder="Indirizzo &ast;">
                                                 @error('restaurant_address')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                                 @enderror
+                                                <div id="restaurantAddressError" class="invalid-feedback"></div>
                                         </div>
                                     </div>
 
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input id="restaurantVat" type="text" class="form-control form-control-user @error('VAT') is-invalid @enderror" name="VAT" value="{{ old('VAT') }}" required pattern="[0-9]+" minlength="11" maxlength="11" placeholder="Partita IVA &ast;" >
+                                            <input id="restaurantVat" type="text" class="form-control form-control-user @error('VAT') is-invalid @enderror" name="VAT" value="{{ old('VAT') }}" placeholder="Partita IVA &ast;" >
                                                 @error('VAT')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                                 @enderror
+                                                <div id="vatError" class="invalid-feedback"></div>
                                     </div>
 
                                     <div class="col-sm-6">
@@ -109,23 +118,27 @@
                                                     <strong>{{ $message }}</strong>
                                                 </span>
                                             @enderror
+                                    </div>
                                 </div>
 
 
-                                        <div class="form-group col-12 mt-4">
-                                            <p class="small mb-1">Tipi di cucina &ast;</p>
-                                            <div class="card d-inline-block rounded-5 p-2">
-                                                @foreach ($types as $type)
-                                                    <div class="form-check form-check-inline form-control-user p-1">
-                                                        <input class="my_checkbox form-check-input" type="checkbox" id="typeCheck-{{$type->id}}" value="{{$type->id}}" name="types[]" required>
-                                                        <label class="form-check-label" for="typeCheck-{{$type->id}}">{{$type->title}}</label>
-                                                    </div>
-                                                    @endforeach
+                                        <div class="form-group row ">
+                                            <div class="col-sm-6 col-md-12">
+                                                <p class="small mb-1">Tipi di cucina &ast;</p>
+                                                <div id="typesContainer" class="card d-inline-block input-group rounded-5 p-2">
+                                                    @foreach ($types as $type)
+                                                        <div class="form-check form-check-inline form-control-user p-1">
+                                                            <input class="my_checkbox form-check-input" type="checkbox" id="typeCheck-{{$type->id}}" value="{{$type->id}}" name="types[]">
+                                                            <label class="form-check-label" for="typeCheck-{{$type->id}}">{{$type->title}}</label>
+                                                        </div>
+                                                        @endforeach
                                                         @error('types')
                                                         <span class="invalid-feedback" role="alert">
                                                             <strong>{{$message}}</strong>
                                                         </span>
                                                         @enderror
+                                                </div>
+                                                <div id="typesError" class="small text-danger mt-1"></div>
                                             </div>
                                         </div>
 
@@ -134,13 +147,6 @@
                                 </button>
                             </form>
                             <hr>
-                            <div class="text-center">
-                                @if (Route::has('password.request'))
-                                                <a class="small" href="{{ route('password.request') }}">
-                                                    Password dimenticata?
-                                                </a>
-                                                @endif
-                            </div>
                             <div class="text-center">
                                 <a class="small" href="{{ route('login') }}">Hai già un account? Accedi!</a>
                             </div>
