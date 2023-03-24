@@ -12,10 +12,11 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Crea il tuo utente</h1>
                             </div>
-                            <form class="user" method="POST" action="{{ route('register') }}"  enctype="multipart/form-data">@csrf
+                            <form class="user" method="POST" action="{{ route('register') }}"  enctype="multipart/form-data">
+                                @csrf
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input id="name" type="text" class="form-control form-control-user @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" placeholder="Nome &ast;">
+                                        <input id="name" type="text" class="form-control form-control-user @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" placeholder="Nome &ast;">
                                             @error('name')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -25,9 +26,9 @@
                                     <div class="col-sm-6">
                                         <input id="surname" type="text" class="form-control form-control-user @error('surname') is-invalid @enderror" name="surname" value="{{ old('surname') }}" required autocomplete="surname" placeholder="Cognome &ast;">
                                             @error('surname')
-                                            <span class="invalid-feedback" role="alert">
+                                            <div class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
-                                            </span>
+                                            </div>
                                             @enderror
                                     </div>
                                 </div>
