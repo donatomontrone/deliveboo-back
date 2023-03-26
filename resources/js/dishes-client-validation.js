@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
     const isPriceValid = validatePrice();
 
     // Controlla se ci sono errori di validazione
-    if (!isNameValid || !isIngredientsValid || !isPriceValid || !isCategoryValid) {
+    if (isNameValid || isIngredientsValid || isPriceValid || isCategoryValid) {
 
         event.preventDefault();
 
