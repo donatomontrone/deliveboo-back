@@ -16,7 +16,6 @@ class RestaurantController extends Controller
 
         // Tipi di cucina selezionati dall'utente
         $selectedTypes = $request->input('type');
-        $selectedTypes = explode(',', $selectedTypes);
         // Ristoranti che corrispondono ai tipi di cucina selezionati
         $query = Restaurant::with('types');
         if (!empty($selectedTypes)) {
