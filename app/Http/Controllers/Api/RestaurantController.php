@@ -20,7 +20,7 @@ class RestaurantController extends Controller
         $query = Restaurant::with('types');
         if (!empty($selectedTypes)) {
             $query->whereHas('types', function ($query) use ($selectedTypes) {
-                $query->whereIn('title', $selectedTypes);
+                $query->where('title', $selectedTypes);
             });
         }
         $restaurants = $query->paginate(6);
