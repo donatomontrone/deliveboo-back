@@ -10,29 +10,27 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
-    protected $numOfRestaurants = 6;
 
     public function index(Request $request)
     {
 
         // Tipi di cucina selezionati dall'utente
         $selectedTypes = $request->input('type');
-        $types = Type::all();
-
+        $selectedTypes = explode(',', $selectedTypes);
         // Ristoranti che corrispondono ai tipi di cucina selezionati
-        $query = Restaurant::with('user', 'types');
+        $query = Restaurant::with('types');
         if (!empty($selectedTypes)) {
             $query->whereHas('types', function ($query) use ($selectedTypes) {
-                $query->where('id', 'LIKE', $selectedTypes);
+                $query->whereIn('title', $selectedTypes);
             });
         }
-        $restaurants = $query->paginate($this->numOfRestaurants);
+        $restaurants = $query->paginate(6);
 
         return response()->json([
             'success' => true,
             'results' => [
                 'restaurants' => $restaurants,
-                'types' => $types,
+                'types' => Type::all(),
             ],
         ]);
     }
