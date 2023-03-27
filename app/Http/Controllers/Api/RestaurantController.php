@@ -10,24 +10,40 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
-    protected $numOfRestaurants=6;
-    
-    public function index(){
+    protected $numOfRestaurants = 6;
+
+    public function index(Request $request)
+    {
+
+        // Tipi di cucina selezionati dall'utente
+        $selectedTypes = $request->input('type');
         $types = Type::all();
-        $restaurants = Restaurant::with('user' , 'types')->paginate($this->numOfRestaurants);
-        
+
+        // Ristoranti che corrispondono ai tipi di cucina selezionati
+        $query = Restaurant::with('user', 'types');
+        if (!empty($selectedTypes)) {
+            $query->whereHas('types', function ($query) use ($selectedTypes) {
+                $query->where('id', 'LIKE', $selectedTypes);
+            });
+        }
+        $restaurants = $query->paginate($this->numOfRestaurants);
+
         return response()->json([
             'success' => true,
-            'results' => ['restaurants' => $restaurants , 'types' => $types],
+            'results' => [
+                'restaurants' => $restaurants,
+                'types' => $types,
+            ],
         ]);
     }
 
-    public function show(Restaurant $restaurant){
+    public function show(Restaurant $restaurant)
+    {
         $categories = Category::all();
-        $restaurant = Restaurant::with('user', 'types','dishes')->findOrFail($restaurant->id);
+        $restaurant = Restaurant::with('user', 'types', 'dishes')->findOrFail($restaurant->id);
         return response()->json([
             'success' => true,
-            'results' => ['restaurant' => $restaurant , 'categories' => $categories]
+            'results' => ['restaurant' => $restaurant, 'categories' => $categories]
         ]);
     }
 }
