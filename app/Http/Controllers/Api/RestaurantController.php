@@ -20,7 +20,7 @@ class RestaurantController extends Controller
                 $query->whereIn('title', $selectedTypes);
             }, '=', count($selectedTypes));
         }
-        $restaurants = $query->get();
+        $restaurants = $query->paginate(6);
 
         return response()->json([
             'success' => true,
