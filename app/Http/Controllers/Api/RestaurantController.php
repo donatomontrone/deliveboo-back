@@ -20,15 +20,21 @@ class RestaurantController extends Controller
                 $query->whereIn('title', $selectedTypes);
             }, '=', count($selectedTypes));
         }
-        $restaurants = $query->paginate(6);
+        $restaurants = $query->get();
 
-        return response()->json([
-            'success' => true,
-            'results' => [
-                'restaurants' => $restaurants,
-                'types' => Type::all(),
-            ],
-        ]);
+        if (!$restaurants->isEmpty()) {
+            return response()->json([
+                'success' => true,
+                'results' => [
+                    'restaurants' => $restaurants,
+                    'types' => Type::all(),
+                ],
+            ]);
+        } else {
+            return response()->json([
+                'success' => false,
+            ]);
+        }
     }
 
     public function show(Restaurant $restaurant)
