@@ -4,36 +4,54 @@ return [
         'name' => 'Spaghetto allo scoglio',
         'description' => 'Piatto cucinato dallo chef Stellato Donato Montrone',
         'ingredients' => 'Pasta, Pesce fresco, Olio, Aglio',
-        'price' => 23.99
+        'price' => 23.99,
+        'img_path' => 'https://media.istockphoto.com/id/1285893132/it/foto/linguine-allo-scoglio-spaghetti-allo-scoglio-pasta-tradizionale-italiana-con-cozze-gamberetti.jpg?s=612x612&w=0&k=20&c=5WN2H9QdpM9PKmsOktzdcBBl82qsHFb74hAKjKXc9BI=',
+        'restaurant_id' => 5,
+        'category_id'=> 2,
     ],
     [
         'name' => 'Pizza Nestola',
         'description' => 'Pizza con lievito madre, impastata personalmente da Riccardo Nestola',
         'ingredients' => 'Farina, Lievito, Olio, Acqua, Pomodoro, Mozzarella, Würstel, Patatine',
-        'price' => 11.99
+        'price' => 5.99,
+        'img_path'=>'https://media.istockphoto.com/id/1063976282/it/foto/lo-chef-esegna-una-pizza-calda-dal-forno.jpg?s=612x612&w=0&k=20&c=_BFUNLiSrHPbsx3EeticvFqo6NKnGTeBQJ3TuUaL0p8=',
+        'restaurant_id' => 8,
+        'category_id' => 4,
     ],
     [
-        'name' => 'Carne all\'Aniello',
-        'description' => 'Carne di Bovino, ammazzato personalmente dallo chef Aniello Piscopo',
+        'name' => 'Carne di agnello',
+        'description' => 'Carne di Bovino, ammazzato personalmente',
         'ingredients' => 'Carne, Origano, Olio, Sale',
-        'price' => 44.85
+        'price' => 44.85,
+        'img_path' => 'https://media.istockphoto.com/id/467413730/it/foto/organic-costolette-di-agnello-alla-griglia.jpg?s=612x612&w=0&k=20&c=44lRbSN3jv6AuaZNK5i-_B1HJLvoehLLGPQVHuA7wzI=',
+        'restaurant_id' => 1,
+        'category_id' => 3,
     ],
     [
-        'name' => 'CheesCake di Mimmo',
+        'name' => 'Cheesecake di Mimmo',
         'description' => 'Dolce prelibato preparato con prodotti a KM0 dello Chef Mimmo',
         'ingredients' => 'Biscotti, Panna, Limone, Philadelphia',
-        'price' => 8.99
+        'price' => 8.99,
+        'img_path' => 'https://media.istockphoto.com/id/1187698342/it/foto/chef-che-tiene-dessert.jpg?s=612x612&w=0&k=20&c=bDPioAiU9ZYUcdsc6l1CHl-zXA_q-PTbk6RsbV-DNEM=',
+        'restaurant_id' => 1,
+        'category_id' => 6,
     ],
     [
         'name' => 'Spezzatino di Montrone',
         'description' => 'Carne di Montone, ammazzato personalmente dallo chef Donato',
         'ingredients' => 'Carne, Origano, Olio, Sale',
-        'price' => 187.65
+        'price' => 17.65,
+        'img_path' => 'https://media.istockphoto.com/id/1192122284/it/foto/stufato-di-manzo-alla-salsa-di-pomodoro.jpg?s=612x612&w=0&k=20&c=JX1SLyINmFni5reLlpE7G1Pr0AyC6ssNtJK9bv9gXJM=',
+        'restaurant_id' => 5,
+        'category_id' => 3,
     ],
     [
-        'name' => 'Salumi da Donato',
+        'name' => 'Salsicce da Donato',
         'description' => 'Salumi di alta qualità scelti personalmente dal salumiere Donato',
         'ingredients' => 'Salumi vari',
-        'price' => 18.99
+        'price' => 18.99,
+        'img_path' => 'https://media.istockphoto.com/id/686648866/it/foto/maestro-chef.jpg?s=612x612&w=0&k=20&c=bJYJ_mBKbqiWvPTvQW6v254lPzxhNE5cyhZwz_ZEk5s=',
+        'restaurant_id' => 5,
+        'category_id' => 3,
     ],
 ];

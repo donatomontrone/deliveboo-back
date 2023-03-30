@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Category;
 use App\Models\Dish;
-use App\Models\Restaurant;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
@@ -23,9 +21,10 @@ class DishSeeder extends Seeder
 
         foreach ($dishes as $dish) {
             $newDish = new Dish();
-            $newDish->restaurant_id = Restaurant::inRandomOrder()->first()->id;
-            $newDish->category_id = Category::inRandomOrder()->first()->id;
+            $newDish->restaurant_id = $dish['restaurant_id'];
+            $newDish->category_id = $dish['category_id'];
             $newDish->name = $dish['name'];
+            $newDish->img_path = $dish['img_path'];
             $newDish->slug = Str::slug($newDish->name);
             $newDish->description = $dish['description'];
             $newDish->ingredients = $dish['ingredients'];
