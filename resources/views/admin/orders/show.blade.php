@@ -17,7 +17,7 @@
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-success">{{$order->date}}</h6>
-                                    <h6 class="m-0 font-weight-bold @if($order->status == 'Ordine effettuato.') text-success @else text-danger @endif"> {{$order->status}}</h6>
+                                    <h6 class="m-0 font-weight-bold @if($order->status == 'Ordine effettuato') text-success @else text-danger @endif"> {{$order->status}}</h6>
                                 </div>
                                 
                                 <div class="card-body">

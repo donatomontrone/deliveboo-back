@@ -29,7 +29,7 @@
                                                 <td>{{$order->date}}</td>
                                                 <td>{{number_format($order->total_price, 2)}} &euro;</td>
                                                 <td>
-                                                    @if ($order->status == 'Ordine effettuato.')
+                                                    @if ($order->status == 'Ordine effettuato')
                                                     <span class="badge badge-pill badge-success p-2">{{$order->status}}</span>
 
                                                     @else
