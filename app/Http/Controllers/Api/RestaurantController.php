@@ -40,7 +40,7 @@ class RestaurantController extends Controller
     public function show(Restaurant $restaurant)
     {
         $categories = Category::all();
-        $restaurant = Restaurant::with('user', 'types', 'dishes')->findOrFail($restaurant->id);
+        $restaurant = Restaurant::with('types', 'dishes.orders')->findOrFail($restaurant->id);
         return response()->json([
             'success' => true,
             'results' => ['restaurant' => $restaurant, 'categories' => $categories]

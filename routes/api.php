@@ -19,4 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('restaurants',RestaurantController::class , ['only' => ['index' , 'show']]);
+Route::apiResource('restaurants', RestaurantController::class, ['only' => ['index', 'show']]);
+Route::post('orders', [OrderController::class, 'store']);
