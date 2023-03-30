@@ -58,9 +58,13 @@ class OrderController extends Controller
         $new_order->status = $data['status'];
         $new_order->save();
 
+        foreach ($data['dishes'] as $dish) {
+            $new_order->dishes()->attach($dish['id'], ['quantity' => $dish['quantity']]);
+        }
+
         return response()->json([
             'success' => true,
-            'results' => ['order' => $new_order]
+            'results' => ['data' => $data]
         ]);
     }
 
