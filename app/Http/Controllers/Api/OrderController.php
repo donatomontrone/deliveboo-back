@@ -41,7 +41,7 @@ class OrderController extends Controller
         $request->validate([
             'total_price' => ['required', 'decimal:2'],
             'costumer_name' => ['required', 'string', 'max:40'],
-            'costumer_phone' => ['required', 'numeric', 'max:15'],
+            'costumer_phone' => ['required', 'numeric', 'digits_between:9, 15'],
             'costumer_mail' => ['required', 'string', 'email', 'max:100'],
             'costumer_address' =>  ['required', 'string', 'max:200'],
         ]);
