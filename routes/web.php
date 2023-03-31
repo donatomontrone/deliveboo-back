@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ChartController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('/dishes', AdminDishController::class);
         Route::resource('/orders', AdminOrderController::class, ['only' => ['index', 'show']]);
+        Route::get('chart', [ChartController::class, 'index'])->name('chart.index');
     });
 });
 

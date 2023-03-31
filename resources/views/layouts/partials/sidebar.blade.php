@@ -63,7 +63,7 @@
            
             <!-- Nav Item - Charts -->
             <li class="nav-item {{ str_starts_with(Route::currentRouteName(), 'admin.stats') ? 'active' : '' }}">
-                <a class="nav-link" href="{{url('/') }}">
+                <a class="nav-link" href="{{route('admin.chart.index') }}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Statistiche</span></a>
             </li>
