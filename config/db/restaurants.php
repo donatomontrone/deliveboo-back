@@ -4,7 +4,6 @@ return [
         'name' => 'La Pergola',
         'address' => 'Via Alberto Cadlolo 101',
         'image' => 'https://media.istockphoto.com/id/1211547141/it/foto/moderno-design-degli-interni-del-ristorante.jpg?s=612x612&w=0&k=20&c=AqJBPt3WX_IcRBOy7SO61vGRKnrS-EAO7FMMDPCJ_U4=',
-        'type_id' => [1,2],
     ],
     [
         'name' => 'La Lucia',
