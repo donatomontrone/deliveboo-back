@@ -3,22 +3,22 @@ return [
     [
         'name' => 'La Pergola',
         'address' => 'Via Alberto Cadlolo 101',
-        'image' => 'https://www.projectinvictus.it/wp-content/uploads/2022/08/junk-food-scaled.jpg',
+        'image' => 'https://media.istockphoto.com/id/1211547141/it/foto/moderno-design-degli-interni-del-ristorante.jpg?s=612x612&w=0&k=20&c=AqJBPt3WX_IcRBOy7SO61vGRKnrS-EAO7FMMDPCJ_U4=',
     ],
     [
         'name' => 'La Lucia',
         'address' => 'Piazza Mazzini 21',
-        'image' => 'https://www.yegam.it/wp-content/uploads/2019/05/yegam-blog-slow-food.jpg',
+        'image' => 'https://media.istockphoto.com/id/1018141890/it/foto/due-bicchieri-da-vino-vuoti-seduti-in-un-ristorante-in-un-caldo-pomeriggio-di-sole.jpg?s=612x612&w=0&k=20&c=rXxL64PCPEoOLFYFoT5l4XkrGhz-YBwYrfq87sxhMa4=',
     ],
     [
         'name' => 'Osteria Salentina',
         'address' => 'Via del Mare 72',
-        'image' => 'https://ichef.bbci.co.uk//food/ic/food_16x9_832/recipes/crispy_smashed_potatoes_70636_16x9.jpg',
+        'image' => 'https://media.istockphoto.com/id/843610508/it/foto/interno-di-accogliente-ristorante-stile-loft.jpg?s=612x612&w=0&k=20&c=lQOh8TjNCT8uC02wQM4FpbEjkgmPCscM_zPzRSWBhE8=',
     ],
     [
         'name' => 'Il Vecchio Molo',
         'address' => 'Via Liguria 19',
-        'image' => 'https://tb-static.uber.com/prod/image-proc/processed_images/91e744b222ecac52cfaf1f15cd79eadc/69ad85cd7b39888042b3bbf1c22d630d.webp',
+        'image' => 'https://media.istockphoto.com/id/1248298359/it/foto/interno-ristorante-di-lusso-di-notte.jpg?s=612x612&w=0&k=20&c=ZWEoYnLnVtzfppR3rb4-gphBnG4B2mHmual0LlVv6O0=',
     ],
     [
         'name' => 'Il Ristorante di Donato',
@@ -26,28 +26,44 @@ return [
         'image' => 'https://www.fabriziocostantini.it/images/food-digital.jpg',
     ],
     [
-        'name' => 'La Trattoria da Gino Ginetti',
+        'name' => 'La Susheria da Gino Ginetti',
         'address' => 'Via Santa Monica di Stefanino 47',
-        'image' => 'https://www.torinotoday.it/~media/horizontal-hi/50984033489356/cibo_osteria_pexels-2.jpg',
+        'image' => 'https://media.istockphoto.com/id/1156782499/it/foto/ritratto-di-chef-di-sushi-giapponese-di-notte.jpg?s=612x612&w=0&k=20&c=65eLiVqqgE-92P9F-5uZLckrkd90OOjZ0Oke4VXVsCQ=',
     ],
     [
         'name' => 'La Taverna di Paolo detto Domenico',
         'address' => 'Via San Rocco 29',
-        'image' => 'https://media.suara.com/pictures/653x366/2021/08/02/81387-ilustrasi-makanan-cepat-saji-freepik.jpg',
+        'image' => 'https://media.istockphoto.com/id/170072398/it/foto/tavoli-del-ristorante-italia.jpg?s=612x612&w=0&k=20&c=U7G8nwL-BZgqi6VBYvKNLL80ABz2vYdB8n4vbbekX6s=',
     ],
     [
         'name' => 'La Pizzeria di Aniello',
         'address' => 'Via Roma 18',
-        'image' => 'https://media-cdn.tripadvisor.com/media/photo-s/1b/59/24/ba/pizza.jpg',
+        'image' => 'https://media.istockphoto.com/id/1372848729/it/foto/cameriere-sorridente-che-guarda-la-macchina-fotografica-e-mostra-una-pizza.jpg?s=612x612&w=0&k=20&c=dwfWF-56Pep1ChIXqsosBLj13sAeHTPjsa4RZq2MDgE=',
     ],
+
     [
-        'name' => 'Il Sushi che vorresti',
-        'address' => 'Via Tokyo 9',
-        'image' => 'https://media.gqitalia.it/photos/60105cb52ff22977eb9ae86e/16:9/w_1280,c_limit/Ritorno%20dei%20Climatariani_Pinterest%20(sustainablefood).jpg',
+        'name' => 'Wellness Trattoria',
+        'address' => 'Corso Porta Nuova 124',
+        'image' => 'https://media.istockphoto.com/id/468441873/it/foto/ristorante-italiano.jpg?s=612x612&w=0&k=20&c=F-s17JqPSPTFOzNaa-0DDneIgfQfqqiB7k_PljjmuPE=',
     ],
+    
     [
         'name' => 'Sapori di Trani',
         'address' => 'Via Appia Nuova 3',
-        'image' => 'http://static1.squarespace.com/static/53b839afe4b07ea978436183/53bbeeb2e4b095b6a428a13e/5fd2570b51740e23cce97919/1676678395594/traditional-food-around-the-world-Travlinmad.jpg?format=1500w',
+        'image' => 'https://media.istockphoto.com/id/1388791611/it/foto/stile-teppanyaki.jpg?s=612x612&w=0&k=20&c=HZlSl4rG20Ms85SLrUCB5cj1U9XPvjrDR6159xnJaeY=',
     ],
+    
+    [
+        'name' => 'North Star Relax Ristorante',
+        'address' => 'Via Appia Nuova 3',
+        'image' => 'https://media.istockphoto.com/id/1159992039/it/foto/ristorante-accogliente-per-lincontro-con-gli-amici.jpg?s=612x612&w=0&k=20&c=T_r51EmiGDTo5bfE4Uo6r4OoCYCxdp14_1a-jXch_t8=',
+    ],
+    
+    [
+        'name' => 'Mondo Sushi',
+        'address' => 'Via degli Aldobrandeschi 119',
+        'image' => 'https://media.istockphoto.com/id/175506580/it/foto/lusso-a-buffet.jpg?s=612x612&w=0&k=20&c=LMWpoEQ9B9llTeojgt04eNpCAPC8XWvABaVZnwL7gwc=',
+    ],
+
+
 ];

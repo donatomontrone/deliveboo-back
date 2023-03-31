@@ -34,5 +34,17 @@ return [
         'title' => 'Internazionale',
         'img_path' => 'http://www.riccardonestola.com/wp-content/uploads/2023/03/internazionale.svg',
         'color' => '#FF00FF'
-    ]
+    ],
+    
+    [
+        'title' => 'Fast Food',
+        'img_path' => 'http://www.riccardonestola.com/wp-content/uploads/2023/03/hamburger.svg',
+        'color' => '#FF00FF'
+    ],
+    
+    [
+        'title' => 'Pizzeria',
+        'img_path' => 'http://www.riccardonestola.com/wp-content/uploads/2023/03/pizza.svg',
+        'color' => '#FF00FF'
+    ],
 ];
