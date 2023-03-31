@@ -4,11 +4,12 @@ return [
         'name' => 'La Pergola',
         'address' => 'Via Alberto Cadlolo 101',
         'image' => 'https://media.istockphoto.com/id/1211547141/it/foto/moderno-design-degli-interni-del-ristorante.jpg?s=612x612&w=0&k=20&c=AqJBPt3WX_IcRBOy7SO61vGRKnrS-EAO7FMMDPCJ_U4=',
+        'type_id' => [1,2],
     ],
     [
         'name' => 'La Lucia',
         'address' => 'Piazza Mazzini 21',
-        'image' => 'https://media.istockphoto.com/id/1018141890/it/foto/due-bicchieri-da-vino-vuoti-seduti-in-un-ristorante-in-un-caldo-pomeriggio-di-sole.jpg?s=612x612&w=0&k=20&c=rXxL64PCPEoOLFYFoT5l4XkrGhz-YBwYrfq87sxhMa4=',
+        'image' => 'https://media.istockphoto.com/id/172188540/it/foto/i-negozi-e-ristoranti-edificio-esterni.jpg?s=612x612&w=0&k=20&c=CZORhBdw-6qba8h9KAPYr5TemJSVhDEZ3UFmEGOhp4s=',
     ],
     [
         'name' => 'Osteria Salentina',
@@ -64,6 +65,4 @@ return [
         'address' => 'Via degli Aldobrandeschi 119',
         'image' => 'https://media.istockphoto.com/id/175506580/it/foto/lusso-a-buffet.jpg?s=612x612&w=0&k=20&c=LMWpoEQ9B9llTeojgt04eNpCAPC8XWvABaVZnwL7gwc=',
     ],
-
-
 ];

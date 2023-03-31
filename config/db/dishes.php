@@ -125,46 +125,77 @@ return [
 
 
     // ? 2: La Lucia
-    // * Secondi
+    // * Antipasti
     [
-        'name' => 'Animelle di vitello',
-        'description' => 'Piatto cucinato dallo chef Stellato Mandarino Capesante',
-        'ingredients' => 'vitello,frutti rossi, basilico',
-        'price' => 62,
-        'img_path' => 'https://media.istockphoto.com/id/1148219726/it/foto/roast-beef-fatto-in-casa.jpg?s=612x612&w=0&k=20&c=gdmCAzWLGZ2VTjFz9U89HBNHTpkZJVQZYa0AeCUfF0o=',
+        'name' => 'Beef Burger',
+        'description' => null,
+        'ingredients' => 'hamrburger di manzo, panino , cipolle',
+        'price' => 5,
+        'img_path' => 'https://media.istockphoto.com/id/1215529349/it/foto/braised-beef-short-rib-sandwich-con-coleslaw-su-un-brioche-bun.jpg?s=612x612&w=0&k=20&c=q-GZarSUd6av_xrrLwVMfyOHtUGLrNnzhUpHcVOJB5U=',
         'restaurant_id' => 2,
-        'category_id'=> 3,
+        'category_id'=> 1,
     ],
 
     [
-        'name' => 'Carne di agnello',
-        'description' => 'Carne di Bovino, ammazzato personalmente',
-        'ingredients' => 'Carne, Origano, Olio, Sale',
-        'price' => 44.85,
-        'img_path' => 'https://media.istockphoto.com/id/467413730/it/foto/organic-costolette-di-agnello-alla-griglia.jpg?s=612x612&w=0&k=20&c=44lRbSN3jv6AuaZNK5i-_B1HJLvoehLLGPQVHuA7wzI=',
+        'name' => 'Cheeseburger',
+        'description' => null,
+        'ingredients' => 'hamrburger di manzo, panino , formaggio , pomodorini',
+        'price' => 6,
+        'img_path' => 'https://media.istockphoto.com/id/544721816/it/foto/due-hamburger-freschi-fatti-in-casa-sottaceti-ketchup-e-anelli-di-cipolla.jpg?s=612x612&w=0&k=20&c=GyUJOcK7To-HiZGPVYe_RnbKekDH4snrz0GDzXrvmm8=',
         'restaurant_id' => 2,
-        'category_id' => 3,
+        'category_id'=> 1,
+    ],
+
+    [
+        'name' => 'Barbeque Burger',
+        'description' => null,
+        'ingredients' => 'panino , cipolle , pomodori , salsa',
+        'price' => 9,
+        'img_path' => 'https://media.istockphoto.com/id/1215569804/it/foto/hamburger-fresco-e-succoso-su-un-cuscino-di-carta-con-birra-su-un-tavolo-di-legno-sfondo-scuro.jpg?s=612x612&w=0&k=20&c=UCrPQ_ou5MCS5lemPreQLPVWlLYh9hoSdQNSZhT3SVk=',
+        'restaurant_id' => 2,
+        'category_id'=> 1,
+    ],
+
+    [
+        'name' => 'Hawaiian Burger',
+        'description' => null,
+        'ingredients' => 'panino , cipolle , pomodori , ananas',
+        'price' => 10,
+        'img_path' => 'https://media.istockphoto.com/id/1043829510/it/foto/teriyaki-hawaiano-hamburger-di-ananas-e-pancetta-con-patatine-fritte.jpg?s=612x612&w=0&k=20&c=g2DTrQgod0Fmo3g9o-h_F1HzS6B7zG6PCQHi5IhiOO8=',
+        'restaurant_id' => 2,
+        'category_id'=> 1,
     ],
 
     // * Dolci
     [
-        'name' => 'Fegato grasso d\'anatra',
-        'description' => 'Piatto cucinato dallo chef Stellato Mandarino Capesante',
-        'ingredients' => 'salsa a base di pasta di ceci , olio di oliva ,cioccolato',
-        'price' => 59,
-        'img_path' => 'https://media.istockphoto.com/id/959099928/it/foto/hummus-chickpea-in-ciotola.jpg?s=612x612&w=0&k=20&c=yABa7GPnJLD1aQXusmveOm27aNwirZC3KfXZpo4-3N8=',
+        'name' => 'Torta di mela',
+        'description' => null,
+        'ingredients' => 'mela',
+        'price' => 5,
+        'img_path' => 'https://media.istockphoto.com/id/450752471/it/foto/dessert-torta-di-mele-fatta-in-casa-naturale.jpg?s=612x612&w=0&k=20&c=addMTNaiSN1LGaZviE8F98LrPst2qx-ekUm_kkLV5JQ=',
         'restaurant_id' => 2,
         'category_id'=> 6,
     ],
-    
+
     [
-        'name' => 'Cheesecake di Mimmo',
-        'description' => 'Dolce prelibato preparato con prodotti a KM0 dello Chef Mimmo',
-        'ingredients' => 'Biscotti, Panna, Limone, Philadelphia',
-        'price' => 8.99,
-        'img_path' => 'https://media.istockphoto.com/id/513995760/it/foto/chef-completamento-del-deserto.jpg?s=612x612&w=0&k=20&c=HrzzZ_uTHSri5hsc8iyvUPq6PzhMemTP8dt66pfo7uw=',
+        'name' => 'Cheescake',
+        'description' => null,
+        'ingredients' => 'formaggio',
+        'price' => 8,
+        'img_path' => 'https://media.istockphoto.com/id/865903134/it/foto/cheescake-al-cioccolato-o-fetta-di-torta-al-cioccolato-su-piatto-bianco.jpg?s=612x612&w=0&k=20&c=z7Sgyg1QueEuVaSp65jpAnz7qwGyNAgdoaHZCA1TP28=',
         'restaurant_id' => 2,
-        'category_id' => 6,
+        'category_id'=> 6,
+    ],
+
+    // * Bevande
+    [
+        'name' => 'Milkshake',
+        'description' => null,
+        'ingredients' => 'latte',
+        'price' => 7,
+        'img_path' => 'https://media.istockphoto.com/id/926990564/it/foto/latte-al-cioccolato-e-panna-montata.jpg?s=612x612&w=0&k=20&c=bpV1YHXYMVvE5mNgw8fLGrZfFu5FFDZByeVQbUbv2K0=',
+        'restaurant_id' => 2,
+        'category_id'=> 7,
     ],
 
     // ? 3: OSTERIA SALENTINA
@@ -998,6 +1029,26 @@ return [
         'category_id' => 3,
     ],
 
+    [
+        'name' => 'Animelle di vitello',
+        'description' => 'Piatto cucinato dallo chef Stellato Mandarino Capesante',
+        'ingredients' => 'vitello,frutti rossi, basilico',
+        'price' => 62,
+        'img_path' => 'https://media.istockphoto.com/id/1148219726/it/foto/roast-beef-fatto-in-casa.jpg?s=612x612&w=0&k=20&c=gdmCAzWLGZ2VTjFz9U89HBNHTpkZJVQZYa0AeCUfF0o=',
+        'restaurant_id' => 10,
+        'category_id'=> 3,
+    ],
+
+    [
+        'name' => 'Carne di agnello',
+        'description' => 'Carne di Bovino, ammazzato personalmente',
+        'ingredients' => 'Carne, Origano, Olio, Sale',
+        'price' => 44.85,
+        'img_path' => 'https://media.istockphoto.com/id/467413730/it/foto/organic-costolette-di-agnello-alla-griglia.jpg?s=612x612&w=0&k=20&c=44lRbSN3jv6AuaZNK5i-_B1HJLvoehLLGPQVHuA7wzI=',
+        'restaurant_id' => 10,
+        'category_id' => 3,
+    ],
+
     // ? 11: NORTH STAR RELAX RISTORANTE
     // * ANTIPASTI
     [
@@ -1029,6 +1080,27 @@ return [
         'img_path'=>'https://media.istockphoto.com/id/1063976282/it/foto/lo-chef-esegna-una-pizza-calda-dal-forno.jpg?s=612x612&w=0&k=20&c=_BFUNLiSrHPbsx3EeticvFqo6NKnGTeBQJ3TuUaL0p8=',
         'restaurant_id' => 10,
         'category_id' => 4,
+    ],
+
+    // * Dolci
+    [
+        'name' => 'Fegato grasso d\'anatra',
+        'description' => 'Piatto cucinato dallo chef Stellato Mandarino Capesante',
+        'ingredients' => 'salsa a base di pasta di ceci , olio di oliva ,cioccolato',
+        'price' => 59,
+        'img_path' => 'https://media.istockphoto.com/id/959099928/it/foto/hummus-chickpea-in-ciotola.jpg?s=612x612&w=0&k=20&c=yABa7GPnJLD1aQXusmveOm27aNwirZC3KfXZpo4-3N8=',
+        'restaurant_id' => 11,
+        'category_id'=> 6,
+    ],
+    
+    [
+        'name' => 'Cheesecake di Mimmo',
+        'description' => 'Dolce prelibato preparato con prodotti a KM0 dello Chef Mimmo',
+        'ingredients' => 'Biscotti, Panna, Limone, Philadelphia',
+        'price' => 8.99,
+        'img_path' => 'https://media.istockphoto.com/id/513995760/it/foto/chef-completamento-del-deserto.jpg?s=612x612&w=0&k=20&c=HrzzZ_uTHSri5hsc8iyvUPq6PzhMemTP8dt66pfo7uw=',
+        'restaurant_id' => 11,
+        'category_id' => 6,
     ],
 
     // ? 12: MONDO SUSHI
