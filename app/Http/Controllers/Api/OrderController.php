@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -16,13 +15,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $userRestaurant = Auth::user()->restaurant;
-        //dd($userRestaurant->dishes()->restaurant_id);
-        $orders = Order::whereHas('dishes', function ($query) use ($userRestaurant) {
-            $query->where('restaurant_id', $userRestaurant->id);
-        })->orderBy('date', 'desc')->get();
-        //dd($orders);
-        return view('admin.orders.index', compact('orders'));
+        //
     }
 
     /**
@@ -43,7 +36,36 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        $request->validate([
+            'total_price' => ['required', 'decimal:2'],
+            'costumer_name' => ['required', 'string', 'max:40'],
+            'costumer_phone' => ['required', 'numeric', 'digits_between:9, 15'],
+            'costumer_mail' => ['required', 'string', 'email', 'max:100'],
+            'costumer_address' =>  ['required', 'string', 'max:200'],
+        ]);
+
+        $data = $request->all();
+
+        $new_order = new Order();
+        $new_order->date = now();
+        $new_order->total_price = $data['total_price'];
+        $new_order->costumer_name = $data['costumer_name'];
+        $new_order->costumer_phone = $data['costumer_phone'];
+        $new_order->costumer_mail = $data['costumer_mail'];
+        $new_order->costumer_address = $data['costumer_address'];
+        $new_order->status = $data['status'];
+        $new_order->save();
+
+        foreach ($data['dishes'] as $dish) {
+            $new_order->dishes()->attach($dish['id'], ['quantity' => $dish['quantity']]);
+        }
+
+        return response()->json([
+            'success' => true,
+            'results' => ['data' => $data]
+        ]);
     }
 
     /**
@@ -52,9 +74,9 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Order $order)
+    public function show($id)
     {
-        return view('admin.orders.show', compact('order'));
+        //
     }
 
     /**
