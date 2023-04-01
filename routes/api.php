@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\LeadController as LeadController;
 use App\Http\Controllers\Api\RestaurantController as RestaurantController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('restaurants', RestaurantController::class, ['only' => ['index', 'show']]);
 Route::post('orders', [OrderController::class, 'store']);
+Route::post('/payment', [LeadController::class, 'store' ]);
