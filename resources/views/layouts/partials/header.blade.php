@@ -3,7 +3,7 @@
     @guest
     <div class="logo_laravel">
         <a class="nav-link" href="{{url('/') }}">
-            <svg width="120px" height="" viewBox="0 0 513 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg width="120px" viewBox="0 0 513 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="512x512-(Android)" transform="translate(0.000000, -199.000000)" fill="#00CCBC">
                         <g id="logo-teal" transform="translate(0.000000, 199.000000)">
