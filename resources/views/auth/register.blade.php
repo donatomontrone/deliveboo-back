@@ -152,7 +152,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="small text-success text-end pe-4">
+                    <p class="small text-success text-end pe-4 position-absolute bottom-0">
                         &ast; Campi obbligatori.
                     </p>
                 </div>
