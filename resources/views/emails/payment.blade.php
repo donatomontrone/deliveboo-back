@@ -12,21 +12,11 @@
 
     <div class="container">
         <div class="row p-5">
-            <div class="card col-12">
-                    <div class="card-body">
-                        <h5 class="card-title">Messaggio di {{ $lead->name }}</h5>
-                        <p class="card-text">
-                            Numero di telefono: {{ $lead->phone }}
-                        </p>
-                        <p class="card-text">
-                            Indirizzo: {{ $lead->address }}
-                        </p>
-                        <div class="card-footer">
-                            <pre>
-                                Email del cliente:{{ $lead->email }}
-                            </pre>
-                        </div>
-                    </div>
+            <div class="card">
+                <img src="http://www.riccardonestola.com/wp-content/uploads/2023/04/logo_deliveboo.svg" class="img-fluid card-img-top" alt="">
+                <div class="card-body">
+                    <span>Ciao {{$lead->name}} ti confermiano che il tuo ordine è stato accettato con la registrazione con l'email "{{$lead->email}}"</span>
+                </div>
               </div>
         </div>
     </div>

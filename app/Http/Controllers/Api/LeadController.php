@@ -36,7 +36,7 @@ class LeadController extends Controller
         $lead->fill($data);
         $lead->save();
 
-        Mail::to('shish@shish.com')->send(new NewContact($lead));
+        Mail::to($lead->email)->send(new NewContact($lead));
 
         return response()->json([
             'success' => true
