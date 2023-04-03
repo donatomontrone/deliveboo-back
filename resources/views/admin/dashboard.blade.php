@@ -33,7 +33,7 @@
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card bg-danger text-white shadow">
                                         <div class="card-body">
-                                            <a class="text-white" href="">Visualizza statistiche</a>
+                                            <a class="text-white" href="{{route('admin.chart.index') }}">Visualizza statistiche</a>
                                         </div>
                                     </div>
                             </div>
