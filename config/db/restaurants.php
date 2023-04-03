@@ -3,65 +3,65 @@ return [
     [
         'name' => 'La Pergola',
         'address' => 'Via Alberto Cadlolo 101',
-        'image' => 'https://media.istockphoto.com/id/1211547141/it/foto/moderno-design-degli-interni-del-ristorante.jpg?s=612x612&w=0&k=20&c=AqJBPt3WX_IcRBOy7SO61vGRKnrS-EAO7FMMDPCJ_U4=',
+        'image' => 'https://plus.unsplash.com/premium_photo-1661775249446-c56b418d009e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4170&q=80',
     ],
     [
         'name' => 'La Lucia',
         'address' => 'Piazza Mazzini 21',
-        'image' => 'https://media.istockphoto.com/id/172188540/it/foto/i-negozi-e-ristoranti-edificio-esterni.jpg?s=612x612&w=0&k=20&c=CZORhBdw-6qba8h9KAPYr5TemJSVhDEZ3UFmEGOhp4s=',
+        'image' => 'https://images.unsplash.com/photo-1600261701148-cab9668a1052?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4170&q=80',
     ],
     [
         'name' => 'Osteria Salentina',
         'address' => 'Via del Mare 72',
-        'image' => 'https://media.istockphoto.com/id/843610508/it/foto/interno-di-accogliente-ristorante-stile-loft.jpg?s=612x612&w=0&k=20&c=lQOh8TjNCT8uC02wQM4FpbEjkgmPCscM_zPzRSWBhE8=',
+        'image' => 'https://images.unsplash.com/photo-1531419925964-8c2e4bc58e63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3456&q=80',
     ],
     [
         'name' => 'Il Vecchio Molo',
         'address' => 'Via Liguria 19',
-        'image' => 'https://media.istockphoto.com/id/1248298359/it/foto/interno-ristorante-di-lusso-di-notte.jpg?s=612x612&w=0&k=20&c=ZWEoYnLnVtzfppR3rb4-gphBnG4B2mHmual0LlVv6O0=',
+        'image' => 'https://salentovip.it/wp-content/uploads/2022/11/LOCATION-IL-VECCHIO-MOLO-10.jpeg',
     ],
     [
         'name' => 'Il Ristorante di Donato',
         'address' => 'Via della Madonnina 6',
-        'image' => 'https://www.fabriziocostantini.it/images/food-digital.jpg',
+        'image' => 'https://images.unsplash.com/photo-1563245370-81fdd442d8d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3953&q=80',
     ],
     [
         'name' => 'La Susheria da Gino Ginetti',
         'address' => 'Via Santa Monica di Stefanino 47',
-        'image' => 'https://media.istockphoto.com/id/1156782499/it/foto/ritratto-di-chef-di-sushi-giapponese-di-notte.jpg?s=612x612&w=0&k=20&c=65eLiVqqgE-92P9F-5uZLckrkd90OOjZ0Oke4VXVsCQ=',
+        'image' => 'https://images.unsplash.com/photo-1526234362653-3b75a0c07438?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4332&q=80',
     ],
     [
         'name' => 'La Taverna di Paolo detto Domenico',
         'address' => 'Via San Rocco 29',
-        'image' => 'https://media.istockphoto.com/id/170072398/it/foto/tavoli-del-ristorante-italia.jpg?s=612x612&w=0&k=20&c=U7G8nwL-BZgqi6VBYvKNLL80ABz2vYdB8n4vbbekX6s=',
+        'image' => 'https://images.unsplash.com/photo-1498536182014-41657c87657b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4170&q=80',
     ],
     [
         'name' => 'La Pizzeria di Aniello',
         'address' => 'Via Roma 18',
-        'image' => 'https://media.istockphoto.com/id/1372848729/it/foto/cameriere-sorridente-che-guarda-la-macchina-fotografica-e-mostra-una-pizza.jpg?s=612x612&w=0&k=20&c=dwfWF-56Pep1ChIXqsosBLj13sAeHTPjsa4RZq2MDgE=',
+        'image' => 'https://images.unsplash.com/photo-1569230516306-5a8cb5586399?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3024&q=80',
     ],
 
     [
         'name' => 'Wellness Trattoria',
         'address' => 'Corso Porta Nuova 124',
-        'image' => 'https://media.istockphoto.com/id/468441873/it/foto/ristorante-italiano.jpg?s=612x612&w=0&k=20&c=F-s17JqPSPTFOzNaa-0DDneIgfQfqqiB7k_PljjmuPE=',
+        'image' => 'https://images.unsplash.com/photo-1469234496837-d0101f54be3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4236&q=80',
     ],
-    
+
     [
         'name' => 'Sapori di Trani',
         'address' => 'Via Appia Nuova 3',
-        'image' => 'https://media.istockphoto.com/id/1388791611/it/foto/stile-teppanyaki.jpg?s=612x612&w=0&k=20&c=HZlSl4rG20Ms85SLrUCB5cj1U9XPvjrDR6159xnJaeY=',
+        'image' => 'https://images.unsplash.com/photo-1562931895-63f11bf6fe62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3079&q=80',
     ],
-    
+
     [
         'name' => 'North Star Relax Ristorante',
         'address' => 'Via Appia Nuova 3',
-        'image' => 'https://media.istockphoto.com/id/1159992039/it/foto/ristorante-accogliente-per-lincontro-con-gli-amici.jpg?s=612x612&w=0&k=20&c=T_r51EmiGDTo5bfE4Uo6r4OoCYCxdp14_1a-jXch_t8=',
+        'image' => 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4170&q=80',
     ],
-    
+
     [
         'name' => 'Mondo Sushi',
         'address' => 'Via degli Aldobrandeschi 119',
-        'image' => 'https://media.istockphoto.com/id/175506580/it/foto/lusso-a-buffet.jpg?s=612x612&w=0&k=20&c=LMWpoEQ9B9llTeojgt04eNpCAPC8XWvABaVZnwL7gwc=',
+        'image' => 'https://images.unsplash.com/photo-1590577976322-3d2d6e2130d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=4170&q=80',
     ],
 ];

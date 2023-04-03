@@ -9,37 +9,37 @@ return [
         'price' => 23.99,
         'img_path' => 'https://www.salepepe.it/files/2016/12/Crema-e-cips-topinambur-con-Camembert-1140x636.jpg',
         'restaurant_id' => 1,
-        'category_id'=> 1,
-    ], 
+        'category_id' => 1,
+    ],
     [
         'name' => 'Tartare di ricciola',
         'description' => 'Piatto cucinato dallo chef Stellato Heinz Beck',
-        'ingredients' => 'sedano,rapa,datteri,salsa di yogurt,orzo',
+        'ingredients' => 'sedano, rapa, datteri, salsa di yogurt, orzo',
         'price' => 68,
         'img_path' => 'https://pentoleepennelli.it/wp-content/uploads/2021/06/1020675-1.jpg',
         'restaurant_id' => 1,
-        'category_id'=> 1,
+        'category_id' => 1,
     ],
     [
         'name' => 'Humus, umile, umano',
         'description' => 'Piatto cucinato dallo chef Stellato Heinz Beck',
-        'ingredients' => 'salsa a base di pasta di ceci , olio di oliva ,cioccolato',
+        'ingredients' => 'salsa a base di pasta di ceci, olio di oliva, cioccolato',
         'price' => 59,
         'img_path' => 'https://media.istockphoto.com/id/959099928/it/foto/hummus-chickpea-in-ciotola.jpg?s=612x612&w=0&k=20&c=yABa7GPnJLD1aQXusmveOm27aNwirZC3KfXZpo4-3N8=',
         'restaurant_id' => 1,
-        'category_id'=> 1,
+        'category_id' => 1,
     ],
-   
+
 
     // * Primi
     [
         'name' => 'Fiore di zucca in pastella con caviale',
         'description' => 'Piatto cucinato dallo chef Stellato Heinz Beck',
-        'ingredients' => 'zucca, crostacei,zafferano,caviale',
+        'ingredients' => 'zucca, crostacei, zafferano, caviale',
         'price' => 79,
         'img_path' => 'https://media.istockphoto.com/id/1390805938/it/foto/fritti-in-una-pastella-fiori-di-zucca-ripieni-di-ricotta-e-prezzemolo-fiori-di-zucca-o-zucca.jpg?s=612x612&w=0&k=20&c=FK6fWKpmLEZrrcNAgw7K6WODHGfd8hFF53FUAaoS8Ko=',
         'restaurant_id' => 1,
-        'category_id'=> 2,
+        'category_id' => 2,
     ],
 
     [
@@ -49,7 +49,7 @@ return [
         'price' => 65,
         'img_path' => 'https://www.innaturale.com/wp-content/uploads/2019/04/procedimento-Fagottelli-Pergola.jpg',
         'restaurant_id' => 1,
-        'category_id'=> 2,
+        'category_id' => 2,
     ],
 
     [
@@ -59,58 +59,58 @@ return [
         'price' => 69,
         'img_path' => 'https://media.istockphoto.com/id/1339854693/it/foto/ravioli-ripieni-di-zucca-sopra-la-scena-del-tavolo-su-uno-sfondo-scuro.jpg?s=612x612&w=0&k=20&c=n-w5TaHWdvjcYf-iCjEwqKdODhHOEGTKgez0t_tbC5s=',
         'restaurant_id' => 1,
-        'category_id'=> 2,
+        'category_id' => 2,
     ],
 
     [
         'name' => 'Spaghetti con coniglio e cime di rapa',
         'description' => 'Piatto cucinato dallo chef Stellato Heinz Beck',
-        'ingredients' => 'spaghetti , cime di rapa , carne di coniglio',
+        'ingredients' => 'spaghetti, cime di rapa, carne di coniglio',
         'price' => 62,
         'img_path' => 'https://media.istockphoto.com/id/1131255252/it/foto/stufato-di-coniglio-tradizionale-maltese.jpg?s=612x612&w=0&k=20&c=_wnOJgzixQMVkjcPFoKHoc6gESN-ImtmDAY-RpBefQs=',
         'restaurant_id' => 1,
-        'category_id'=> 2,
+        'category_id' => 2,
     ],
 
     // * Secondo
     [
         'name' => 'San Pietro con broccoli selvatici',
         'description' => 'Piatto cucinato dallo chef Stellato Heinz Beck',
-        'ingredients' => 'carne,broccoli',
+        'ingredients' => 'carne, broccoli',
         'price' => 78,
         'img_path' => 'http://cdn.cook.stbm.it/thumbnails/ricette/25/25700/hd750x421.jpg',
         'restaurant_id' => 1,
-        'category_id'=> 3,
+        'category_id' => 3,
     ],
 
     [
         'name' => 'Rombo con contorni',
         'description' => 'Piatto cucinato dallo chef Stellato Heinz Beck',
-        'ingredients' => 'carne, barbabietole,quinoa e crema alla soia',
+        'ingredients' => 'carne, barbabietole, quinoa e crema alla soia',
         'price' => 78,
         'img_path' => 'https://www.cucinamancina.com/media/k2/items/cache/7539a1b30386b8951ffea14c91e802dc_L.jpg',
         'restaurant_id' => 1,
-        'category_id'=> 3,
+        'category_id' => 3,
     ],
 
     [
         'name' => 'Agnello su crema soffice di lenticchie',
         'description' => 'Piatto cucinato dallo chef Stellato Heinz Beck',
-        'ingredients' => 'carne di agnello, crema di lenticchie ,carne di pecora e cipollotti',
+        'ingredients' => 'carne di agnello, crema di lenticchie, carne di pecora e cipollotti',
         'price' => 72,
         'img_path' => 'http://www.chefericette.com/wp-content/uploads/2021/03/Ricetta-Agnello-arrosto-chef-Rocco-de-Santis.jpg',
         'restaurant_id' => 1,
-        'category_id'=> 3,
+        'category_id' => 3,
     ],
 
     [
         'name' => 'Piccione con miele e polline',
         'description' => 'Piatto cucinato dallo chef Stellato Heinz Beck',
-        'ingredients' => 'piccione, miele , polline ',
+        'ingredients' => 'filetto di piccione, miele, polline ',
         'price' => 72,
         'img_path' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-2cvhbJt9G0ypkuNr8O7Y3XioD1G2KDwEfA&usqp=CAU',
         'restaurant_id' => 1,
-        'category_id'=> 3,
+        'category_id' => 3,
     ],
 
     [
@@ -120,7 +120,7 @@ return [
         'price' => 72,
         'img_path' => 'https://media.istockphoto.com/id/639407692/it/foto/rumpsteak-ai-ferri.jpg?s=612x612&w=0&k=20&c=h0GKKFmNvjIYKZElz3IY_s9o0PqLf9CgRY1d_HoDmpk=',
         'restaurant_id' => 1,
-        'category_id'=> 3,
+        'category_id' => 3,
     ],
 
 
@@ -128,74 +128,74 @@ return [
     // * Antipasti
     [
         'name' => 'Beef Burger',
-        'description' => null,
-        'ingredients' => 'hamrburger di manzo, panino , cipolle',
+        'description' => 'Panino soffice, hamburger di manzo, formaggio, insalata, pomodoro, cipolla caramellata, salse, patatine.',
+        'ingredients' => 'hamrburger di manzo, panino, cipolle',
         'price' => 5,
         'img_path' => 'https://media.istockphoto.com/id/1215529349/it/foto/braised-beef-short-rib-sandwich-con-coleslaw-su-un-brioche-bun.jpg?s=612x612&w=0&k=20&c=q-GZarSUd6av_xrrLwVMfyOHtUGLrNnzhUpHcVOJB5U=',
         'restaurant_id' => 2,
-        'category_id'=> 1,
+        'category_id' => 1,
     ],
 
     [
         'name' => 'Cheeseburger',
-        'description' => null,
-        'ingredients' => 'hamrburger di manzo, panino , formaggio , pomodorini',
+        'description' => 'Hamburger di manzo con formaggio fuso e condimenti',
+        'ingredients' => 'hamrburger di manzo, panino, formaggio, pomodorini',
         'price' => 6,
         'img_path' => 'https://media.istockphoto.com/id/544721816/it/foto/due-hamburger-freschi-fatti-in-casa-sottaceti-ketchup-e-anelli-di-cipolla.jpg?s=612x612&w=0&k=20&c=GyUJOcK7To-HiZGPVYe_RnbKekDH4snrz0GDzXrvmm8=',
         'restaurant_id' => 2,
-        'category_id'=> 1,
+        'category_id' => 1,
     ],
 
     [
         'name' => 'Barbeque Burger',
-        'description' => null,
-        'ingredients' => 'panino , cipolle , pomodori , salsa',
+        'description' => 'Hamburger di manzo grigliato, salsa barbecue, formaggio fuso, pancetta croccante',
+        'ingredients' => 'panino, cipolle, pomodori, salsa',
         'price' => 9,
         'img_path' => 'https://media.istockphoto.com/id/1215569804/it/foto/hamburger-fresco-e-succoso-su-un-cuscino-di-carta-con-birra-su-un-tavolo-di-legno-sfondo-scuro.jpg?s=612x612&w=0&k=20&c=UCrPQ_ou5MCS5lemPreQLPVWlLYh9hoSdQNSZhT3SVk=',
         'restaurant_id' => 2,
-        'category_id'=> 1,
+        'category_id' => 1,
     ],
 
     [
         'name' => 'Hawaiian Burger',
-        'description' => null,
-        'ingredients' => 'panino , cipolle , pomodori , ananas',
+        'description' => 'Hamburger di manzo, formaggio cheddar, ananas grigliato, salsa teriyaki',
+        'ingredients' => 'panino, cipolle, pomodori, ananas',
         'price' => 10,
         'img_path' => 'https://media.istockphoto.com/id/1043829510/it/foto/teriyaki-hawaiano-hamburger-di-ananas-e-pancetta-con-patatine-fritte.jpg?s=612x612&w=0&k=20&c=g2DTrQgod0Fmo3g9o-h_F1HzS6B7zG6PCQHi5IhiOO8=',
         'restaurant_id' => 2,
-        'category_id'=> 1,
+        'category_id' => 1,
     ],
 
     // * Dolci
     [
-        'name' => 'Torta di mela',
-        'description' => null,
-        'ingredients' => 'mela',
+        'name' => 'Torta di mele',
+        'description' => 'Dolce rustico con fette di mele caramellate, cannella e briciole croccanti',
+        'ingredients' => 'Mele, cannella, zucchero, farina, burro, uova, lievito, limone',
         'price' => 5,
         'img_path' => 'https://media.istockphoto.com/id/450752471/it/foto/dessert-torta-di-mele-fatta-in-casa-naturale.jpg?s=612x612&w=0&k=20&c=addMTNaiSN1LGaZviE8F98LrPst2qx-ekUm_kkLV5JQ=',
         'restaurant_id' => 2,
-        'category_id'=> 6,
+        'category_id' => 6,
     ],
 
     [
         'name' => 'Cheescake',
-        'description' => null,
-        'ingredients' => 'formaggio',
+        'description' => 'Dolce cremoso a base di formaggio, crosta di biscotti sbriciolati.',
+        'ingredients' => 'Formaggio cremoso, zucchero, uova, biscotti secchi, burro, vaniglia',
         'price' => 8,
         'img_path' => 'https://media.istockphoto.com/id/865903134/it/foto/cheescake-al-cioccolato-o-fetta-di-torta-al-cioccolato-su-piatto-bianco.jpg?s=612x612&w=0&k=20&c=z7Sgyg1QueEuVaSp65jpAnz7qwGyNAgdoaHZCA1TP28=',
         'restaurant_id' => 2,
-        'category_id'=> 6,
+        'category_id' => 6,
     ],
 
     // * Bevande
     [
         'name' => 'Milkshake',
-        'description' => null,
-        'ingredients' => 'latte',
+        'description' => 'Bevanda cremosa a base di latte e gelato, aromatizzata con sciroppo',
+        'ingredients' => 'Latte, gelato alla vaniglia, sciroppo di cioccolato, panna montata.',
         'price' => 7,
         'img_path' => 'https://media.istockphoto.com/id/926990564/it/foto/latte-al-cioccolato-e-panna-montata.jpg?s=612x612&w=0&k=20&c=bpV1YHXYMVvE5mNgw8fLGrZfFu5FFDZByeVQbUbv2K0=',
         'restaurant_id' => 2,
-        'category_id'=> 7,
+        'category_id' => 7,
     ],
 
     // ? 3: OSTERIA SALENTINA
@@ -203,42 +203,42 @@ return [
     [
         'name' => 'Riso con salmone',
         'description' => 'Riso bianco saltato con uova ,salmone e verdure',
-        'ingredients' => 'riso bianco,uova,salmone e verdure',
+        'ingredients' => 'riso bianco, uova, salmone e verdure',
         'price' => 7,
         'img_path' => 'https://media.istockphoto.com/id/1072044110/it/foto/ciotola-di-poke-con-salmone-servito-in-ciotola.jpg?s=612x612&w=0&k=20&c=O9BbEE9rjS2Rd7-a9YkqjoDtc8bATlxt8xLKrcTHMKg=',
         'restaurant_id' => 3,
-        'category_id'=> 2,
+        'category_id' => 2,
     ],
-    
+
     [
         'name' => 'Spaghetti di riso e verdure',
         'description' => 'Spaghetti di riso saltati con uova strapazzate e verdure miste e salsa di soia',
-        'ingredients' => 'riso,uova strappazzate,verdure,salsa di soia',
+        'ingredients' => 'riso, uova strappazzate, verdure, salsa di soia',
         'price' => 5,
         'img_path' => 'https://media.istockphoto.com/id/503129686/it/foto/piccante-pho-vietnamita-con-salsa-sriracha-in-alto-verso-il-basso.jpg?s=612x612&w=0&k=20&c=GOjdJJNFbHZCVvDx-Dr0OD7_9rm_7rJeKsUA3clDmFk=',
         'restaurant_id' => 3,
-        'category_id'=> 2,
+        'category_id' => 2,
     ],
 
     // * Secondi 
     [
         'name' => 'Pollo con mandorle',
         'description' => 'Pollo saltato con verdure e mandorle',
-        'ingredients' => 'pollo , verdure , mandorle',
+        'ingredients' => 'pollo, verdure, mandorle',
         'price' => 7,
         'img_path' => 'https://media.istockphoto.com/id/520882958/it/foto/pollo-con-mandorle.jpg?s=612x612&w=0&k=20&c=sBeGlS4ffSVfUXRaa5p39kFBm2_UPTbCJy-zvdLMt9M=',
         'restaurant_id' => 3,
-        'category_id'=> 3,
+        'category_id' => 3,
     ],
-    
+
     [
         'name' => 'Gamberi sale e pepe',
         'description' => 'Gamberi alla piastra conditi con peperoni e cipolla',
-        'ingredients' => 'gamberi,peperoni,cipolla',
+        'ingredients' => 'gamberi, peperoni, cipolla',
         'price' => 10,
         'img_path' => 'https://media.istockphoto.com/id/1361821345/it/foto/gamberetti-asiatici-fatti-in-casa-con-sale-e-pepe.jpg?s=612x612&w=0&k=20&c=AqyVFDp91Fzle6bAA2YSN2eb7dOAOe0HPXUV5J_YrwA=',
         'restaurant_id' => 3,
-        'category_id'=> 3,
+        'category_id' => 3,
     ],
 
     // ? 4: IL VECCHIO MOLO
@@ -246,42 +246,42 @@ return [
     [
         'name' => 'Riso con pesce',
         'description' => 'Riso bianco saltato con uova strapazzate e verdure miste',
-        'ingredients' => 'riso bianco,uova strapazzate e verdure miste',
+        'ingredients' => 'riso bianco, uova strapazzate e verdure miste',
         'price' => 6,
         'img_path' => 'https://media.istockphoto.com/id/1320554221/it/foto/ciotola-di-salmone-piccante-con-riso-carote-cetriolo-e-avocado.jpg?s=612x612&w=0&k=20&c=OSvwqjeSwNDhBgVdoREGBT7-zhymbrd7j0uHPNY6OcM=',
         'restaurant_id' => 4,
-        'category_id'=> 2,
+        'category_id' => 2,
     ],
-    
+
     [
         'name' => 'Spaghetti di riso e pesce',
         'description' => 'Spaghetti di riso saltati con uova strapazzate , verdure ,pesce misto e salsa di soia',
-        'ingredients' => 'riso,uova strappazzate,verdure,salsa di soia,pesce misto',
+        'ingredients' => 'riso, uova strappazzate, verdure, salsa di soia, pesce misto',
         'price' => 6,
         'img_path' => 'https://media.istockphoto.com/id/1398323365/it/foto/vermicelli-di-riso-zuppa-di-noodle-con-polpette-di-maiale.jpg?s=612x612&w=0&k=20&c=S14n1bysrtVykQcGyTmohHscWTVN7W4G2bzoG6HSiIw=',
         'restaurant_id' => 4,
-        'category_id'=> 2,
+        'category_id' => 2,
     ],
 
     // * Secondi 
     [
         'name' => 'Pollo al limone',
         'description' => 'Pollo saltato con limone',
-        'ingredients' => 'pollo , limone',
+        'ingredients' => 'pollo, limone',
         'price' => 7,
         'img_path' => 'https://media.istockphoto.com/id/518528305/it/foto/pollo-limone-fatta-in-casa-ed-erbe-aromatiche.jpg?s=612x612&w=0&k=20&c=Q_lEqxkh8vW7l1QTC6_oC2MfQXHYIin-rWYT8wPoW88=',
         'restaurant_id' => 4,
-        'category_id'=> 3,
+        'category_id' => 3,
     ],
-    
+
     [
         'name' => 'Gamberi in salsa chili',
         'description' => 'Gamberi saltati con verdure e salsa piccante',
-        'ingredients' => 'gamberi,verdure,salsa piccante',
+        'ingredients' => 'gamberi, verdure, salsa piccante',
         'price' => 10,
         'img_path' => 'https://media.istockphoto.com/id/1291717116/it/foto/cibo-tailandese-fagioli-ali-con-insalata-piccante-di-gamberetti.jpg?s=612x612&w=0&k=20&c=LDMhPv0uYH0RxKv1dRG03ZjXyIXk5FXzosyXsNb-QA4=',
         'restaurant_id' => 4,
-        'category_id'=> 3,
+        'category_id' => 3,
     ],
 
 
@@ -294,7 +294,7 @@ return [
         'price' => 23.99,
         'img_path' => 'https://media.istockphoto.com/id/1285893132/it/foto/linguine-allo-scoglio-spaghetti-allo-scoglio-pasta-tradizionale-italiana-con-cozze-gamberetti.jpg?s=612x612&w=0&k=20&c=5WN2H9QdpM9PKmsOktzdcBBl82qsHFb74hAKjKXc9BI=',
         'restaurant_id' => 5,
-        'category_id'=> 2,
+        'category_id' => 2,
     ],
 
     // * Secondi
@@ -328,7 +328,7 @@ return [
         'restaurant_id' => 5,
         'category_id' => 7,
     ],
-    
+
     [
         'name' => 'Acqua frizzante',
         'description' => 'Acqua frizzante',
@@ -344,28 +344,28 @@ return [
     [
         'name' => 'Involtini Primavera',
         'description' => 'Pasta fillo di grano fritta ripiena di verdure miste , servito con salsa agrodolce cinese',
-        'ingredients' => 'pasta,verdure miste,salsa agrodolce',
+        'ingredients' => 'pasta, verdure miste, salsa agrodolce',
         'price' => 3,
         'img_path' => 'https://media.istockphoto.com/id/840599504/it/foto/involtini.jpg?s=612x612&w=0&k=20&c=E4AeyvqVlDI_upRxK4OMJpUt0cF3TLAQxCM_qF49MMg=',
         'restaurant_id' => 6,
         'category_id' => 1,
     ],
-    
+
     [
         'name' => 'Involtini di gamberi',
         'description' => 'Pasta fillo di grano fritta ripiena di gamberi e verdure,servito con salsa agrodolce piccante',
-        'ingredients' => 'pasta,verdure miste,salsa agrodolce',
+        'ingredients' => 'pasta, verdure miste, salsa agrodolce',
         'price' => 5,
         'img_path' => 'https://media.istockphoto.com/id/944478354/it/foto/festa-della-mamma-in-una-composizione-alimentare.jpg?s=612x612&w=0&k=20&c=Z1S1eKf6TVAmmsMUP1n6KkHYHhre857YeuiHNKwpPq0=',
         'restaurant_id' => 6,
         'category_id' => 1,
     ],
-    
+
     // * Sushi
     [
         'name' => 'Nigiri Sake',
         'description' => 'Piatto di sushi cucinato da Gino Ginetti',
-        'ingredients' => 'riso sushi,tonno crudo',
+        'ingredients' => 'riso sushi, tonno crudo',
         'price' => 3,
         'img_path' => 'https://media.istockphoto.com/id/155144448/it/foto/rotolo-di-sushi-parte-delle-applicazioni.jpg?s=612x612&w=0&k=20&c=vTWtmeNjcMaxdT-zKqsZfls-LTP3_H0wwmjGLgoH8NY=',
         'restaurant_id' => 6,
@@ -375,7 +375,7 @@ return [
     [
         'name' => 'Hosso Maki Sake',
         'description' => 'Alga esterna ripiena di riso e tonno crudo',
-        'ingredients' => 'alga,riso,tonno crudo',
+        'ingredients' => 'alga, riso, tonno crudo',
         'price' => 5,
         'img_path' => 'https://media.istockphoto.com/id/1139803818/it/foto/rotolo-di-sushi-californiano-rotolo-di-sushi-di-sake-gamberi-fritti-gyozas-e-salsa-di-soia-su.jpg?s=612x612&w=0&k=20&c=MptzkHMZ9Q_QYXuQwzhGDqSY9YnT9aieA9E3TKGDYH8=',
         'restaurant_id' => 6,
@@ -385,7 +385,7 @@ return [
     [
         'name' => 'Temaki Sake Avocado',
         'description' => 'Alga ripiena con riso,salmone crudo e avocado',
-        'ingredients' => 'alga,riso,salmone,avocado',
+        'ingredients' => 'alga, riso, salmone, avocado',
         'price' => 4,
         'img_path' => 'https://media.istockphoto.com/id/477299443/it/foto/rotolo-di-mano.jpg?s=612x612&w=0&k=20&c=Ymu4XGLVQevhntbPKS33c54xYZFGLIs7iM9qeIKMV-0=',
         'restaurant_id' => 6,
@@ -395,7 +395,7 @@ return [
     [
         'name' => 'Gunkan Sake Flower',
         'description' => 'Involtino di salmone crudo farcito con chicco di riso e salmone crudo e maionese crudo',
-        'ingredients' => 'salmone crudo ,riso,maionese crudo',
+        'ingredients' => 'salmone crudo, riso, maionese crudo',
         'price' => 5,
         'img_path' => 'https://media.istockphoto.com/id/1249753510/it/foto/ricci-di-mare-gunkan.jpg?s=612x612&w=0&k=20&c=jZiiZtdRcHVpN00D1kzhcCTZzkjazMVsxZf3inCYzjo=',
         'restaurant_id' => 6,
@@ -427,7 +427,7 @@ return [
     [
         'name' => 'Antipasto taverna',
         'description' => 'Un antipasto gustoso e prelibato di 5 portate',
-        'ingredients' => 'bruschette con stracciatella , zeppoline ,alici fritte,parmigiana di melanzana,caciottine',
+        'ingredients' => 'bruschette con stracciatella, zeppoline, alici fritte, parmigiana di melanzana, caciottine',
         'price' => 20,
         'img_path' => 'https://media.istockphoto.com/id/815989082/it/foto/piatto-di-cibo-sul-bancone-del-ristorante.jpg?s=612x612&w=0&k=20&c=Ebmal90FL1KwpvzjOk387ayInZ3XR64i6VmFZlgqoXI=',
         'restaurant_id' => 7,
@@ -437,7 +437,7 @@ return [
     [
         'name' => 'Polipo fritto',
         'description' => 'Polipo fritto servito su un letto di rugola e pomodorini',
-        'ingredients' => 'polipo,rugola,pomodorini',
+        'ingredients' => 'polipo, rugola, pomodorini',
         'price' => 12,
         'img_path' => 'https://media.istockphoto.com/id/905554106/it/foto/piatto-di-polpo-con-insalata-di-cibo-italiano.jpg?s=612x612&w=0&k=20&c=BBI5RONXtDH4Ue84bZMpVyMl2yP4_hVivVKiOinwzT4=',
         'restaurant_id' => 7,
@@ -447,18 +447,18 @@ return [
     [
         'name' => 'Tartare di tonno',
         'description' => 'Tonno fresco servito su un letto di avocado',
-        'ingredients' => 'tonno , avocado',
+        'ingredients' => 'tonno, avocado',
         'price' => 12,
         'img_path' => 'https://media.istockphoto.com/id/516424598/it/foto/avocado-e-verdure-insalata-di-tonno.jpg?s=612x612&w=0&k=20&c=40olnWvtMXK2Yxd0zQJjooNVbKrhyO0_wUVgOLIAjxw=',
         'restaurant_id' => 7,
         'category_id' => 1,
     ],
-    
+
     // * Primo
     [
         'name' => 'Pasta e patate con provola',
         'description' => 'Un primo piatto della tipica cucina italiana dalla avvolgente cremosità grazie alla qualità della provola esclusivamente di Agerola',
-        'ingredients' => 'pasta,patate,provola',
+        'ingredients' => 'pasta, patate, provola',
         'price' => 9,
         'img_path' => 'https://media.istockphoto.com/id/1449303517/it/foto/piatto-di-pasta-filante-e-patate-sul-tavolo-al-ristorante.jpg?s=612x612&w=0&k=20&c=l1oh7WJyYYE3IUVx9LjVFp-Wvkyb9zN0fT6VqaioUV0=',
         'restaurant_id' => 7,
@@ -468,7 +468,7 @@ return [
     [
         'name' => 'Genovese',
         'description' => 'Tipico piatto di tradizione partenopea basata su un ragù bianco di carne e cipolle  e poche altri ingredienti che viene stufato a lungo fino a diventare una crema e viene servito su una pasta con una buona spolverata di formaggio grattugiato',
-        'ingredients' => 'ragù bianco,carne , cipolle',
+        'ingredients' => 'ragù bianco, carne, cipolle',
         'price' => 9,
         'img_path' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTws5zoiPOlRMQA3gF2kfRZEHlQZtrDQuFySA&usqp=CAU',
         'restaurant_id' => 7,
@@ -478,7 +478,7 @@ return [
     [
         'name' => 'Paccheri con crema di patate e polipo',
         'description' => 'Polipo fresco, soffrito con aggiunta di crema di patate servito su paccheri freschi',
-        'ingredients' => 'polipo , crema di patate , paccheri',
+        'ingredients' => 'polipo, crema di patate, paccheri',
         'price' => 14,
         'img_path' => 'https://media.istockphoto.com/id/1307213031/it/foto/maccheroni-di-pasta-al-rag%C3%B9.jpg?s=612x612&w=0&k=20&c=8GC_tUtxmULjcO0w_oZlgBISN5amzaftb3lUlICMoXA=',
         'restaurant_id' => 7,
@@ -564,7 +564,7 @@ return [
         'description' => 'Pizza impastata personalmente da Riccardo Nestola',
         'ingredients' => 'pomodoro San Marzano, fiordilatte di Agerola, basilico e olio e.v.o',
         'price' => 7.5,
-        'img_path'=>'https://media.istockphoto.com/id/604829224/it/foto/pizza-margherita.jpg?s=612x612&w=0&k=20&c=yEp1WxF9Stun0IhDB6l042AkveLzF4SSxKjS6AVNZWs=',
+        'img_path' => 'https://media.istockphoto.com/id/604829224/it/foto/pizza-margherita.jpg?s=612x612&w=0&k=20&c=yEp1WxF9Stun0IhDB6l042AkveLzF4SSxKjS6AVNZWs=',
         'restaurant_id' => 8,
         'category_id' => 4,
     ],
@@ -574,7 +574,7 @@ return [
         'description' => 'Pizza impastata personalmente da Riccardo Nestola',
         'ingredients' => 'pomodoro San Marzano, aglio, pomodorino ciliegino, origano Sicilia e olio e.v.o',
         'price' => 7.5,
-        'img_path'=>'https://media.istockphoto.com/id/1397015408/it/foto/trancio-di-pizza-marinara-a-napoli.jpg?s=612x612&w=0&k=20&c=hAIKP75bHn_p3gttgQpznd2oO0UVhmXPgjk-Tv0fecw=',
+        'img_path' => 'https://media.istockphoto.com/id/1397015408/it/foto/trancio-di-pizza-marinara-a-napoli.jpg?s=612x612&w=0&k=20&c=hAIKP75bHn_p3gttgQpznd2oO0UVhmXPgjk-Tv0fecw=',
         'restaurant_id' => 8,
         'category_id' => 4,
     ],
@@ -584,7 +584,7 @@ return [
         'description' => 'Pizza impastata personalmente da Riccardo Nestola',
         'ingredients' => 'mozzarella di bufala, pomodorino giallo e rosso del Piennolo, basilico e olio e.v.o',
         'price' => 10,
-        'img_path'=>'https://media.istockphoto.com/id/1273709340/it/foto/pizza-al-bacon.jpg?s=612x612&w=0&k=20&c=C1ukxNQi9kGKOGlIMlEzJkxI6nF5ZCNYbJwtaq2_KyE=',
+        'img_path' => 'https://media.istockphoto.com/id/1273709340/it/foto/pizza-al-bacon.jpg?s=612x612&w=0&k=20&c=C1ukxNQi9kGKOGlIMlEzJkxI6nF5ZCNYbJwtaq2_KyE=',
         'restaurant_id' => 8,
         'category_id' => 4,
     ],
@@ -594,7 +594,7 @@ return [
         'description' => 'Pizza impastata personalmente da Riccardo Nestola',
         'ingredients' => 'pomodoro San Marzano, fiordilatte di Agerola, crema pecorino, dolce verde, emmental',
         'price' => 11,
-        'img_path'=>'https://media.istockphoto.com/id/1322309775/it/foto/quattro-cheese-pizza-o-quattro-formaggi-pizza-condite-con-salsa-di-pomodoro-mozzarella.jpg?s=612x612&w=0&k=20&c=p816Cy6zi87odim3856pkQDdUYZMdCSiLv8j5eWs3R8=',
+        'img_path' => 'https://media.istockphoto.com/id/1322309775/it/foto/quattro-cheese-pizza-o-quattro-formaggi-pizza-condite-con-salsa-di-pomodoro-mozzarella.jpg?s=612x612&w=0&k=20&c=p816Cy6zi87odim3856pkQDdUYZMdCSiLv8j5eWs3R8=',
         'restaurant_id' => 8,
         'category_id' => 4,
     ],
@@ -604,7 +604,7 @@ return [
         'description' => 'Pizza impastata personalmente da Riccardo Nestola',
         'ingredients' => 'pomodoro San Marzano, fiordilatte di Agerola, prosciutto, funghi, olio e.v.o.',
         'price' => 11,
-        'img_path'=>'https://media.istockphoto.com/id/1218105613/it/foto/pizza-con-prosciutto-e-funghi.jpg?s=612x612&w=0&k=20&c=Da06gsrlxu9xR7zWzraDcK5E1-QDZyI1d0vb_Y-nX90=',
+        'img_path' => 'https://media.istockphoto.com/id/1218105613/it/foto/pizza-con-prosciutto-e-funghi.jpg?s=612x612&w=0&k=20&c=Da06gsrlxu9xR7zWzraDcK5E1-QDZyI1d0vb_Y-nX90=',
         'restaurant_id' => 8,
         'category_id' => 4,
     ],
@@ -614,7 +614,7 @@ return [
         'description' => 'Pizza impastata personalmente da Riccardo Nestola',
         'ingredients' => 'verdure miste',
         'price' => 10,
-        'img_path'=>'https://media.istockphoto.com/id/1279000076/it/foto/pizza-appena-sforata-con-rucola-pomodoro-cipolla-rossa-e-mozzarella.jpg?s=612x612&w=0&k=20&c=ch15mNhK1NSN54P6LClzVmXehNZrp4BginVRn3vs7Xo=',
+        'img_path' => 'https://media.istockphoto.com/id/1279000076/it/foto/pizza-appena-sforata-con-rucola-pomodoro-cipolla-rossa-e-mozzarella.jpg?s=612x612&w=0&k=20&c=ch15mNhK1NSN54P6LClzVmXehNZrp4BginVRn3vs7Xo=',
         'restaurant_id' => 8,
         'category_id' => 4,
     ],
@@ -624,7 +624,7 @@ return [
         'description' => 'Pizza impastata personalmente da Riccardo Nestola',
         'ingredients' => 'prosciutto cotto',
         'price' => 9,
-        'img_path'=>'https://media.istockphoto.com/id/1213496995/it/foto/pizza-con-prosciutto-e-basilico-fresco_pizza-prosciutto-e-basilico-fresco.jpg?s=612x612&w=0&k=20&c=HFFcJ3Kj-YRimXCVUbrd9-bgQzodP9g0gRR6MXCpZ7U=',
+        'img_path' => 'https://media.istockphoto.com/id/1213496995/it/foto/pizza-con-prosciutto-e-basilico-fresco_pizza-prosciutto-e-basilico-fresco.jpg?s=612x612&w=0&k=20&c=HFFcJ3Kj-YRimXCVUbrd9-bgQzodP9g0gRR6MXCpZ7U=',
         'restaurant_id' => 8,
         'category_id' => 4,
     ],
@@ -635,7 +635,7 @@ return [
         'description' => '10',
         'ingredients' => 'Coca cola',
         'price' => 3,
-        'img_path'=>'https://media.istockphoto.com/id/458297599/it/foto/coca-cola-bottiglia-e-a-bicchiere.jpg?s=612x612&w=0&k=20&c=grtfQYHDe8rQjtwakd9rOzdO1klGJfVf5vHxzJhmmD4=',
+        'img_path' => 'https://media.istockphoto.com/id/458297599/it/foto/coca-cola-bottiglia-e-a-bicchiere.jpg?s=612x612&w=0&k=20&c=grtfQYHDe8rQjtwakd9rOzdO1klGJfVf5vHxzJhmmD4=',
         'restaurant_id' => 8,
         'category_id' => 7,
     ],
@@ -645,7 +645,7 @@ return [
         'description' => 'null',
         'ingredients' => 'Fanta',
         'price' => 3,
-        'img_path'=>'https://media.istockphoto.com/id/513393326/it/foto/arancio-fanta-bottiglia-di-plastica.jpg?s=612x612&w=0&k=20&c=nqg1EFy6JJarxEY7WMA4y_KHcbKTStNRIfTgzrtRLOA=',
+        'img_path' => 'https://media.istockphoto.com/id/513393326/it/foto/arancio-fanta-bottiglia-di-plastica.jpg?s=612x612&w=0&k=20&c=nqg1EFy6JJarxEY7WMA4y_KHcbKTStNRIfTgzrtRLOA=',
         'restaurant_id' => 8,
         'category_id' => 7,
     ],
@@ -655,7 +655,7 @@ return [
         'description' => 'null',
         'ingredients' => 'caffè',
         'price' => 2.5,
-        'img_path'=>'https://media.istockphoto.com/id/1225614709/it/foto/tazza-di-caff%C3%A8-mani-della-signora-che-tiene-tazza-di-caff%C3%A8-donna-in-possesso-di-una-tazza.jpg?s=612x612&w=0&k=20&c=C2dQxpt0Vtk6gI_uVaDj5hgF9tmCdslgQdUH-R1NUkY=',
+        'img_path' => 'https://media.istockphoto.com/id/1225614709/it/foto/tazza-di-caff%C3%A8-mani-della-signora-che-tiene-tazza-di-caff%C3%A8-donna-in-possesso-di-una-tazza.jpg?s=612x612&w=0&k=20&c=C2dQxpt0Vtk6gI_uVaDj5hgF9tmCdslgQdUH-R1NUkY=',
         'restaurant_id' => 8,
         'category_id' => 7,
     ],
@@ -664,120 +664,120 @@ return [
     // * Antipasti
     [
         'name' => 'Fiore di zucca fritto imbottito',
-        'description' => null,
-        'ingredients' => 'fiore di zucca,ricotta',
+        'description' => 'Fiore di zucca ripieno di mozzarella, fritto in pastella croccante',
+        'ingredients' => 'Fiori di zucca, mozzarella, uova, farina, lievito per dolci, olio di semi',
         'price' => 3,
-        'img_path'=>'https://media.istockphoto.com/id/1448995258/it/foto/fiori-di-zucca-fritti-e-prosciutto-cotto-sul-tavolo-di-marmo-con-foglie-e-statue.jpg?s=612x612&w=0&k=20&c=ZjQyZERurOq-29dnrhsPBIOdSr-t95IEVbKbRaIIR1k=',
+        'img_path' => 'https://media.istockphoto.com/id/1448995258/it/foto/fiori-di-zucca-fritti-e-prosciutto-cotto-sul-tavolo-di-marmo-con-foglie-e-statue.jpg?s=612x612&w=0&k=20&c=ZjQyZERurOq-29dnrhsPBIOdSr-t95IEVbKbRaIIR1k=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
 
     [
         'name' => 'Bruschetta al pomodoro',
-        'description' => null,
-        'ingredients' => 'pomodoro,zeppoline',
+        'description' => 'Pane abbrustolito, pomodori freschi, aglio, olio, basilico, sale, pepe',
+        'ingredients' => 'Pane toscano, pomodori maturi, aglio, olio, basilico, sale',
         'price' => 3,
-        'img_path'=>'https://media.istockphoto.com/id/1181611076/it/foto/bruschetta-italiana-fatta-in-casa-su-tavolo-rustico-in-legno.jpg?s=612x612&w=0&k=20&c=1zS6O9h9qMhHgHwtydkw_ZOgKdcPzgO-CRmn9cblxxo=',
+        'img_path' => 'https://media.istockphoto.com/id/1181611076/it/foto/bruschetta-italiana-fatta-in-casa-su-tavolo-rustico-in-legno.jpg?s=612x612&w=0&k=20&c=1zS6O9h9qMhHgHwtydkw_ZOgKdcPzgO-CRmn9cblxxo=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
 
     [
         'name' => 'Insalatona',
-        'description' => null,
-        'ingredients' => 'mix di insalata , pomodori , mozzarella, tonno , mais e formaggio',
+        'description' => 'Insalata mista con pomodori, cetrioli, tonno, uova, mais, olive.',
+        'ingredients' => 'Lattuga, pomodori, cetrioli, tonno, uova sode, mais, olive nere.',
         'price' => 6,
-        'img_path'=>'https://media.istockphoto.com/id/598567824/it/foto/insalata-di-spinaci-di-noce-di-mela-autunnale-fatta-in-casa.jpg?s=612x612&w=0&k=20&c=Zu2cpredvglh10usryYxeBtqpY4DRl2xAjVWgiMwXfU=',
+        'img_path' => 'https://media.istockphoto.com/id/598567824/it/foto/insalata-di-spinaci-di-noce-di-mela-autunnale-fatta-in-casa.jpg?s=612x612&w=0&k=20&c=Zu2cpredvglh10usryYxeBtqpY4DRl2xAjVWgiMwXfU=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
 
     [
         'name' => 'Caprese',
-        'description' => null,
-        'ingredients' => 'mozzarella , pomodoro',
+        'description' => 'Insalata fresca di pomodori, mozzarella e basilico, condita con olio.',
+        'ingredients' => 'pomodori, mozzarella e basilico',
         'price' => 6,
-        'img_path'=>'https://media.istockphoto.com/id/1254837938/it/foto/insalata-caprese-insalata-con-mozzarella-pomodori-freschi-foglie-di-basilico-e-olio-doliva.jpg?s=612x612&w=0&k=20&c=T_A2K3eM846sHcipn7iU8ABxH4PJCDdUh0nV0WRR7Xg=',
+        'img_path' => 'https://media.istockphoto.com/id/1254837938/it/foto/insalata-caprese-insalata-con-mozzarella-pomodori-freschi-foglie-di-basilico-e-olio-doliva.jpg?s=612x612&w=0&k=20&c=T_A2K3eM846sHcipn7iU8ABxH4PJCDdUh0nV0WRR7Xg=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
 
     [
         'name' => 'Parmigiana di melanzane',
-        'description' => null,
-        'ingredients' => 'melanzane',
+        'description' => 'Piatto rustico a base di melanzane fritte, pomodoro e formaggio',
+        'ingredients' => 'Melanzane, mozzarella, pomodori, basilico, olio, parmigiano.',
         'price' => 6,
-        'img_path'=>'https://media.istockphoto.com/id/998502576/it/foto/porzione-di-parmigiana-di-melanzane.jpg?s=612x612&w=0&k=20&c=5U9ToStnzb9_M-5NvZr5d8nHfTdhecg-uWcrsTHMDuk=',
+        'img_path' => 'https://media.istockphoto.com/id/998502576/it/foto/porzione-di-parmigiana-di-melanzane.jpg?s=612x612&w=0&k=20&c=5U9ToStnzb9_M-5NvZr5d8nHfTdhecg-uWcrsTHMDuk=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
 
     [
         'name' => 'Alici fritte',
-        'description' => null,
-        'ingredients' => 'alici fritte',
+        'description' => 'Alici fresche',
+        'ingredients' => 'Alici fresche, farina, uova, prezzemolo, aglio, sale, pepe',
         'price' => 6,
-        'img_path'=>'https://media.istockphoto.com/id/1044416962/it/foto/acciughe-fritte-tipiche-della-spagna-pescadito-frito.jpg?s=612x612&w=0&k=20&c=jdq969qfHO80z9lY8UF89iYyg01hGRbz_ryVEx4fDeM=',
+        'img_path' => 'https://media.istockphoto.com/id/1044416962/it/foto/acciughe-fritte-tipiche-della-spagna-pescadito-frito.jpg?s=612x612&w=0&k=20&c=jdq969qfHO80z9lY8UF89iYyg01hGRbz_ryVEx4fDeM=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
 
     [
         'name' => 'Impepata di cozze',
-        'description' => null,
-        'ingredients' => 'cozze',
+        'description' => 'Saporita zuppa di cozze con pepe nero, aglio e prezzemolo',
+        'ingredients' => 'Cozze, aglio, pepe nero, prezzemolo, olio',
         'price' => 12,
-        'img_path'=>'https://media.istockphoto.com/id/1341245857/it/foto/impepata-di-cozze.jpg?s=612x612&w=0&k=20&c=C6WVwVD6v6_aObo26VywCc9qb8h1hMLcj7FOtCYWKyk=',
+        'img_path' => 'https://media.istockphoto.com/id/1341245857/it/foto/impepata-di-cozze.jpg?s=612x612&w=0&k=20&c=C6WVwVD6v6_aObo26VywCc9qb8h1hMLcj7FOtCYWKyk=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
 
     [
         'name' => 'Zuppa di cozze',
-        'description' => null,
-        'ingredients' => 'cozze',
+        'description' => 'Brodo di pesce con cozze, pomodori, aglio e prezzemolo',
+        'ingredients' => 'Cozze, pomodori pelati, aglio, prezzemolo, olio, sale, pepe',
         'price' => 8,
-        'img_path'=>'https://media.istockphoto.com/id/477584654/it/foto/cozze-e-stufato-di-fagioli.jpg?s=612x612&w=0&k=20&c=l-4B-tpWmy1xKYjIvRfnYgxwnhZAq7IJZ0jvFFfbDo8=',
+        'img_path' => 'https://media.istockphoto.com/id/477584654/it/foto/cozze-e-stufato-di-fagioli.jpg?s=612x612&w=0&k=20&c=l-4B-tpWmy1xKYjIvRfnYgxwnhZAq7IJZ0jvFFfbDo8=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
 
     [
         'name' => 'Polpa all\'insalata',
-        'description' => null,
-        'ingredients' => 'insalata',
+        'description' => 'Piatto freddo con polpa di maiale, insalata mista, olive e pomodorini',
+        'ingredients' => 'Polpa di maiale cotta, insalata mista, pomodorini, olive nere, olio',
         'price' => 9,
-        'img_path'=>'https://media.istockphoto.com/id/1433051123/it/foto/insalata-kani-a-base-di-polpa-di-granchio-e-verdure-a-julienne-il-tutto-cosparso-di-un-primo.jpg?s=612x612&w=0&k=20&c=KvrHYRpX6J4RoQ6fKnlg5ry6UmodntSnjZrmjRPNi1A=',
+        'img_path' => 'https://media.istockphoto.com/id/1433051123/it/foto/insalata-kani-a-base-di-polpa-di-granchio-e-verdure-a-julienne-il-tutto-cosparso-di-un-primo.jpg?s=612x612&w=0&k=20&c=KvrHYRpX6J4RoQ6fKnlg5ry6UmodntSnjZrmjRPNi1A=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
 
     [
         'name' => 'Antipasto contadino',
-        'description' => null,
-        'ingredients' => 'mozzarella di bufala , ricotta , bruschetta al pomodoro',
+        'description' => 'Tagliere con salumi, formaggi, sottaceti, focaccia e pane tostato',
+        'ingredients' => 'formaggi, sottaceti, focaccia e pane tostato',
         'price' => 10,
-        'img_path'=>'https://media.istockphoto.com/id/516145646/it/foto/terrina-di-base-di-baguette.jpg?s=612x612&w=0&k=20&c=f4a5iJHts4FAH8e5XwOncd0yyjNByil_Mw3dJvH41XU=',
+        'img_path' => 'https://media.istockphoto.com/id/516145646/it/foto/terrina-di-base-di-baguette.jpg?s=612x612&w=0&k=20&c=f4a5iJHts4FAH8e5XwOncd0yyjNByil_Mw3dJvH41XU=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
 
     [
         'name' => 'Antipasto Positano',
-        'description' => null,
-        'ingredients' => 'zeppoline fritte , bruschetta , alici e polipo',
+        'description' => 'Antipasto di mare con frutti di mare, limone e olio',
+        'ingredients' => 'frutti di mare',
         'price' => 10,
-        'img_path'=>'https://media.istockphoto.com/id/1166994559/it/foto/calamari-freschi-alla-griglia-con-limone-e-lattuga.jpg?s=612x612&w=0&k=20&c=Mt7ybgSl762FMs-lgMDiNILvIXIrT0Ym1_Po8tsC3uo=',
+        'img_path' => 'https://media.istockphoto.com/id/1166994559/it/foto/calamari-freschi-alla-griglia-con-limone-e-lattuga.jpg?s=612x612&w=0&k=20&c=Mt7ybgSl762FMs-lgMDiNILvIXIrT0Ym1_Po8tsC3uo=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
 
     [
         'name' => 'Melanzana di mare',
-        'description' => null,
-        'ingredients' => 'melanzana fritta imbottita con polpo , gamberetti e frutti di mare',
+        'description' => 'Melanzane ripiene di pesce, pangrattato e formaggio, al forno',
+        'ingredients' => 'pesce, pangrattato e formaggio, al forno.',
         'price' => 12,
-        'img_path'=>'https://media.istockphoto.com/id/665906404/it/foto/carne-arrosto-e-verdure-attenzione-selettiva-al-primo-piano-di-riempimento.jpg?s=612x612&w=0&k=20&c=MPOvQK2fUfz4FNIU48zFVdYgtLWfU1cgffxNd9J0MqE=',
+        'img_path' => 'https://media.istockphoto.com/id/665906404/it/foto/carne-arrosto-e-verdure-attenzione-selettiva-al-primo-piano-di-riempimento.jpg?s=612x612&w=0&k=20&c=MPOvQK2fUfz4FNIU48zFVdYgtLWfU1cgffxNd9J0MqE=',
         'restaurant_id' => 9,
         'category_id' => 1,
     ],
@@ -785,70 +785,70 @@ return [
     // * Primi
     [
         'name' => 'Gnocchi alla sorrentina',
-        'description' => null,
-        'ingredients' => 'gnocchi',
+        'description' => 'Gnocchi di patate in salsa di pomodoro, mozzarella e basilico',
+        'ingredients' => 'Gnocchi di patate, pomodori pelati, mozzarella, basilico, olio, sale',
         'price' => 6,
-        'img_path'=>'https://media.istockphoto.com/id/186942363/it/foto/gnocchi-sorrento.jpg?s=612x612&w=0&k=20&c=TBdwVdPFPRMJ9gwzy2pQ_DROmUhaNaBkhzv3L9hLIH0=',
+        'img_path' => 'https://media.istockphoto.com/id/186942363/it/foto/gnocchi-sorrento.jpg?s=612x612&w=0&k=20&c=TBdwVdPFPRMJ9gwzy2pQ_DROmUhaNaBkhzv3L9hLIH0=',
         'restaurant_id' => 9,
         'category_id' => 2,
     ],
 
     [
-        'name' => 'Gnocchi alla al ragù',
-        'description' => null,
-        'ingredients' => 'gnocchi',
+        'name' => 'Gnocchi al ragù',
+        'description' => 'Gnocchi di patate con salsa di carne macinata e pomodoro',
+        'ingredients' => 'carne macinata, pomodori pelati, cipolla, sedano, carota, vino rosso, olio, sale e pepe',
         'price' => 6,
-        'img_path'=>'https://media.istockphoto.com/id/504699528/it/foto/tradizionale-sardo-pasta-malloreddus-con-salsiccia.jpg?s=612x612&w=0&k=20&c=Afz5VOXriRjvvgDgnVQSQpoHA88ifDEHDDiPYd0p42w=',
+        'img_path' => 'https://media.istockphoto.com/id/504699528/it/foto/tradizionale-sardo-pasta-malloreddus-con-salsiccia.jpg?s=612x612&w=0&k=20&c=Afz5VOXriRjvvgDgnVQSQpoHA88ifDEHDDiPYd0p42w=',
         'restaurant_id' => 9,
         'category_id' => 2,
     ],
 
     [
         'name' => 'Pasta al pomodoro',
-        'description' => null,
-        'ingredients' => 'pasta , pomodoro',
+        'description' => 'Pasta corta condita con salsa di pomodoro fresco e basilico',
+        'ingredients' => 'pasta, pomodoro, basilico',
         'price' => 5,
-        'img_path'=>'https://media.istockphoto.com/id/121306641/it/foto/pasta-italiana.jpg?s=612x612&w=0&k=20&c=wPusOX27SOSVPjOGOhMiD9602j3mg0CqY0i2IC8yAVU=',
+        'img_path' => 'https://media.istockphoto.com/id/121306641/it/foto/pasta-italiana.jpg?s=612x612&w=0&k=20&c=wPusOX27SOSVPjOGOhMiD9602j3mg0CqY0i2IC8yAVU=',
         'restaurant_id' => 9,
         'category_id' => 2,
     ],
 
     [
         'name' => 'Rigatoni alla genovese',
-        'description' => null,
-        'ingredients' => 'rigatoni',
+        'description' => 'Pasta rigata con sugo di carne e cipolle caramellate.',
+        'ingredients' => 'Carne di manzo e cipolle',
         'price' => 7,
-        'img_path'=>'https://media.istockphoto.com/id/1266169556/it/foto/pasta-cremosa-al-pesto-di-penne.jpg?s=612x612&w=0&k=20&c=L1oB3c5_jvVpdrxFCjg6q3imQhd-WsKo_NNWudyR9z4=',
+        'img_path' => 'https://media.istockphoto.com/id/1266169556/it/foto/pasta-cremosa-al-pesto-di-penne.jpg?s=612x612&w=0&k=20&c=L1oB3c5_jvVpdrxFCjg6q3imQhd-WsKo_NNWudyR9z4=',
         'restaurant_id' => 9,
         'category_id' => 2,
     ],
 
     [
         'name' => 'Rigatoni al ragù con ricotta',
-        'description' => null,
-        'ingredients' => 'rigatoni , ricotta',
+        'description' => 'Rigatoni con salsa di carne macinata, pomodoro, ricotta',
+        'ingredients' => 'carne macinata, pomodori pelati, cipolla, ricotta',
         'price' => 8,
-        'img_path'=>'https://media.istockphoto.com/id/1391593775/it/foto/cene-regionali-di-pasta.jpg?s=612x612&w=0&k=20&c=TbDIRMJzD_lu-iXcUka0eRrz4cdDmRDX8gEYxkKuGdE=',
+        'img_path' => 'https://media.istockphoto.com/id/1391593775/it/foto/cene-regionali-di-pasta.jpg?s=612x612&w=0&k=20&c=TbDIRMJzD_lu-iXcUka0eRrz4cdDmRDX8gEYxkKuGdE=',
         'restaurant_id' => 9,
         'category_id' => 2,
     ],
 
     [
         'name' => 'Risotto alla pescatora',
-        'description' => null,
-        'ingredients' => 'risotto , vongole',
+        'description' => 'Risotto cremoso con frutti di mare e pomodorini freschi.',
+        'ingredients' => 'risotto, frutti di mare, pomodorini',
         'price' => 11,
-        'img_path'=>'https://media.istockphoto.com/id/471030909/it/foto/frutti-di-mare-risotto-alla-pescatora.jpg?s=612x612&w=0&k=20&c=Z_V4N_nEG97wY4z0QhU5AjCLBh0g0-J1ug2M5oCBwVc=',
+        'img_path' => 'https://media.istockphoto.com/id/471030909/it/foto/frutti-di-mare-risotto-alla-pescatora.jpg?s=612x612&w=0&k=20&c=Z_V4N_nEG97wY4z0QhU5AjCLBh0g0-J1ug2M5oCBwVc=',
         'restaurant_id' => 9,
         'category_id' => 2,
     ],
 
     [
         'name' => 'Spaghetti alle vongole',
-        'description' => null,
-        'ingredients' => 'spaghetti , vongole',
+        'description' => 'Spaghetti al dente, vongole, aglio, olio, peperoncino: perfetto abbinamento mediterraneo',
+        'ingredients' => 'spaghetti, vongole',
         'price' => 9,
-        'img_path'=>'https://media.istockphoto.com/id/1154111559/it/foto/pasta-italiana-con-vongole.jpg?s=612x612&w=0&k=20&c=-WzXSokrJfb3-TTdF0lUCdbsriGCWPfIqYXmyGzNl5c=',
+        'img_path' => 'https://media.istockphoto.com/id/1154111559/it/foto/pasta-italiana-con-vongole.jpg?s=612x612&w=0&k=20&c=-WzXSokrJfb3-TTdF0lUCdbsriGCWPfIqYXmyGzNl5c=',
         'restaurant_id' => 9,
         'category_id' => 2,
     ],
@@ -856,80 +856,80 @@ return [
     // * Contorni
     [
         'name' => 'Mix di insalata',
-        'description' => null,
-        'ingredients' => 'insalata',
+        'description' => 'Fresco, croccante, colorato: mix di insalata per tutti i gusti',
+        'ingredients' => 'insalata mista',
         'price' => 2.5,
-        'img_path'=>'https://media.istockphoto.com/id/1057063106/it/foto/insalata-mediterranea-con-tonno-fagioli-borlotti-pomodorini-lattuga-da-vicino-orizzontale.jpg?s=612x612&w=0&k=20&c=SKYN7tnYiKwjIH9rmVdPsF8x626evfQ6w4eZe9QVLZs=',
+        'img_path' => 'https://media.istockphoto.com/id/1057063106/it/foto/insalata-mediterranea-con-tonno-fagioli-borlotti-pomodorini-lattuga-da-vicino-orizzontale.jpg?s=612x612&w=0&k=20&c=SKYN7tnYiKwjIH9rmVdPsF8x626evfQ6w4eZe9QVLZs=',
         'restaurant_id' => 9,
         'category_id' => 5,
     ],
 
     [
         'name' => 'Patatine fritte',
-        'description' => null,
+        'description' => 'Dorate, croccanti e irresistibili, le patatine fritte sono intramontabili',
         'ingredients' => 'patatine fritte',
         'price' => 2.5,
-        'img_path'=>'https://media.istockphoto.com/id/852412726/it/foto/patatine-fritte.jpg?s=612x612&w=0&k=20&c=lWfMCPiW6owvm_vAu-OLMZiCTLsIYiJU6ouJsO2Z5ks=',
+        'img_path' => 'https://media.istockphoto.com/id/852412726/it/foto/patatine-fritte.jpg?s=612x612&w=0&k=20&c=lWfMCPiW6owvm_vAu-OLMZiCTLsIYiJU6ouJsO2Z5ks=',
         'restaurant_id' => 9,
         'category_id' => 5,
     ],
 
     [
         'name' => 'Zucchine alle scapece',
-        'description' => null,
-        'ingredients' => 'zucchine , olio',
+        'description' => 'Le zucchine fritte in pastella e marinate nel limone.',
+        'ingredients' => 'zucchine, olio, limone',
         'price' => 2.5,
-        'img_path'=>'https://media.istockphoto.com/id/589582730/it/foto/zucchine-scapece-aceto-aromatizzato-di-zucchine-fritte-e-menta.jpg?s=612x612&w=0&k=20&c=lssrRhr3mRSqh4lcLJSSV-HkXiuvGj4j73hl-ryc4Wc=',
+        'img_path' => 'https://media.istockphoto.com/id/589582730/it/foto/zucchine-scapece-aceto-aromatizzato-di-zucchine-fritte-e-menta.jpg?s=612x612&w=0&k=20&c=lssrRhr3mRSqh4lcLJSSV-HkXiuvGj4j73hl-ryc4Wc=',
         'restaurant_id' => 9,
         'category_id' => 5,
     ],
 
     [
         'name' => 'Melanzane a funghetto',
-        'description' => null,
-        'ingredients' => 'melanzane',
+        'description' => 'Melanzane a funghetto: croccanti e morbide con un sapore intenso',
+        'ingredients' => 'melanzane, grana, insalata, olio, aglio',
         'price' => 2.5,
-        'img_path'=>'https://media.istockphoto.com/id/883797270/it/foto/cucinare-melanzane.jpg?s=612x612&w=0&k=20&c=mr2aV8mzAFFN_X9igc_20X7HMGf07ATL-HRk5EVSo3U=',
+        'img_path' => 'https://media.istockphoto.com/id/883797270/it/foto/cucinare-melanzane.jpg?s=612x612&w=0&k=20&c=mr2aV8mzAFFN_X9igc_20X7HMGf07ATL-HRk5EVSo3U=',
         'restaurant_id' => 9,
         'category_id' => 5,
     ],
 
     [
         'name' => 'Zucchine alla griglia',
-        'description' => null,
-        'ingredients' => 'zucchine',
+        'description' => 'Zucchine tagliate sottili, leggere striature, aromi mediterranei, perfette estive',
+        'ingredients' => 'zucchine, aceto, menta',
         'price' => 2.5,
-        'img_path'=>'https://media.istockphoto.com/id/537630734/it/foto/spiedini-vegetariani-con-verdure-biologiche-su-un-piatto-bianco.jpg?s=612x612&w=0&k=20&c=0zOPBdq3mTaZX9G8rd3i7AACCVTHl3-xsyGOKYBVXJQ=',
+        'img_path' => 'https://media.istockphoto.com/id/537630734/it/foto/spiedini-vegetariani-con-verdure-biologiche-su-un-piatto-bianco.jpg?s=612x612&w=0&k=20&c=0zOPBdq3mTaZX9G8rd3i7AACCVTHl3-xsyGOKYBVXJQ=',
         'restaurant_id' => 9,
         'category_id' => 5,
     ],
 
     [
         'name' => 'Melanzane alla griglia',
-        'description' => null,
-        'ingredients' => 'melanzane',
+        'description' => 'Saporite melanzane grigliate con profumo di erbe mediterranee.',
+        'ingredients' => 'melanzane, aceto, menta',
         'price' => 5.5,
-        'img_path'=>'https://media.istockphoto.com/id/1254024274/it/foto/fette-di-melanzane-arrosto.jpg?s=612x612&w=0&k=20&c=xksPW5H6FWQGlKmbRs8VOXgBcm_F3yjQuGvdP-C8NI4=',
+        'img_path' => 'https://media.istockphoto.com/id/1254024274/it/foto/fette-di-melanzane-arrosto.jpg?s=612x612&w=0&k=20&c=xksPW5H6FWQGlKmbRs8VOXgBcm_F3yjQuGvdP-C8NI4=',
         'restaurant_id' => 9,
         'category_id' => 5,
     ],
 
     [
         'name' => 'Peperoni alla griglia',
-        'description' => null,
+        'description' => 'Saporiti peperoni grigliate con profumo di erbe mediterranee.',
         'ingredients' => 'peperoni',
         'price' => 2.5,
-        'img_path'=>'https://media.istockphoto.com/id/912629972/it/foto/kebab-di-pollo-con-peperone.jpg?s=612x612&w=0&k=20&c=KQg7MI_xXF26h8VeV6tfrkrXe92C4spzXAX8La1J3A4=',
+        'img_path' => 'https://media.istockphoto.com/id/912629972/it/foto/kebab-di-pollo-con-peperone.jpg?s=612x612&w=0&k=20&c=KQg7MI_xXF26h8VeV6tfrkrXe92C4spzXAX8La1J3A4=',
         'restaurant_id' => 9,
         'category_id' => 5,
     ],
 
     [
         'name' => 'Salsiccia di maiale alla griglia',
-        'description' => null,
+        'description' => 'Gustosa salsiccia su griglia rovente, profumo affumicato irresistibile',
         'ingredients' => 'salsiccia di maiale',
         'price' => 7,
-        'img_path'=>'https://media.istockphoto.com/id/1253061466/it/foto/salsiccia-affumicata-su-tavolo-di-legno.jpg?s=612x612&w=0&k=20&c=ouT42cQ6d_tg57pG974ZI-PwA5A0HcBZX8VpEm_qRzk=',
+        'img_path' => 'https://media.istockphoto.com/id/1253061466/it/foto/salsiccia-affumicata-su-tavolo-di-legno.jpg?s=612x612&w=0&k=20&c=ouT42cQ6d_tg57pG974ZI-PwA5A0HcBZX8VpEm_qRzk=',
         'restaurant_id' => 9,
         'category_id' => 5,
     ],
@@ -937,10 +937,10 @@ return [
     // * Secondi
     [
         'name' => 'Cotoletta di pollo',
-        'description' => null,
-        'ingredients' => 'petto di pollo , uova , farina , olio',
+        'description' => 'Croccante fuori, morbida dentro, panata con ingredienti semplici',
+        'ingredients' => 'petto di pollo, uova, farina, olio',
         'price' => 6,
-        'img_path'=>'https://media.istockphoto.com/id/603258520/it/foto/cotoletta-e-patate-fritte.jpg?s=612x612&w=0&k=20&c=Pv5RE9dGwKgLeumNPGmQYJbKWP_ijlaL5jEEJriiiRI=',
+        'img_path' => 'https://media.istockphoto.com/id/603258520/it/foto/cotoletta-e-patate-fritte.jpg?s=612x612&w=0&k=20&c=Pv5RE9dGwKgLeumNPGmQYJbKWP_ijlaL5jEEJriiiRI=',
         'restaurant_id' => 9,
         'category_id' => 2,
     ],
@@ -951,7 +951,7 @@ return [
         'description' => null,
         'ingredients' => 'pastiera',
         'price' => 4,
-        'img_path'=>'https://media.istockphoto.com/id/1128685559/it/foto/pastiera-napoletana-dolce-tipica-del-sud-italia.jpg?s=612x612&w=0&k=20&c=2aZaEzBttDi1NGxANH9n6-nLhJEXgEC_LfXm4HjWtbA=',
+        'img_path' => 'https://media.istockphoto.com/id/1128685559/it/foto/pastiera-napoletana-dolce-tipica-del-sud-italia.jpg?s=612x612&w=0&k=20&c=2aZaEzBttDi1NGxANH9n6-nLhJEXgEC_LfXm4HjWtbA=',
         'restaurant_id' => 9,
         'category_id' => 6,
     ],
@@ -961,7 +961,7 @@ return [
         'description' => null,
         'ingredients' => 'babà',
         'price' => 4,
-        'img_path'=>'https://media.istockphoto.com/id/171575952/it/foto/napoletana-bab%C3%A0-al-rum.jpg?s=612x612&w=0&k=20&c=EhClFPxfCOiXrDj5p2q_iY8fk1RlBtMJ6Wnnn6Gg_es=',
+        'img_path' => 'https://media.istockphoto.com/id/171575952/it/foto/napoletana-bab%C3%A0-al-rum.jpg?s=612x612&w=0&k=20&c=EhClFPxfCOiXrDj5p2q_iY8fk1RlBtMJ6Wnnn6Gg_es=',
         'restaurant_id' => 9,
         'category_id' => 6,
     ],
@@ -971,7 +971,7 @@ return [
         'description' => null,
         'ingredients' => 'tiramisù',
         'price' => 4,
-        'img_path'=>'https://media.istockphoto.com/id/1061450296/it/foto/porzione-di-dessert-tiramis%C3%B9.jpg?s=612x612&w=0&k=20&c=BLpE-1fUywFRfUXD8yMiNdizdUCxa9PaJhXpNAJmKEw=',
+        'img_path' => 'https://media.istockphoto.com/id/1061450296/it/foto/porzione-di-dessert-tiramis%C3%B9.jpg?s=612x612&w=0&k=20&c=BLpE-1fUywFRfUXD8yMiNdizdUCxa9PaJhXpNAJmKEw=',
         'restaurant_id' => 9,
         'category_id' => 6,
     ],
@@ -981,7 +981,7 @@ return [
         'description' => null,
         'ingredients' => 'panna',
         'price' => 4,
-        'img_path'=>'https://media.istockphoto.com/id/1218448207/it/foto/panna-cotta-con-condimento-in-salsa-di-fragole-servita-in-un-barattolo-di-vetro.jpg?s=612x612&w=0&k=20&c=0MB-NTHQOmNp407T5iUuUefh2lKCBdPrRskK-m2tz5c=',
+        'img_path' => 'https://media.istockphoto.com/id/1218448207/it/foto/panna-cotta-con-condimento-in-salsa-di-fragole-servita-in-un-barattolo-di-vetro.jpg?s=612x612&w=0&k=20&c=0MB-NTHQOmNp407T5iUuUefh2lKCBdPrRskK-m2tz5c=',
         'restaurant_id' => 9,
         'category_id' => 6,
     ],
@@ -991,27 +991,27 @@ return [
     [
         'name' => 'Spaghetti di grano saltati con verdure',
         'description' => 'Spaghetti di grano saltati con uova strapazzate e verdure miste e salsa di soia',
-        'ingredients' => 'spaghetti,uova strapazzate,verdure miste,salsa di soia',
+        'ingredients' => 'spaghetti, uova strapazzate, verdure miste, salsa di soia',
         'price' => 5,
         'img_path' => 'https://media.istockphoto.com/id/1181456803/it/foto/spaghetti-cremosi-ai-funghi-pasta-cremosa-ai-funghi-spaghetti-e-funghi.jpg?s=612x612&w=0&k=20&c=yIpr4fzVVZb4IQuEO4smCk5OVJEaDc78IQ3DbpvYe8Q=',
         'restaurant_id' => 10,
         'category_id' => 2,
     ],
-    
+
     [
         'name' => 'Spaghetti di soia con verdure',
         'description' => 'Spaghetti di soia saltati con verdure miste e salsa di soia',
-        'ingredients' => 'spaghetti,verdure miste,salsa di soia',
+        'ingredients' => 'spaghetti, verdure miste, salsa di soia',
         'price' => 5,
         'img_path' => 'https://media.istockphoto.com/id/1285794141/it/foto/spaghetti-di-vetro-con-pollo-gamberetti-e-verdure.jpg?s=612x612&w=0&k=20&c=IQ2TMVYlVsQQgUQlwotn6mPB8tqyGJl5enm-HeF-_G4=',
         'restaurant_id' => 10,
         'category_id' => 2,
     ],
-    
+
     [
         'name' => 'Riso con verdure',
         'description' => 'Riso bianco saltato con uova strapazzate e verdure miste',
-        'ingredients' => 'riso bianco,uova strapazzate e verdure miste',
+        'ingredients' => 'riso bianco, uova strapazzate e verdure miste',
         'price' => 4,
         'img_path' => 'https://media.istockphoto.com/id/157646162/it/foto/vegetariano-riso-fritto-con-verdure-sano.jpg?s=612x612&w=0&k=20&c=itdPgLU5SRcC5ytxJOLDiZ_epQCGzwpp7jVifH7nP-g=',
         'restaurant_id' => 10,
@@ -1022,7 +1022,7 @@ return [
     [
         'name' => 'Pollo agrodolce',
         'description' => 'Pollo fritto con verdure miste in salsa agrodolce',
-        'ingredients' => 'riso bianco,uova strapazzate e verdure miste',
+        'ingredients' => 'riso bianco, uova strapazzate e verdure miste',
         'price' => 7,
         'img_path' => 'https://media.istockphoto.com/id/483421890/it/foto/general-tso-e-riso-con-pollo-fritto.jpg?s=612x612&w=0&k=20&c=KJkR8OagHFtEL-iTLoGID4UO6v6ZHNE3RLX-kNpbCFA=',
         'restaurant_id' => 10,
@@ -1032,11 +1032,11 @@ return [
     [
         'name' => 'Animelle di vitello',
         'description' => 'Piatto cucinato dallo chef Stellato Mandarino Capesante',
-        'ingredients' => 'vitello,frutti rossi, basilico',
+        'ingredients' => 'vitello, frutti rossi, basilico',
         'price' => 62,
         'img_path' => 'https://media.istockphoto.com/id/1148219726/it/foto/roast-beef-fatto-in-casa.jpg?s=612x612&w=0&k=20&c=gdmCAzWLGZ2VTjFz9U89HBNHTpkZJVQZYa0AeCUfF0o=',
         'restaurant_id' => 10,
-        'category_id'=> 3,
+        'category_id' => 3,
     ],
 
     [
@@ -1054,7 +1054,7 @@ return [
     [
         'name' => 'Ravioli al vapore',
         'description' => 'Raviolo topico giapponese cucinato al vapore,ripieno di maiale e verdure miste,servito con salsa a base di soia',
-        'ingredients' => 'raviolo,carne di maiale,verdure miste,salsa di soia',
+        'ingredients' => 'raviolo, carne di maiale, verdure miste, salsa di soia',
         'price' => 5,
         'img_path' => 'https://media.istockphoto.com/id/1133151212/it/foto/gnocchi-giapponesi-gyoza-con-carne-di-maiale-e-verdure.jpg?s=612x612&w=0&k=20&c=-x1xBsKYFmZIUZBg3cTNX9Nxdut2G6aDJoXiSx6moH8=',
         'restaurant_id' => 11,
@@ -1070,14 +1070,14 @@ return [
         'restaurant_id' => 11,
         'category_id' => 1,
     ],
-    
+
     // * Pizza
     [
         'name' => 'Pizza Nestola',
         'description' => 'Pizza con lievito madre, impastata personalmente da Riccardo Nestola',
         'ingredients' => 'Farina, Lievito, Olio, Acqua, Pomodoro, Mozzarella, Würstel, Patatine',
         'price' => 5.99,
-        'img_path'=>'https://media.istockphoto.com/id/1063976282/it/foto/lo-chef-esegna-una-pizza-calda-dal-forno.jpg?s=612x612&w=0&k=20&c=_BFUNLiSrHPbsx3EeticvFqo6NKnGTeBQJ3TuUaL0p8=',
+        'img_path' => 'https://media.istockphoto.com/id/1063976282/it/foto/lo-chef-esegna-una-pizza-calda-dal-forno.jpg?s=612x612&w=0&k=20&c=_BFUNLiSrHPbsx3EeticvFqo6NKnGTeBQJ3TuUaL0p8=',
         'restaurant_id' => 10,
         'category_id' => 4,
     ],
@@ -1086,13 +1086,13 @@ return [
     [
         'name' => 'Fegato grasso d\'anatra',
         'description' => 'Piatto cucinato dallo chef Stellato Mandarino Capesante',
-        'ingredients' => 'salsa a base di pasta di ceci , olio di oliva ,cioccolato',
+        'ingredients' => 'salsa a base di pasta di ceci, olio di oliva, cioccolato',
         'price' => 59,
         'img_path' => 'https://media.istockphoto.com/id/959099928/it/foto/hummus-chickpea-in-ciotola.jpg?s=612x612&w=0&k=20&c=yABa7GPnJLD1aQXusmveOm27aNwirZC3KfXZpo4-3N8=',
         'restaurant_id' => 11,
-        'category_id'=> 6,
+        'category_id' => 6,
     ],
-    
+
     [
         'name' => 'Cheesecake di Mimmo',
         'description' => 'Dolce prelibato preparato con prodotti a KM0 dello Chef Mimmo',
@@ -1108,17 +1108,17 @@ return [
     [
         'name' => 'Involtini di granchio e zucchine',
         'description' => 'Pasta fillo di grano in tempura ripiena di polpa di granchio e zucchine,servito con salsa agrodolce e piccante',
-        'ingredients' => 'pasta,polpa di granchio , zucchine , salsa agrodolce e piccante',
+        'ingredients' => 'pasta, polpa di granchio, zucchine, salsa agrodolce e piccante',
         'price' => 5,
         'img_path' => 'https://media.istockphoto.com/id/836036928/it/foto/rotolo-di-granchio-di-avocado-roulade.jpg?s=612x612&w=0&k=20&c=qB_XHP9AWSGganVJDeFhQXxitnuOX1gIA7ZQbESy7Aw=',
         'restaurant_id' => 12,
         'category_id' => 1,
     ],
-    
+
     [
         'name' => 'Curry Sarmosa',
         'description' => 'Pasta fillo di grano fritta ripiena di verdure miste e salsa al curry, servito con salsa agrodolce piccante',
-        'ingredients' => 'pasta,salsa al curry,salsa agrodolce',
+        'ingredients' => 'pasta, salsa al curry, salsa agrodolce',
         'price' => 4,
         'img_path' => 'https://media.istockphoto.com/id/1281931101/it/foto/curry-di-pollo.jpg?s=612x612&w=0&k=20&c=ollHwEDcdLZ18k_N4K4iGorMmnFrFQb9LGr605u0lMU=',
         'restaurant_id' => 12,
@@ -1129,27 +1129,27 @@ return [
     [
         'name' => 'Tartare sake',
         'description' => 'Salmone crudo taglaito a cubetti , marinato con salsa a base di soia e agrumi',
-        'ingredients' => 'pasta,salsa al curry,salsa agrodolce',
+        'ingredients' => 'pasta, salsa al curry, salsa agrodolce',
         'price' => 8,
         'img_path' => 'https://media.istockphoto.com/id/988652058/it/foto/tartare-cremoso-al-salmone-con-toast-su-tavola-di-ardesia.jpg?s=612x612&w=0&k=20&c=WZkwHowKCUiRBuR84zPOUczj0yXYzyr5k8eQDJ-d1Ps=',
         'restaurant_id' => 12,
         'category_id' => 8,
     ],
-    
+
     [
         'name' => 'Salmone fritto',
-        'description' => 'Roll di riso con alga , salmone fritto e Philadelpia,guarnito con salsa teriyaki e patatine fritte',
-        'ingredients' => 'riso,alga,salmone fritto,Philadelpia,salsa teriyaki,patatine fritte',
+        'description' => 'Roll di riso con alga , salmone fritto e Philadelpia,guarnito con salsa teriyaki',
+        'ingredients' => 'riso, alga, salmone fritto, Philadelpia, salsa teriyaki',
         'price' => 10,
         'img_path' => 'https://media.istockphoto.com/id/505546729/it/foto/porzione-di-salmone.jpg?s=612x612&w=0&k=20&c=vlr35diw1Sr1D5OoTaqyOtz3CSNeO1uWcy16eM_7rtw=',
         'restaurant_id' => 12,
         'category_id' => 8,
     ],
-    
+
     [
         'name' => 'Futomaki Fritto',
-        'description' => 'Esterno di alga in tempura fritta, farcito con salmone, avocado, Philadelphia,salsa teriyaki e patatine fritte tagliate alla julienne',
-        'ingredients' => 'alga,salmone,avocado,Philadelphia,salsa teriyaki,patatine fritte,',
+        'description' => 'Esterno di alga in tempura fritta, farcito con salmone, avocado, Philadelphia,salsa teriyaki',
+        'ingredients' => 'alga, salmone, avocado, Philadelphia, salsa teriyaki',
         'price' => 10,
         'img_path' => 'https://media.istockphoto.com/id/183815946/it/foto/tempura-di-gamberi-roll.jpg?s=612x612&w=0&k=20&c=ZF0ZqGDZO0wndBXXcRhZZvyMPmA5T31Uid1i-vMHuVM=',
         'restaurant_id' => 12,
