@@ -53,7 +53,7 @@
                                     
                             
                                 <div class="form-group">
-                                    <textarea name="description" minlength="5" id="dishDescription" placeholder="Descrizione" class="form-control form-control-user rounded-5" rows="3">{{old('description', $dish->description)}}</textarea> 
+                                    <textarea style="resize: none" name="description" minlength="5" id="dishDescription" placeholder="Descrizione" class="form-control form-control-user rounded-5" rows="3">{{old('description', $dish->description)}}</textarea> 
                                             @error('description')
                                                 <div class="invalid-feedback px-2">
                                                     <i class="fa-solid fa-circle-exclamation pe-1"></i>{{ $message }}
